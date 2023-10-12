@@ -242,7 +242,7 @@
 <span id="more"></span>
 
 <h2 id="判断下列标识符是否合法"><a href="#判断下列标识符是否合法" class="headerlink" title="判断下列标识符是否合法"></a>判断下列标识符是否合法</h2><blockquote>
-<p>什么是<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/cpp/cpp/identifiers-cpp?view=msvc-170">标识符</a>（<a target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/language/identifiers">Identifier</a>）<br>什么是<a target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/keyword">保留字</a>（<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/cpp/cpp/keywords-cpp?view=msvc-170">Keywords</a>）</p>
+<p>什么是<a class="link"   target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/cpp/cpp/identifiers-cpp?view=msvc-170" >标识符<i class="fas fa-external-link-alt"></i></a>（<a class="link"   target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/language/identifiers" >Identifier<i class="fas fa-external-link-alt"></i></a>）<br>什么是<a class="link"   target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/keyword" >保留字<i class="fas fa-external-link-alt"></i></a>（<a class="link"   target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/cpp/cpp/keywords-cpp?view=msvc-170" >Keywords<i class="fas fa-external-link-alt"></i></a>）</p>
 </blockquote>
 <ol>
 <li><code>sin</code>：合法，C++标准库的函数名</li>
@@ -251,7 +251,7 @@
 <li><code>_name</code>：合法</li>
 <li><code>Example2.1</code>：不合法，<code>.</code>是C++的运算符</li>
 <li><code>main</code>：合法，只是C++中的一个特殊函数名称</li>
-<li><code>$1</code>：一般而言视作不合法，但是在Microsoft C++编译器（MSVC）中视为合法，具体见<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/cpp/cpp/identifiers-cpp?view=msvc-170">Microsoft C++标识符</a></li>
+<li><code>$1</code>：一般而言视作不合法，但是在Microsoft C++编译器（MSVC）中视为合法，具体见<a class="link"   target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/cpp/cpp/identifiers-cpp?view=msvc-170" >Microsoft C++标识符<i class="fas fa-external-link-alt"></i></a></li>
 <li><code>class_cpp</code>：合法</li>
 <li><code>a3</code>：合法</li>
 <li><code>x*y</code>：不合法，<code>*</code>是运算符，表示的是表达式</li>
@@ -315,7 +315,7 @@ case 7:
 <p><strong>case 4</strong><br>基本没问题，注意是整除</p>
 </blockquote>
 <blockquote>
-<p><strong>case 5</strong><br>逻辑短路。<br>从左到右先计算<code>a&gt;b</code>为<code>false</code>，取非后为<code>true</code>，不能决定最后表达式的值<br>接着计算<code>c</code>的值为<code>0</code><br>由于是连续的<code>&amp;&amp;</code>与运算，<code>c</code>的值已经决定了整个表达式的值（你说为什么C++这么聪明，聪明的是某些编译器啦~课程指路：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cW411B7DW/?spm_id_from=333.337.search-card.all.click">编译原理</a>）</p>
+<p><strong>case 5</strong><br>逻辑短路。<br>从左到右先计算<code>a&gt;b</code>为<code>false</code>，取非后为<code>true</code>，不能决定最后表达式的值<br>接着计算<code>c</code>的值为<code>0</code><br>由于是连续的<code>&amp;&amp;</code>与运算，<code>c</code>的值已经决定了整个表达式的值（你说为什么C++这么聪明，聪明的是某些编译器啦~课程指路：<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cW411B7DW/?spm_id_from=333.337.search-card.all.click" >编译原理<i class="fas fa-external-link-alt"></i></a>）</p>
 </blockquote>
 <blockquote>
 <p><strong>case 6</strong><br>和上一题一样</p>
@@ -333,7 +333,7 @@ case 7:
 <li><code>char s[ ]=&quot;Hello&quot;;</code>：常量</li>
 </ul>
 <blockquote>
-<p>关于<code>const</code>的<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/cpp/cpp/const-cpp?view=msvc-170">用法</a><br>关于指针的内容可以先跳过</p>
+<p>关于<code>const</code>的<a class="link"   target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/cpp/cpp/const-cpp?view=msvc-170" >用法<i class="fas fa-external-link-alt"></i></a><br>关于指针的内容可以先跳过</p>
 </blockquote>
 <h2 id="将下列表达式或叙述用C-描述"><a href="#将下列表达式或叙述用C-描述" class="headerlink" title="将下列表达式或叙述用C++描述"></a>将下列表达式或叙述用C++描述</h2><p><code>3.14 / 2 + sqrt(pow(asin(x), 2) + pow(c, 2))</code><br><code>(x + y) / ((x - y) * pow(a, y))</code><br><code>(x * x + y * y &gt; pow(min(a, b), 2) &amp;&amp; (x * x + y * y &lt; pow(max(a, b), 2)</code><br><code>(a != b) &amp;&amp; (b != c)</code> 或者 <code>(a != b) &amp;&amp; (b != c) &amp;&amp; (a != c)</code><br><code>(k &lt;= 20) &amp;&amp; (ch != &#39;\0&#39;)</code></p>
 <blockquote>
@@ -362,22 +362,6 @@ case 7:
 
                 
                     <div class="article-nav">
-                        
-                            <div class="article-prev">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/cpp-2023-lecture-notes/2023/10/12/Notes/test-slide/"
-                                   title="test"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                      <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                            <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">test</span>
-                                        <span class="post-nav-item">Prev posts</span>
-                                    </span>
-                                </a>
-                            </div>
                         
                         
                             <div class="article-next">

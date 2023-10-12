@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>0929 Talks.</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+
+# Seminar.
+</script></section><section  data-markdown><script type="text/template">
+## ToC
+
+1. Homework
+2. About your assignments: 
+   1. submition
+   2. arrangement
+3. About this course
+
+
+## Week 3 Homework.
+</script></section><section  data-markdown><script type="text/template">
+### Task 1
+
+1. `sin` 合法，是 C++ 标准库函数名
+2. `book` 合法
+3. `5arry` 不合法，不能用数字开头
+4. `_name` 合法
+5. `Example2.1` 不合法，因为 `.` 是 C++ 的运算符，参考[Member Access](https://en.cppreference.com/w/cpp/language/operator_member_access)
+6. `main` 合法，`main` 只是 C++ 的一个特殊的函数，见下例
+</script></section><section  data-markdown><script type="text/template">
+### Task 1
+
+7. `$1` 视作不合法，传统标准下，非标识符，当前标准下可以，具有兼容性问题，因此视作不合法
+8. `class_cpp` 合法
+9. `a3` 合法
+10. `x*y` 不合法，是表达式
+11. `my name` 不合法，因为有空格
+</script></section><section  data-markdown><script type="text/template">
+### Task 2
+
+
+```cpp
+case 1:
+  x + (int)y % a: float = 4.5
+  x: float = 2.5
+  y: float = 8.2
+  a: int = 3
+case 2:
+  (x = z * b++, b = b * x, b++): int = 42
+  x: float = 7
+  z: float = 1.4
+  b: int = 43
+case 3:
+  (ch4 = ch3 - ch2 + ch1): char = \
+  ch4: char = \
+  ch3: char = 0
+  ch2: char = 5
+  ch1: char = a
+```
+
+- 不要自己给自己出题。
+</script></section><section  data-markdown><script type="text/template">
+### Task 2
+
+```cpp
+case 4:
+  int(y / z) + (int)y / (int)z: int = 13
+case 5:
+  !(a > b) && c && (x *= y) && b++: bool = 0
+  x: float = 2.5
+  b: int = 5
+case 6:
+  ch3 || (b += a * c) || c++: bool = 1
+  b: int = 5
+  c: int = 0
+case 7:
+  z = (a << 2) / (b >> 1): float = 6
+```
+</script></section><section  data-markdown><script type="text/template">
+### Task 3
+
+```cpp
+"China"
+const int n=10;
+int m=5;
+'a'
+char ch='a';
+int array[5]={1,2,3,4,5};
+char s[ ]="Hello";
+```
+
+## Assignment Submission
+
+We use [SmartChair](http://www.smartchair.org) for assignment submission.
+
+1. Create account
+2. Enter the class group
+3. Registration
+</script></section><section  data-markdown><script type="text/template">
+
+### Account Creation
+
+<img data-src="/cpp-2022-lecture-notes/assets/2022-09-27-20-55-48.png">
+</script></section><section  data-markdown><script type="text/template">
+### Account Creation
+
+<img data-src="/cpp-2022-lecture-notes/assets/2022-09-27-22-32-11.png">
+</script></section><section  data-markdown><script type="text/template">
+### Enter the class group
+
+Choose one of the link: 
+
+[link 1](http://www.smartchair.org/Wjx-AP2021/) / [link 2](http://www.smartchair.org/register/?id=Wjx-AP2021)
+
+<img data-src="/cpp-2022-lecture-notes/assets/2022-09-27-22-35-16.png">
+</script></section><section  data-markdown><script type="text/template">
+### Registration
+
+<img data-src="/cpp-2022-lecture-notes/assets/2022-09-27-22-36-34.png">
+</script></section><section  data-markdown><script type="text/template">
+### Registration
+
+<img data-src="/cpp-2022-lecture-notes/assets/2022-09-27-22-37-02.png">
+
+## Homework Requirements.
+
+1. 一个作业，只用一个解决方案，写完一个作业关掉vs，然后在一开始的界面重新创建项目
+   
+   原因：防止 `main` 函数重定义 - （一个**作业**中，应该不可能出现多个 `main`）
+
+2. Windows 平台：写作业不要用`VS Code`！
+
+   原因：配置难度高，且强依赖于 `CMake` 作项目管理
+
+3. code style：推荐 Visual Studio 或 Google 风格
+   1. 代码对齐
+   2. 命名规范
+</script></section><section  data-markdown><script type="text/template">
+### Submission
+
+<img data-src="/cpp-2022-lecture-notes/assets/2022-09-27-22-54-02.png">
+
+一周的多次作业，请一并提交。
+</script></section><section  data-markdown><script type="text/template">
+### archive
+
+Visual Studio 201x/2022：
+
+1. 每一个题目，对应一个或多个`cpp/h`文件
+2. 对每一个题目，**建立一个文件夹，存放这些文件**，按题目顺序命名为 `task0/task1/.../taskn`，例如（两次作业，第一次3题，第二次2题）：
+   1. 作业一，第一题 - `task0`
+   2. 作业二，第二题 - `task4`
+3. 将这些文件夹打包上传。</script></section><section  data-markdown><script type="text/template">
+### archive
+
+```sh
+win
+├── task1
+│   ├── header.h
+│   └── main.cpp
+└── task2
+    ├── header.h
+    └── main.cpp
+```
+</script></section><section  data-markdown><script type="text/template">
+### About the archive
+
+```sh
+mac
+├── task1
+│   ├── CMakeLists.txt
+│   ├── include
+│   │   └── header.h
+│   └── source
+│       └── main.cpp
+└── task2
+    ├── CMakeLists.txt
+    ├── include
+    │   └── header.h
+    └── source
+        └── main.cpp
+```
+
+## About this course
+
+</script></section><section  data-markdown><script type="text/template">
+### About me
+
+1. 2019, WJX(Rank: 15+), CS (Rank: 1/?).
+2. Major: CS → Math.
+3. Interest: Conputer Graphics, especially *physics simulation*.
+4. [Github](https://github.com/Adversarr)
+</script></section><section  data-markdown><script type="text/template">
+#### 小秀一波
+
+<img width=80% data-src="/cpp-2022-lecture-notes/assets/2022-09-28-13-50-58.png">
+</script></section><section  data-markdown><script type="text/template">
+### 一周目回顾（21级、同课程助教）
+
+1. **作业批改**：
+   1. 单向的信息传递（both）、有时可能没有看出来一些错误
+   2. 并没有提供一个完整的解决方案
+   3. 二周目：提供每一次作业的Reference Solution
+2. **答疑**：
+   1. 受限于大三的课余时间，有些共性问题没有总结共享出来
+   2. 二周目：提供这个网站作为QA汇总
+
+[notes](https://adversarr.github.io/cpp-2022-lecture-notes/)
+</script></section><section  data-markdown><script type="text/template">
+### Ideas 1: 所以两学期的课为啥一个学期学完。
+
+
+Examination $\ll$ Course $\ll$ C++(03) $\ll$ Modern C++
+
+Memorize $\ll$ Understand $\ll$ Practice $\ll$ The problem
+</script></section><section  data-markdown><script type="text/template">
+### Ideas 1: 所以两学期的课为啥一个学期学完。
+
+> It’s possible for a skilled programer to learn 50% of any programming language in 30 mins.
+
+> Beginner — foreign to grammar, and especially, algorithm.
+</script></section><section  data-markdown><script type="text/template">
+### Ideas 2: Computational Thinking
+
+> Programming is about **thinking**, not **typing**.
+
+- This is why MIT use `python` instead of `lisp` in SICP nowadays.
+
+- Abstraction/Analysis/Automation
+</script></section><section  data-markdown><script type="text/template">
+### Ideas 3: What is computer programmes.
+
+1. State: $S$
+2. Input,Output: $I,O$
+3. Programme: $P: S\times I \rightarrowtail S \times O$
+</script></section><section  data-markdown><script type="text/template">
+### Idea 4: Key features of C & C++
+
+1. C: Pointers, Functions
+   1. `int array[10]`, `int *array`
+   2. `double pow(double x, double alpha) noexcept;`
+2. C++: 
+   1. Object Oriented: `class`
+   2. Template(Meta) Programming: `template`
+</script></section><section  data-markdown><script type="text/template">
+### FAQ：如何快速找到程序中的错误？
+
+注意WARNING提示：
+
+<img style="height:600px"  data-src="/cpp-2022-lecture-notes/assets/2022-09-28-09-26-41.png">
+</script></section><section  data-markdown><script type="text/template">
+### FAQ: 如何快速找到程序中的错误？
+
+添加`cout`，但在提交作业时必须删除！
+
+```cpp
+...
+if (x = 1) /* bug! */ {
+
+} ...
+...
+
+// [Debug]: check the value of x: (always 1)
+cout << x << endl;
+```
+</script></section><section  data-markdown><script type="text/template">
+### FAQ: 如何快速找到程序中的错误？
+
+使用 Debugger。（last section）
+</script></section><section  data-markdown><script type="text/template">
+### FAQ: 如何找文档？
+
+1. 关于CSDN、简书、知乎、……等信息的可靠性：
+   
+   说的话里 50% 是对的。因此如果你需要上这些平台查资料/找答案，建议打开4-5个相关文章。（大部分问题不会错的都一模一样）
+
+2. 资料获取：
+   1. [cppreference](https://en.cppreference.com/w/cpp)
+   2. [microsoft](https://learn.microsoft.com/zh-cn/cpp/cpp/cpp-language-reference)
+</script></section><section  data-markdown><script type="text/template">
+### FAQ：不会做题怎么办
+
+1. 模仿是最好的学习（但不是抄袭）。
+2. Step by Step：从学会vs打开一个项目开始
+3. 解题思路相关：
+   1. 编程能力 ≈ 代码量 + 概念理解量
+   2. 提升代码量：刷题（leetcode + luogu)
+   3. 提升概念理解：上课（课程、网课、演讲、经验分享…）
+
+Examination $\ll$ Course $\ll$ C++(03) $\ll$ Modern C++
+</script></section><section  data-markdown><script type="text/template">
+# Debug.
+
+See [last lecture notes](https://github.com/Adversarr/cpp-2022-lecture-notes/raw/main/docs/assets/intro.pdf).
+
+</script></section></div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
