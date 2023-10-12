@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Andrew-Rey">
+    
+    <title>
+        
+            Homework | 第一次作业解答 |
+        
+        算法与程序设计 2023
+    </title>
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/cpp-2023-lecture-notes/images/seu-round.png">
+    
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"andrew-rey.github.io","root":"/cpp-2023-lecture-notes/","language":"zh"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"style":{"primary_color":"#0066cc","logo":"/images/seu-round.png","favicon":"/images/seu-round.png","avatar":"/images/seu-round.png","first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"SEU吴健雄学院 算法与程序设计 2023","hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false}},"post":{"author_label":{"enable":false,"auto":false,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"version":"3.8.3"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/cpp-2023-lecture-notes/images/seu-round.png">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               算法与程序设计 2023
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/category/homework"
+                            >
+                                HOMEWORK
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/category/notes"
+                            >
+                                NOTES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/category/homework">HOMEWORK</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/category/notes">NOTES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        Homework | 第一次作业解答
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/cpp-2023-lecture-notes/images/seu-round.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">Andrew-Rey</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2023-10-09 14:41:44</span>
+                <span class="mobile">2023-10-09 14:41</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Tue Oct 10 2023 11:27:19 GMT+0800">2023-10-10 11:27:19</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="article-category-ul">
+                    
+                            <li class="category-item"><a href="/cpp-2023-lecture-notes/category/homework/">homework</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <p><strong>【作业情况】</strong> 1.1题中误判<code>main</code>和<code>sin</code>；1.2题对（5）（6）题的逻辑短路（惰性求值）不理解；1.3对于误判字符串数组和数组名；1.4不能规范书写C++代码；1.6题主要是后两个变量的值错误率高…其实可以写一小段代码验证，关于结果的解释可以上网搜</p>
+<span id="more"></span>
+
+<h2 id="判断下列标识符是否合法"><a href="#判断下列标识符是否合法" class="headerlink" title="判断下列标识符是否合法"></a>判断下列标识符是否合法</h2><blockquote>
+<p>什么是<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/cpp/cpp/identifiers-cpp?view=msvc-170">标识符</a>（<a target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/language/identifiers">Identifier</a>）<br>什么是<a target="_blank" rel="noopener" href="https://en.cppreference.com/w/cpp/keyword">保留字</a>（<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/cpp/cpp/keywords-cpp?view=msvc-170">Keywords</a>）</p>
+</blockquote>
+<ol>
+<li><code>sin</code>：合法，C++标准库的函数名</li>
+<li><code>book</code>: 合法</li>
+<li><code>5arry</code>：不合法，不能用数字作为开头</li>
+<li><code>_name</code>：合法</li>
+<li><code>Example2.1</code>：不合法，<code>.</code>是C++的运算符</li>
+<li><code>main</code>：合法，只是C++中的一个特殊函数名称</li>
+<li><code>$1</code>：一般而言视作不合法，但是在Microsoft C++编译器（MSVC）中视为合法，具体见<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/cpp/cpp/identifiers-cpp?view=msvc-170">Microsoft C++标识符</a></li>
+<li><code>class_cpp</code>：合法</li>
+<li><code>a3</code>：合法</li>
+<li><code>x*y</code>：不合法，<code>*</code>是运算符，表示的是表达式</li>
+<li><code>my name</code>：不合法，中间含有空格</li>
+</ol>
+<blockquote>
+<p><strong>关于为什么<code>main</code>和<code>sin</code>是合法的标识符</strong></p>
+<p>可以用以下代码来验证：</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">auto</span> main <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">auto</span> sin <span class="token operator">=</span> <span class="token number">0.8</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"idetifier 'main' = "</span> <span class="token operator">&lt;&lt;</span> main <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"idetifier 'sin' = "</span> <span class="token operator">&lt;&lt;</span> sin <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>得到的输出是<code>1</code>和<code>0.8</code>（其中<code>auto</code>的自动类型推断告诉我们<code>main</code>是一个类型为<code>int</code>的变量，<code>sin</code>是一个类型为<code>float</code>的变量）</p>
+</blockquote>
+<h2 id="求表达式的值以及运算后表达式所涉及的各变量的值"><a href="#求表达式的值以及运算后表达式所涉及的各变量的值" class="headerlink" title="求表达式的值以及运算后表达式所涉及的各变量的值"></a>求表达式的值以及运算后表达式所涉及的各变量的值</h2><pre class="line-numbers language-none"><code class="language-none">case 1:
+  x + (int)y % a: float &#x3D; 4.5
+  x: float &#x3D; 2.5
+  y: float &#x3D; 8.2
+  a: int &#x3D; 3
+case 2:
+  (x &#x3D; z * b++, b &#x3D; b * x, b++): int &#x3D; 42
+  x: float &#x3D; 7
+  z: float &#x3D; 1.4
+  b: int &#x3D; 43
+case 3:
+  (ch4 &#x3D; ch3 - ch2 + ch1): char &#x3D; \
+  ch4: char &#x3D; \
+  ch3: char &#x3D; 0
+  ch2: char &#x3D; 5
+  ch1: char &#x3D; a
+case 4:
+  int(y &#x2F; z) + (int)y &#x2F; (int)z: int &#x3D; 13
+case 5:
+  !(a &gt; b) &amp;&amp; c &amp;&amp; (x *&#x3D; y) &amp;&amp; b++: bool &#x3D; 0
+  x: float &#x3D; 2.5
+  b: int &#x3D; 5
+case 6:
+  ch3 || (b +&#x3D; a * c) || c++: bool &#x3D; 1
+  b: int &#x3D; 5
+  c: int &#x3D; 0
+case 7:
+  z &#x3D; (a &lt;&lt; 2) &#x2F; (b &gt;&gt; 1): float &#x3D; 6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p><strong>case 1</strong><br>主要注意【强制转换】和【算数运算符】的优先级，查优先级表可以知道【强制转换】的优先级更高，从左到右运算后得到表达式的值是4.5，整个表达式不存在赋值操作，因此没有变量的值被改变</p>
+</blockquote>
+<blockquote>
+<p><strong>case 2</strong><br>这里给了3个【赋值】表达式。第一个表达式注意【后缀自增】运算的优先级更高</p>
+</blockquote>
+<blockquote>
+<p><strong>case 3</strong><br>字符的运算。相当于对应ASCII码的运算，而不是字符的拼接和剪切。计算得到的<code>ch4 = 92</code>或者<code>ch4 = &#39;\\&#39;</code>。注意第一个<code>\</code>是转义。注意区分’&#39;和’&#x2F;‘是不一样的符号</p>
+</blockquote>
+<blockquote>
+<p><strong>case 4</strong><br>基本没问题，注意是整除</p>
+</blockquote>
+<blockquote>
+<p><strong>case 5</strong><br>逻辑短路。<br>从左到右先计算<code>a&gt;b</code>为<code>false</code>，取非后为<code>true</code>，不能决定最后表达式的值<br>接着计算<code>c</code>的值为<code>0</code><br>由于是连续的<code>&amp;&amp;</code>与运算，<code>c</code>的值已经决定了整个表达式的值（你说为什么C++这么聪明，聪明的是某些编译器啦~课程指路：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1cW411B7DW/?spm_id_from=333.337.search-card.all.click">编译原理</a>）</p>
+</blockquote>
+<blockquote>
+<p><strong>case 6</strong><br>和上一题一样</p>
+</blockquote>
+<blockquote>
+<p><strong>case 7</strong><br>注意<code>a,b</code>的值不会改变</p>
+</blockquote>
+<h2 id="判断哪些是常量，哪些是变量"><a href="#判断哪些是常量，哪些是变量" class="headerlink" title="判断哪些是常量，哪些是变量"></a>判断哪些是常量，哪些是变量</h2><ul>
+<li><code>&quot;China&quot;</code>: 常量</li>
+<li><code>const int n=10;</code>：常量</li>
+<li><code>int m=5;</code>：变量</li>
+<li><code>&#39;a&#39;</code>：常量</li>
+<li><code>char ch=&#39;a&#39;;</code>：变量</li>
+<li><code>int array[5]=&#123;1,2,3,4,5&#125;;</code>：指针类型，<code>array</code>是常量，<code>array[0]...array[4]</code>是变量</li>
+<li><code>char s[ ]=&quot;Hello&quot;;</code>：常量</li>
+</ul>
+<blockquote>
+<p>关于<code>const</code>的<a target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/cpp/cpp/const-cpp?view=msvc-170">用法</a><br>关于指针的内容可以先跳过</p>
+</blockquote>
+<h2 id="将下列表达式或叙述用C-描述"><a href="#将下列表达式或叙述用C-描述" class="headerlink" title="将下列表达式或叙述用C++描述"></a>将下列表达式或叙述用C++描述</h2><p><code>3.14 / 2 + sqrt(pow(asin(x), 2) + pow(c, 2))</code><br><code>(x + y) / ((x - y) * pow(a, y))</code><br><code>(x * x + y * y &gt; pow(min(a, b), 2) &amp;&amp; (x * x + y * y &lt; pow(max(a, b), 2)</code><br><code>(a != b) &amp;&amp; (b != c)</code> 或者 <code>(a != b) &amp;&amp; (b != c) &amp;&amp; (a != c)</code><br><code>(k &lt;= 20) &amp;&amp; (ch != &#39;\0&#39;)</code></p>
+<blockquote>
+<p>基本没问题，第三问没有说明<code>a,b</code>的大小关系，上述为较为标准写法（别钻牛角尖了，合理答案都是对的）</p>
+</blockquote>
+<h2 id="求程序运行后各变量的值"><a href="#求程序运行后各变量的值" class="headerlink" title="求程序运行后各变量的值"></a>求程序运行后各变量的值</h2><pre class="line-numbers language-none"><code class="language-none">a&#x3D;3  b&#x3D;2  x&#x3D;1.8  y&#x3D;7  ch1&#x3D;&#39;a&#39;   ch2&#x3D;&#39; &#39;  ch3&#x3D;&#39;b&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>注意<code>&#39; &#39; != &#39;\0&#39;</code></p>
+<blockquote>
+<p><code>cin.get()</code>的用法，它与<code>&lt;&lt;</code>等运算符的区别（建议用<a href="../Notes/about-course.md">这篇文章</a>的方法去搜索）</p>
+</blockquote>
+
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="article-nav">
+                        
+                            <div class="article-prev">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/cpp-2023-lecture-notes/2023/10/12/Notes/test-slide/"
+                                   title="test"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                      <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                            <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">test</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="/cpp-2023-lecture-notes/2023/10/09/Notes/about-course/"
+                                   title="关于这门课"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">关于这门课</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E4%B8%8B%E5%88%97%E6%A0%87%E8%AF%86%E7%AC%A6%E6%98%AF%E5%90%A6%E5%90%88%E6%B3%95"><span class="nav-text">判断下列标识符是否合法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%82%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%80%BC%E4%BB%A5%E5%8F%8A%E8%BF%90%E7%AE%97%E5%90%8E%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%89%80%E6%B6%89%E5%8F%8A%E7%9A%84%E5%90%84%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC"><span class="nav-text">求表达式的值以及运算后表达式所涉及的各变量的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E5%93%AA%E4%BA%9B%E6%98%AF%E5%B8%B8%E9%87%8F%EF%BC%8C%E5%93%AA%E4%BA%9B%E6%98%AF%E5%8F%98%E9%87%8F"><span class="nav-text">判断哪些是常量，哪些是变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86%E4%B8%8B%E5%88%97%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%88%96%E5%8F%99%E8%BF%B0%E7%94%A8C-%E6%8F%8F%E8%BF%B0"><span class="nav-text">将下列表达式或叙述用C++描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%82%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E5%90%8E%E5%90%84%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC"><span class="nav-text">求程序运行后各变量的值</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2023</span>&nbsp;-&nbsp;2023
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Andrew-Rey</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E4%B8%8B%E5%88%97%E6%A0%87%E8%AF%86%E7%AC%A6%E6%98%AF%E5%90%A6%E5%90%88%E6%B3%95"><span class="nav-text">判断下列标识符是否合法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%82%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%80%BC%E4%BB%A5%E5%8F%8A%E8%BF%90%E7%AE%97%E5%90%8E%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%89%80%E6%B6%89%E5%8F%8A%E7%9A%84%E5%90%84%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC"><span class="nav-text">求表达式的值以及运算后表达式所涉及的各变量的值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E5%93%AA%E4%BA%9B%E6%98%AF%E5%B8%B8%E9%87%8F%EF%BC%8C%E5%93%AA%E4%BA%9B%E6%98%AF%E5%8F%98%E9%87%8F"><span class="nav-text">判断哪些是常量，哪些是变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%86%E4%B8%8B%E5%88%97%E8%A1%A8%E8%BE%BE%E5%BC%8F%E6%88%96%E5%8F%99%E8%BF%B0%E7%94%A8C-%E6%8F%8F%E8%BF%B0"><span class="nav-text">将下列表达式或叙述用C++描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B1%82%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E5%90%8E%E5%90%84%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC"><span class="nav-text">求程序运行后各变量的值</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/cpp-2023-lecture-notes/js/utils.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/header-shrink.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/back2top.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/dark-light-toggle.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/main.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- code-block -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/cpp-2023-lecture-notes/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/cpp-2023-lecture-notes/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
