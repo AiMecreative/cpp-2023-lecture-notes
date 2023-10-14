@@ -29,7 +29,7 @@ archive_dir: archives
 category_dir: category
 # code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: "_slides/**"
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -119,4 +119,3 @@ deploy:
   type: git
   repo: https://github.com/Andrew-Rey/cpp-2023-lecture-notes.git
   branch: main
-

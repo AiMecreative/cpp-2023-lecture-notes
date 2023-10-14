@@ -23,6 +23,8 @@
     "hexo-renderer-stylus": "^3.0.0",
     "hexo-server": "^3.0.0",
     "hexo-theme-keep": "^3.8.3",
-    "hexo-theme-landscape": "^1.0.0"
+    "hexo-theme-landscape": "^1.0.0",
+    "reveal-md": "^5.5.1",
+    "reveal.js": "^4.6.1"
   }
 }
