@@ -1,7 +1,7 @@
 ---
 title: Homework | 第一次作业解答
 date: 2023-10-09 14:41:44
-category: homework
+category: Homework
 ---
 
 
