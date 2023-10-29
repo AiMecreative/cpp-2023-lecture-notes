@@ -1,4 +1,4 @@
-from CMakeDecorator import cmake
+from CMakeDecorator import cmake, redirect
 
 
 class Task(object):
@@ -19,11 +19,18 @@ class Task(object):
         info += "\n}"
         return info
 
+    @redirect
     @cmake("config")
     def config(self, config_cmd):
-        print("abs_path: " + self.abs_path)
+        print(config_cmd)
         return {"cmd": config_cmd, "path": self.abs_path}
 
+    @redirect
     @cmake("build")
     def build(self, build_cmd):
+        print(build_cmd)
         return {"cmd": build_cmd}
+
+    @redirect
+    def run(self, exe: str, fill_params: bool = True):
+        return {"cmd": exe, "fill_params": fill_params}

@@ -37,8 +37,10 @@ checker:
   ]
   question_count: 4
   multi_file: false
-  tasks_folder: "E:\\cpp-tutorial\\scripts\\AutoCpp\\tasks\\week1"
+  tasks_folder: "E:\\cpp-tutorial\\scripts\\week4"
+  target_exe: "build\\task.exe"
 
 workflow:
   cmake_config: "cmake -B build -G Ninja -DCMAKE_C_COMPILER=Clang -DCMAKE_CXX_COMPILER=Clang++ -DCMAKE_CXX_STANDARD=17"
   cmake_build: "cmake --build build --config Release --clean-first -j 18"
+

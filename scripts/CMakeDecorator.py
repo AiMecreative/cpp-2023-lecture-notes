@@ -4,6 +4,7 @@ from functools import wraps
 _lists_path = "."
 _project_name = "task"
 _cmake_target_name = "task"
+_redirect_file = "./output.txt"
 
 
 def cmake_minimum_required(version: float = 3.22):
@@ -38,6 +39,21 @@ def init_cmake_lists():
         c.write(target_sources(_cmake_target_name, [""]))
 
 
+def redirect(task_cmd):
+    @wraps(task_cmd)
+    def _wrapper(*args, **kwargs):
+        try:
+            print(task_cmd.__name__)
+            with open(_redirect_file, 'w') as f:
+                f.write(task_cmd(*args, **kwargs))
+        except RuntimeError as e:
+            pass
+        finally:
+            pass
+
+    return _wrapper
+
+
 # TODO: add try-except, logs
 def cmake(mode):
     def _decorator(task_cmd):
@@ -59,11 +75,18 @@ def cmake(mode):
                 with open(cmake_lists, 'w') as c:
                     c.writelines(content)
             print(zipped["cmd"])
-            p = subprocess.Popen(zipped["cmd"], shell=True, stdout=subprocess.PIPE)
-            output, err = p.communicate()
-            print('-' * 100)
-            print(output)
-            print(err)
+            p = None
+            try:
+                p = subprocess.Popen(zipped["cmd"], shell=True, stdout=subprocess.PIPE)
+            except RuntimeError as e:
+                pass
+            finally:
+                output, err = p.communicate()
+                output = output if output is not None else bytes()
+                err = err if err is not None else bytes()
+                print(type(output))
+                print(bytes.decode(output) + "\n" + bytes.decode(err))
+                return bytes.decode(output) + "\n" + bytes.decode(err)
 
         return _wrapper
 
