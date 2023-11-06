@@ -1,188 +1,648 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Andrew-Rey">
+    
+    <title>
+        
+            Notes | 10.29 杂谈 |
+        
+        算法与程序设计 2023
+    </title>
+    
+<link rel="stylesheet" href="../css/style.css">
 
-    <title>Notes | 10.29 杂谈</title>
-    <link rel="shortcut icon" href="./favicon.ico" />
-    <link rel="stylesheet" href="./dist/reset.css" />
-    <link rel="stylesheet" href="./dist/reveal.css" />
-    <link rel="stylesheet" href="./dist/theme/white.css" id="theme" />
-    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+    
+        <link rel="shortcut icon" href="../../../../../images/seu-round.png">
+    
+    
+<link rel="stylesheet" href="font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"andrew-rey.github.io","root":"/cpp-2023-lecture-notes/","language":"zh"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"style":{"primary_color":"#0066cc","logo":"/images/seu-round.png","favicon":"/images/seu-round.png","avatar":"/images/seu-round.png","first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"SEU吴健雄学院 算法与程序设计 2023","hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false}},"post":{"author_label":{"enable":false,"auto":false,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"version":"3.8.3"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="slides"><section  data-markdown><script type="text/template">
+<body>
+<div class="progress-bar-container">
+    
 
-# Talks. 10.29
-</script></section><section  data-markdown><script type="text/template">
-- code with me
-- programming task 1
-- programming task 2
-- other problems
-- debug
-- what should I do
-</script></section><section ><section data-markdown><script type="text/template">
-### code with me
-</script></section><section data-markdown><script type="text/template">
-- rewrite the quadratic equation
-- draw an image using cpp
-- but with given data...
-</script></section><section data-markdown><script type="text/template">
-- learn the STANDARD(maybe?) coding
-- how to use a function
-- how to do file io
-- how to name variables
-- how to format your code
-- how to ...
-</script></section></section><section ><section data-markdown><script type="text/template">
-### programming task 1
-</script></section><section data-markdown><script type="text/template">
-#### question 0
+    
+</div>
 
-- define `int` or `double`
-- if use acceleration ...
-</script></section><section data-markdown><script type="text/template">
-#### question 1
 
-- when to calculate delta
-- how many branches needed
-- handle complex number
-  - how to print
-- now refactor the code
-</script></section><section data-markdown><script type="text/template">
-#### question 2
+<main class="page-container border-box">
 
-- delete the tail zeros
-</script></section><section data-markdown><script type="text/template">
-#### question 3
+    <!-- home first screen  -->
+    
 
-- just math
-</script></section></section><section ><section data-markdown><script type="text/template">
-### programming task 2
-</script></section><section data-markdown><script type="text/template">
-#### question 0
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
 
-- input checking
-  - does it matter?
-  - other solutions?
-</script></section><section data-markdown><script type="text/template">
-#### question 1
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="../../../../../images/seu-round.png">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               算法与程序设计 2023
+            </a>
+        </div>
 
-- how many loops we need
-- how to check the middle results
-</script></section><section data-markdown><script type="text/template">
-#### question 2
-
-- everything is `int` ?
-- how to select your test data
-</script></section><section data-markdown><script type="text/template">
-#### question 3
-
-- what if change the range to `[10, 9435]` or someone else
-</script></section><section data-markdown><script type="text/template">
-#### question 4
-
-$arctan(x) = \sum_{k=0}^{\inf} (-1)^{k}\frac{x^{2k+1}}{2k+1}$ for $\forall x \in [-1, 1]$
-
-- focus on your target: calculate $\pi$
-- $\pi = 3.14159...$
-- why the answer is $0.78...$
-</script></section></section><section ><section data-markdown><script type="text/template">
-### other problems
-
-- life circle (simplized version)
-- initialize your variables!
-- format your code!
-- `for` loop is just `for` loop
-</script></section><section data-markdown><script type="text/template">
-- `=` and `==`, and even `===`(Java)
-- why no Chinese in my programs
-- standard and simplify your io
-- what is the path of file or folder
-</script></section></section><section  data-markdown><script type="text/template">
-### debug
-
-- just print print print!
-- a more complex but useful method: debugger
-- variable value & function stack
-</script></section><section ><section data-markdown><script type="text/template">
-### what should I do
-
-- one cpp source file -> one project -> one question
-- submit your **source code file only** (xxx.cpp)
-- name a source file with **no Space,tab,(,),Chinese...**
-- name a folder with **just your name**
-- run code **before** submit
-  - use more test demos
-
----- 
-
-- CS learning routine: [csdiy](https://csdiy.wiki/)
-- searching is also an ability
-  - use [official docs](https://en.cppreference.com/w/)
-  - English reading
-  - just copy your error the IDE gives and paste it on the right brower
-</script></section><section data-markdown><script type="text/template">
-- what makes me angry
-  - [no screenshot!!!](https://zhuanlan.zhihu.com/p/552422979)
-  - no code or no output (results or errors) and just say "what happened"
-    - who knows
-  - no self-searching, even a little problem
-    - I also have my silly things...
-</script></section></section></div>
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="../../../../../index.html"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="../../../../../archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="../../../../../category/homework"
+                            >
+                                HOMEWORK
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="../../../../../category/notes"
+                            >
+                                NOTES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script src="./dist/reveal.js"></script>
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="../../../../../index.html">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="../../../../../archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="../../../../../category/homework">HOMEWORK</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="../../../../../category/notes">NOTES</a>
+                </li>
+            
+        </ul>
+    </div>
 
-    <script src="./plugin/markdown/markdown.js"></script>
-    <script src="./plugin/highlight/highlight.js"></script>
-    <script src="./plugin/zoom/zoom.js"></script>
-    <script src="./plugin/notes/notes.js"></script>
-    <script src="./plugin/math/math.js"></script>
-    <script>
-      function extend() {
-        var target = {};
-        for (var i = 0; i < arguments.length; i++) {
-          var source = arguments[i];
-          for (var key in source) {
-            if (source.hasOwnProperty(key)) {
-              target[key] = source[key];
-            }
-          }
-        }
-        return target;
-      }
+    <div class="window-mask"></div>
 
-      // default options to init reveal.js
-      var defaultOptions = {
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-        transition: 'default', // none/fade/slide/convex/concave/zoom
-        slideNumber: true,
-        plugins: [
-          RevealMarkdown,
-          RevealHighlight,
-          RevealZoom,
-          RevealNotes,
-          RevealMath
-        ]
-      };
-
-      // options from URL query string
-      var queryOptions = Reveal().getQueryHash() || {};
-
-      var options = extend(defaultOptions, {}, queryOptions);
-    </script>
+</header>
 
 
-    <script>
-      Reveal.initialize(options);
-    </script>
-  </body>
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        Notes | 10.29 杂谈
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="../../../../../images/seu-round.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">Andrew-Rey</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2023-10-29 20:00:54</span>
+                <span class="mobile">2023-10-29 20:00</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Sun Oct 29 2023 23:53:05 GMT+0800">2023-10-29 23:53:05</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="article-category-ul">
+                    
+                            <li class="category-item"><a href="../../../../../category/Notes/">Notes</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <h1 id="Talks-10-29"><a href="#Talks-10-29" class="headerlink" title="Talks. 10.29"></a>Talks. 10.29</h1><hr>
+<ul>
+<li>code with me</li>
+<li>programming task 1</li>
+<li>programming task 2</li>
+<li>other problems</li>
+<li>debug</li>
+<li>what should I do</li>
+</ul>
+<hr>
+<h3 id="code-with-me"><a href="#code-with-me" class="headerlink" title="code with me"></a>code with me</h3><hr>
+<ul>
+<li>rewrite the quadratic equation</li>
+<li>draw an image using cpp</li>
+<li>but with given data…</li>
+</ul>
+<hr>
+<ul>
+<li>learn the STANDARD(maybe?) coding</li>
+<li>how to use a function</li>
+<li>how to do file io</li>
+<li>how to name variables</li>
+<li>how to format your code</li>
+<li>how to …</li>
+</ul>
+<hr>
+<h3 id="programming-task-1"><a href="#programming-task-1" class="headerlink" title="programming task 1"></a>programming task 1</h3><hr>
+<h4 id="question-0"><a href="#question-0" class="headerlink" title="question 0"></a>question 0</h4><ul>
+<li>define <code>int</code> or <code>double</code></li>
+<li>if use acceleration …</li>
+</ul>
+<hr>
+<h4 id="question-1"><a href="#question-1" class="headerlink" title="question 1"></a>question 1</h4><ul>
+<li>when to calculate delta</li>
+<li>how many branches needed</li>
+<li>handle complex number<ul>
+<li>how to print</li>
+</ul>
+</li>
+<li>now refactor the code</li>
+</ul>
+<hr>
+<h4 id="question-2"><a href="#question-2" class="headerlink" title="question 2"></a>question 2</h4><ul>
+<li>delete the tail zeros</li>
+</ul>
+<hr>
+<h4 id="question-3"><a href="#question-3" class="headerlink" title="question 3"></a>question 3</h4><ul>
+<li>just math</li>
+</ul>
+<hr>
+<h3 id="programming-task-2"><a href="#programming-task-2" class="headerlink" title="programming task 2"></a>programming task 2</h3><hr>
+<h4 id="question-0-1"><a href="#question-0-1" class="headerlink" title="question 0"></a>question 0</h4><ul>
+<li>input checking<ul>
+<li>does it matter?</li>
+<li>other solutions?</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="question-1-1"><a href="#question-1-1" class="headerlink" title="question 1"></a>question 1</h4><ul>
+<li>how many loops we need</li>
+<li>how to check the middle results</li>
+</ul>
+<hr>
+<h4 id="question-2-1"><a href="#question-2-1" class="headerlink" title="question 2"></a>question 2</h4><ul>
+<li>everything is <code>int</code> ?</li>
+<li>how to select your test data</li>
+</ul>
+<hr>
+<h4 id="question-3-1"><a href="#question-3-1" class="headerlink" title="question 3"></a>question 3</h4><ul>
+<li>what if change the range to <code>[10, 9435]</code> or someone else</li>
+</ul>
+<hr>
+<h4 id="question-4"><a href="#question-4" class="headerlink" title="question 4"></a>question 4</h4><p>$arctan(x) &#x3D; \sum_{k&#x3D;0}^{\inf} (-1)^{k}\frac{x^{2k+1}}{2k+1}$ for $\forall x \in [-1, 1]$</p>
+<ul>
+<li>focus on your target: calculate $\pi$</li>
+<li>$\pi &#x3D; 3.14159…$</li>
+<li>why the answer is $0.78…$</li>
+</ul>
+<hr>
+<h3 id="other-problems"><a href="#other-problems" class="headerlink" title="other problems"></a>other problems</h3><ul>
+<li>life circle (simplized version)</li>
+<li>initialize your variables!</li>
+<li>format your code!</li>
+<li><code>for</code> loop is just <code>for</code> loop</li>
+</ul>
+<hr>
+<ul>
+<li><code>=</code> and <code>==</code>, and even <code>===</code>(Java)</li>
+<li>why no Chinese in my programs</li>
+<li>standard and simplify your io</li>
+<li>what is the path of file or folder</li>
+</ul>
+<hr>
+<h3 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h3><ul>
+<li>just print print print!</li>
+<li>a more complex but useful method: debugger</li>
+<li>variable value &amp; function stack</li>
+</ul>
+<hr>
+<h3 id="what-should-I-do"><a href="#what-should-I-do" class="headerlink" title="what should I do"></a>what should I do</h3><ul>
+<li>one cpp source file -&gt; one project -&gt; one question</li>
+<li>submit your <strong>source code file only</strong> (xxx.cpp)</li>
+<li>name a source file with <strong>no Space,tab,(,),Chinese…</strong></li>
+<li>name a folder with <strong>just your name</strong></li>
+<li>run code <strong>before</strong> submit<ul>
+<li>use more test demos</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>CS learning routine: <a class="link"   target="_blank" rel="noopener" href="https://csdiy.wiki/" >csdiy<i class="fas fa-external-link-alt"></i></a></li>
+<li>searching is also an ability<ul>
+<li>use <a class="link"   target="_blank" rel="noopener" href="https://en.cppreference.com/w/" >official docs<i class="fas fa-external-link-alt"></i></a></li>
+<li>English reading</li>
+<li>just copy your error the IDE gives and paste it on the right brower</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>what makes me angry<ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/552422979" >no screenshot!!!<i class="fas fa-external-link-alt"></i></a></li>
+<li>no code or no output (results or errors) and just say “what happened”<ul>
+<li>who knows</li>
+</ul>
+</li>
+<li>no self-searching, even a little problem<ul>
+<li>I also have my silly things…</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="article-nav">
+                        
+                            <div class="article-prev">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="../../../../11/06/Homework/task4/"
+                                   title="Homework | 第四次作业解答"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                      <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                            <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Homework | 第四次作业解答</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="../../Homework/task3/"
+                                   title="Homework | 第三次作业解答"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Homework | 第三次作业解答</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Talks-10-29"><span class="nav-text">Talks. 10.29</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#code-with-me"><span class="nav-text">code with me</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#programming-task-1"><span class="nav-text">programming task 1</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#question-0"><span class="nav-text">question 0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-1"><span class="nav-text">question 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-2"><span class="nav-text">question 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-3"><span class="nav-text">question 3</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#programming-task-2"><span class="nav-text">programming task 2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#question-0-1"><span class="nav-text">question 0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-1-1"><span class="nav-text">question 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-2-1"><span class="nav-text">question 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-3-1"><span class="nav-text">question 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-4"><span class="nav-text">question 4</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#other-problems"><span class="nav-text">other problems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#debug"><span class="nav-text">debug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#what-should-I-do"><span class="nav-text">what should I do</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2023</span>&nbsp;-&nbsp;2023
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Andrew-Rey</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Talks-10-29"><span class="nav-text">Talks. 10.29</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#code-with-me"><span class="nav-text">code with me</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#programming-task-1"><span class="nav-text">programming task 1</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#question-0"><span class="nav-text">question 0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-1"><span class="nav-text">question 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-2"><span class="nav-text">question 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-3"><span class="nav-text">question 3</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#programming-task-2"><span class="nav-text">programming task 2</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#question-0-1"><span class="nav-text">question 0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-1-1"><span class="nav-text">question 1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-2-1"><span class="nav-text">question 2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-3-1"><span class="nav-text">question 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#question-4"><span class="nav-text">question 4</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#other-problems"><span class="nav-text">other problems</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#debug"><span class="nav-text">debug</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#what-should-I-do"><span class="nav-text">what should I do</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="js/utils.js"></script>
+
+<script src="js/header-shrink.js"></script>
+
+<script src="js/back2top.js"></script>
+
+<script src="js/dark-light-toggle.js"></script>
+
+<script src="js/main.js"></script>
+
+<script src="js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- code-block -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
 </html>
