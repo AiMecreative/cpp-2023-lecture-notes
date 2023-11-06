@@ -195,7 +195,7 @@ int main() {
 
 其中绘图如下：
 
-![function](Figure_1.png)
+![function](https://andrew-rey.github.io/cpp-2023-lecture-notes/2023/11/06/Homework/task4/Figure_1.png)
 
 使用的是python绘图，代码如下：
 
