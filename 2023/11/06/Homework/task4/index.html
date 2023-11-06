@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Andrew-Rey">
+    
+    <title>
+        
+            Homework | 第四次作业解答 |
+        
+        算法与程序设计 2023
+    </title>
+    
+<link rel="stylesheet" href="../css/style.css">
+
+    
+        <link rel="shortcut icon" href="../../../../../images/seu-round.png">
+    
+    
+<link rel="stylesheet" href="font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"andrew-rey.github.io","root":"/cpp-2023-lecture-notes/","language":"zh"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"style":{"primary_color":"#0066cc","logo":"/images/seu-round.png","favicon":"/images/seu-round.png","avatar":"/images/seu-round.png","first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"SEU吴健雄学院 算法与程序设计 2023","hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false}},"post":{"author_label":{"enable":false,"auto":false,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"version":"3.8.3"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="../../../../../images/seu-round.png">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               算法与程序设计 2023
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="../../../../../index.html"
+                            >
+                                首頁
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="../../../../../archives"
+                            >
+                                歸檔
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="../../../../../category/homework"
+                            >
+                                HOMEWORK
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="../../../../../category/notes"
+                            >
+                                NOTES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="../../../../../index.html">首頁</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="../../../../../archives">歸檔</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="../../../../../category/homework">HOMEWORK</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="../../../../../category/notes">NOTES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        Homework | 第四次作业解答
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="../../../../../images/seu-round.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">Andrew-Rey</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2023-11-06 17:07:12</span>
+                <span class="mobile">2023-11-06 17:07</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Mon Nov 06 2023 17:21:36 GMT+0800">2023-11-06 17:21:36</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="article-category-ul">
+                    
+                            <li class="category-item"><a href="../../../../../category/Homework/">Homework</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <p><strong>【作业情况】：正在批改</strong></p>
+<span id="more"></span>
+
+<h2 id="question-0"><a href="#question-0" class="headerlink" title="question 0"></a>question 0</h2><blockquote>
+<p>猴子吃桃问题：猴子摘下若干个桃子，第一天吃了桃子的一半多一个，以后每天吃了前一天剩下的一半多一个，到第十天吃以前发现只剩下一个桃子，问猴子共摘了几个桃子。</p>
+</blockquote>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> peach_sum<span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> peach_remains <span class="token operator">=</span> peach_sum<span class="token punctuation">;</span>
+  <span class="token keyword">int</span> total_day <span class="token operator">=</span> <span class="token number">9</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> exact_divide <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> day<span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span> day <span class="token operator">&lt;</span> total_day<span class="token punctuation">;</span> day <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      peach_remains <span class="token operator">=</span> peach_remains <span class="token operator">-</span> <span class="token punctuation">(</span>peach_remains <span class="token operator">/</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">// check for exactly division (except for the last day)</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>peach_remains <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">!=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> day <span class="token operator">&lt;</span> total_day <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        exact_divide <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token comment">// meet 2 requirements, the last day has only one peach and every step the</span>
+    <span class="token comment">// remains count can be exactly divided by 2</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>peach_remains <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> exact_divide<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token comment">// reset these variables</span>
+    peach_sum <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    peach_remains <span class="token operator">=</span> peach_sum<span class="token punctuation">;</span>
+    exact_divide <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  cout <span class="token operator">&lt;&lt;</span> peach_sum <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="question-1"><a href="#question-1" class="headerlink" title="question 1"></a>question 1</h2><blockquote>
+<p>将100元换成用10元、5元和1元的组合，共有多少种组合方法。  请把组合方法写入文件</p>
+</blockquote>
+<p><strong>记得修改文件路径</strong></p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fstream></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// relevent to cpp_dir/build</span>
+  string out_file_path<span class="token punctuation">&#123;</span><span class="token string">"path/to/your/file"</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  ofstream out_file<span class="token punctuation">&#123;</span>out_file_path<span class="token punctuation">,</span> ios<span class="token double-colon punctuation">::</span>out<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token keyword">int</span> total_mouny <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token keyword">int</span> ten_tick <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token keyword">int</span> five_tick <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token keyword">int</span> one_tick <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  out_file <span class="token operator">&lt;&lt;</span> <span class="token string">"10 yuan 5 yuan 1 yuan\n"</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> ten_count<span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span> ten_count <span class="token operator">&lt;</span> total_mouny <span class="token operator">/</span> ten_tick <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+       ten_count <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> remains <span class="token operator">=</span> total_mouny <span class="token operator">-</span> ten_count <span class="token operator">*</span> ten_tick<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> five_count<span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span> five_count <span class="token operator">&lt;</span> remains <span class="token operator">/</span> five_tick <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+         five_count <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      remains <span class="token operator">-=</span> five_count <span class="token operator">*</span> five_tick<span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>remains <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+      out_file <span class="token operator">&lt;&lt;</span> <span class="token string">"\t"</span> <span class="token operator">&lt;&lt;</span> ten_count <span class="token operator">&lt;&lt;</span> <span class="token string">"\t"</span> <span class="token operator">&lt;&lt;</span> five_count <span class="token operator">&lt;&lt;</span> <span class="token string">"\t"</span> <span class="token operator">&lt;&lt;</span> remains <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+  out_file<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="question-2"><a href="#question-2" class="headerlink" title="question 2"></a>question 2</h2><blockquote>
+<p>一个数如果恰好等于它的因子之和，这个数就称为“完数”。例如，6的因子为1、2、3，而6&#x3D;1+2+3，28&#x3D;1+2+4+7+14因此6，28是“完数”。编程序找出1000之内的所有的完数并输出到屏幕和文件data.txt</p>
+</blockquote>
+<p><strong>记得修改文件路径</strong></p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cmath></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fstream></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  string out_file_path<span class="token punctuation">&#123;</span><span class="token string">"path/to/your/file"</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  ofstream out_file<span class="token punctuation">&#123;</span>out_file_path<span class="token punctuation">,</span> ios<span class="token double-colon punctuation">::</span>out<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token keyword">const</span> <span class="token keyword">int</span> max_limit <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> num <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> num <span class="token operator">&lt;</span> max_limit <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> num <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> fact_sum<span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> f_num <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> f_num <span class="token operator">&lt;</span> num<span class="token punctuation">;</span> f_num <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>num <span class="token operator">%</span> f_num <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+      fact_sum <span class="token operator">+=</span> f_num<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>fact_sum <span class="token operator">!=</span> num<span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> num <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    out_file <span class="token operator">&lt;&lt;</span> num <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  out_file<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="question-3"><a href="#question-3" class="headerlink" title="question 3"></a>question 3</h2><blockquote>
+<p>从文件data.txt读入数据，求平均值，并统计其中正数和负数的个数</p>
+</blockquote>
+<p><strong>记得修改文件路径</strong></p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fstream></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  string in_file_path<span class="token punctuation">&#123;</span><span class="token string">"path/to/your/file"</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  ifstream in_file<span class="token punctuation">&#123;</span>in_file_path<span class="token punctuation">,</span> ios<span class="token double-colon punctuation">::</span>in<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token keyword">double</span> value<span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token keyword">double</span> avg<span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> pos_count<span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> neg_count<span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>in_file <span class="token operator">>></span> value<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> neg_count <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> pos_count <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    avg <span class="token operator">+=</span> value<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  in_file<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  avg <span class="token operator">/=</span> pos_count <span class="token operator">+</span> neg_count<span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"positive number: "</span> <span class="token operator">&lt;&lt;</span> pos_count <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"negtive number: "</span> <span class="token operator">&lt;&lt;</span> neg_count <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"average number: "</span> <span class="token operator">&lt;&lt;</span> avg <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="question-4"><a href="#question-4" class="headerlink" title="question 4"></a>question 4</h2><blockquote>
+<p>iteration x_{n+1}&#x3D;\frac{x_n^2 - 10(x_n sin(x_n) + cos(x_n))}{2 x_n - 10sin(x_n)}<br>solve the equation: x^2 + 10 cos(x) &#x3D; 0</p>
+</blockquote>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cmath></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;corecrt_math.h></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">double</span> <span class="token function">iterate</span><span class="token punctuation">(</span><span class="token keyword">double</span> x<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">double</span> numerator <span class="token operator">=</span> x <span class="token operator">*</span> x <span class="token operator">-</span> <span class="token number">10</span> <span class="token operator">*</span> <span class="token punctuation">(</span>x <span class="token operator">*</span> <span class="token function">sin</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">cos</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">double</span> denominator <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> x <span class="token operator">-</span> <span class="token number">10</span> <span class="token operator">*</span> <span class="token function">sin</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> numerator <span class="token operator">/</span> denominator<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">double</span> init_x<span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+  <span class="token keyword">double</span> limit <span class="token operator">=</span> <span class="token number">1e-5</span><span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"input the init x (!= 0): "</span><span class="token punctuation">;</span>
+  cin <span class="token operator">>></span> init_x<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">fabs</span><span class="token punctuation">(</span>init_x<span class="token punctuation">)</span> <span class="token operator">&lt;</span> limit<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">double</span> former_x <span class="token operator">=</span> init_x<span class="token punctuation">;</span>
+  <span class="token keyword">double</span> current_x <span class="token operator">=</span> <span class="token function">iterate</span><span class="token punctuation">(</span>init_x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token function">fabs</span><span class="token punctuation">(</span>current_x <span class="token operator">-</span> former_x<span class="token punctuation">)</span> <span class="token operator">>=</span> limit<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">double</span> x_n <span class="token operator">=</span> current_x<span class="token punctuation">;</span>
+    former_x <span class="token operator">=</span> current_x<span class="token punctuation">;</span>
+    current_x <span class="token operator">=</span> <span class="token function">iterate</span><span class="token punctuation">(</span>x_n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"solution is: "</span> <span class="token operator">&lt;&lt;</span> current_x <span class="token operator">&lt;&lt;</span> <span class="token string">" the error is: "</span> <span class="token operator">&lt;&lt;</span> <span class="token function">fabs</span><span class="token punctuation">(</span>current_x <span class="token operator">-</span> former_x<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>注意问题的<strong>多解性</strong></p>
+<ul>
+<li>可以多尝试几个初值，会发现答案不止一个</li>
+<li>可以使用绘图软件绘制函数，发现与 $y&#x3D;0$ 的交点不止一个</li>
+</ul>
+<p>其中绘图如下：</p>
+<p><img src="Figure_1.png" alt="function"></p>
+<p>使用的是python绘图，代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+x <span class="token operator">=</span> <span class="token punctuation">[</span>_ <span class="token keyword">for</span> _ <span class="token keyword">in</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+y <span class="token operator">=</span> <span class="token punctuation">[</span>_x <span class="token operator">*</span> _x <span class="token operator">+</span> <span class="token number">10</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>_x<span class="token punctuation">)</span> <span class="token keyword">for</span> _x <span class="token keyword">in</span> x<span class="token punctuation">]</span>
+y_copy <span class="token operator">=</span> <span class="token punctuation">[</span>np<span class="token punctuation">.</span>fabs<span class="token punctuation">(</span>_x <span class="token operator">*</span> _x <span class="token operator">+</span> <span class="token number">10</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>_x<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">for</span> _x <span class="token keyword">in</span> x<span class="token punctuation">]</span>
+x_points <span class="token operator">=</span> np<span class="token punctuation">.</span>argsort<span class="token punctuation">(</span>y_copy<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>x_points<span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">0</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> x<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'k'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">"$y=x^2+10cos(x)$"</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> x_p <span class="token keyword">in</span> x_points<span class="token punctuation">:</span>
+    plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">[</span>x_p<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token string">'ro'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">(</span>x<span class="token punctuation">[</span>x_p<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>grid<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="article-nav">
+                        
+                            <div class="article-prev">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="../task5/"
+                                   title="Homework | 第五次作业解答"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                      <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                            <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Homework | 第五次作业解答</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="../../../../10/29/Notes/Talks-1/"
+                                   title="Notes | 10.29 杂谈"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Notes | 10.29 杂谈</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#question-0"><span class="nav-text">question 0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#question-1"><span class="nav-text">question 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#question-2"><span class="nav-text">question 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#question-3"><span class="nav-text">question 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#question-4"><span class="nav-text">question 4</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2023</span>&nbsp;-&nbsp;2023
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Andrew-Rey</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;框架&nbsp;&&nbsp;主題&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#question-0"><span class="nav-text">question 0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#question-1"><span class="nav-text">question 1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#question-2"><span class="nav-text">question 2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#question-3"><span class="nav-text">question 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#question-4"><span class="nav-text">question 4</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="js/utils.js"></script>
+
+<script src="js/header-shrink.js"></script>
+
+<script src="js/back2top.js"></script>
+
+<script src="js/dark-light-toggle.js"></script>
+
+<script src="js/main.js"></script>
+
+<script src="js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- code-block -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
