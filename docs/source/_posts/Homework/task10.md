@@ -1,13 +1,14 @@
 ---
-title: Homework | 第九次作业解答
-date: 2023-12-06 15:29:00
+title: Homework | 第十次作业解答
+date: 2024-01-08 20:51:22
 category: Homework
 ---
-**【批改情况会私发给同学】**
+
+第十次作业解答
 
 <!--more-->
 
-## question 0
+## 第一题
 
 ```cpp
 /**
@@ -62,10 +63,9 @@ int main() {
   cout << even_result.str() << odd_result.str() << endl;
   return 0;
 }
-
 ```
 
-## question 1
+## 第二题
 
 ```cpp
 /**
@@ -95,7 +95,8 @@ b[i]= 34  41 有2个峰值， 32 低谷
 using namespace std;
 
 const int ary_size = 15;
-const string cpp_path = "";  // 或者替换成你自己cpp的绝对路径，主要针对cmake用户
+const string cpp_path =
+    "E:/Documents/Repositories/cpp-2023-lecture-notes/tasks/week10/ref/";
 const string data_file = "file1.txt";
 const string output_file = "file2.txt";
 
@@ -144,10 +145,9 @@ int main() {
   cout << endl;
   return 0;
 }
-
 ```
 
-## question 2
+## 第三题
 
 ```cpp
 /**
@@ -205,7 +205,7 @@ int main() {
 }
 ```
 
-## question 3
+## 第四题
 
 ```cpp
 /**
