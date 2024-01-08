@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Andrew-Rey">
+    
+    <title>
+        
+            Notes | 睡前故事：程序设计（一）知识概要 |
+        
+        算法与程序设计 2023
+    </title>
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/cpp-2023-lecture-notes/images/seu-round.png">
+    
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"andrew-rey.github.io","root":"/cpp-2023-lecture-notes/","language":"zh"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"style":{"primary_color":"#0066cc","logo":"/images/seu-round.png","favicon":"/images/seu-round.png","avatar":"/images/seu-round.png","first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"SEU吴健雄学院 算法与程序设计 2023","hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false}},"post":{"author_label":{"enable":false,"auto":false,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"version":"3.8.3"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/cpp-2023-lecture-notes/images/seu-round.png">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               算法与程序设计 2023
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/"
+                            >
+                                HOME
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/archives"
+                            >
+                                ARCHIVES
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/category/homework"
+                            >
+                                HOMEWORK
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/category/notes"
+                            >
+                                NOTES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/">HOME</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/archives">ARCHIVES</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/category/homework">HOMEWORK</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/category/notes">NOTES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        Notes | 睡前故事：程序设计（一）知识概要
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/cpp-2023-lecture-notes/images/seu-round.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">Andrew-Rey</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2024-01-08 13:03:08</span>
+                <span class="mobile">2024-01-08 13:03</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Mon Jan 08 2024 21:02:58 GMT+0800">2024-01-08 21:02:58</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="article-category-ul">
+                    
+                            <li class="category-item"><a href="/cpp-2023-lecture-notes/category/Notes/">Notes</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <p>这篇文章主要针对《算法与程序设计I》，对其中的知识点做一个比较概括的总结，具体细节需要大家参照教材、作业和PPT仔细复习。</p>
+<span id="more"></span>
+
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>本学期主要针对基本数据类型、控制语句、函数和指针进行学习，这些不仅是<code>C++</code>的基础，更是今后学习其它编程语言的关键。在下学期，我们将会学习C++最为强大的内容之一——面向对象编程（OOP），除了学会一些新颖的语法外，熟练运用本学期的知识能帮助大家写出 <strong>更好</strong> 的面向对象程序。</p>
+<p>经过一个学期的编程作业，大家对下列知识点应该有所掌握：</p>
+<ul>
+<li><strong>基本数据类型</strong>：在C++中 <strong>常用</strong> 的、 <strong>基本</strong> 的数据类型有 <code>bool, char, int, float, double, void</code>，这些都是C++内置的 <strong>保留字（或称为关键字）</strong>，我们在写程序时不能用保留字命名自己的变量 ；而在后半学期，我们也接触到了 <strong>指针</strong>，它的定义其实是在前面基本类型中增加了修饰符 <code>*</code>；如果进一步了解C++变量类型，还会发现这些数据类型的保留字其实是可以被修饰的，例如比较基础的 <code>const int</code>，<code>static long long int</code>，<code>unsigned double</code>，这些一般用于比较特殊的场合，不需要掌握。</li>
+<li><strong>控制语句</strong>：控制流语句是程序的灵魂，你的程序几乎无时无刻都在做判断。而C++的控制语句是基于<code>if-else, switch-case, for, while (do-while)</code>进行展开的。它们的语法和用法是 <strong>必须掌握</strong> ，此外，如果你想写出不那么令人费解的程序，你还需要了解它们是如何用 <code>&#123;、&#125;</code> “分隔”变量的作用域的：例如<code>while</code>的内外都 <strong>定义</strong> 了变量<code>value</code>，那么在<code>while</code>语句里面改变你所看见的<code>value</code>，当<code>while</code>语句结束时，你所看到的<code>value</code>真的被改变了吗？当然，在批改大家程序的时候，仍然存在 <strong>不规范</strong> 使用语法的情况（注意，不是错误，而是不规范！），在编写程序的时候 <strong>按照规范</strong> 是一个比较好的职业操守，例如我们永远不喜欢这样的句子：<code>for(;i&lt;10,j&lt;100,k&lt;1000;)&#123;//for 语句里面改变ijk&#125;</code>，我们也不喜欢这样的句子：<code>for(int i = 0, int j = 1, int k = 2;;)</code>；这就好比在客厅做饭，在厨房待客——程序没有毛病，但是别人觉得你有毛病。</li>
+<li><strong>函数</strong>：进入到函数这一章，大家的程序开始变得五花八门、光怪陆离，<del>在批改作业的时候我不断感慨：原来C++还能这样写！</del> 话说回来，在此之前的程序，我们都是写在一个叫做 <code>main</code> 函数的里面，就仿佛是八股文一般，<code>int main()&#123;return 0;&#125;</code> 这些东西你别删，你的代码写在两个大括号中间（准确来说是<code>return 0;</code>前面）。那么学完了函数，我们发现这是一个叫做 <code>main</code> 的函数的定义，它的返回值类型是 <code>int</code>，因此必须（事实上由于<code>main</code>函数的特殊性，这里有些编译器会自动添加返回值，即使你没有写<code>return 0;</code>）有返回值，并且是<code>int</code>类型的返回值，一般是返回<code>0</code>，代表程序正常结束（可以这样理解），而函数参数列表为空，代表不接收任何参数（在某些场合，比如需要在命令行传入参数时，<code>main</code>函数的参数列表也可以不为空），在两个大括号之间的、也就是我们书写自己代码的地方，就是<code>main</code>函数的函数体。这就是一个标准的函数的 <strong>定义</strong>：函数名、函数参数列表、函数返回值、函数体。<ul>
+<li><strong>函数的定义</strong></li>
+<li><strong>函数的声明</strong>：将函数体替换为分号<code>;</code>，其中函数名、函数参数列表也称为函数签名</li>
+</ul>
+</li>
+<li><strong>数组和指针</strong>：如果有同学来问我关于指针、引用的一些细节，我经常的回复是“我也不知道”，“我去查查”等，因为在现代C++中，如果只是完成一些比较简单的上层任务，很少会用到指针（但引用会经常用到，包括下学期面向对象编程也会经常用到引用）。这一章主要的特色就是 <strong>绕</strong>。<ul>
+<li>数组是 <strong>相同数据类型的数据的、有序的、可以随机访问的，集合</strong>：第一：相同数据类型，怎么看或者是如何定义数组存的是什么类型呢？在定义数组的时候就已经写得很清楚了：<code>int a[length];</code>，看到了吧，数组里存的是<code>int</code>类型；第二：有序，这里的有序其实指的是 <strong>连续内存空间</strong>，一个 <code>int</code> 型的变量可能计算机随便分配一块 <em>4字节</em> 内存给你，但如果你定义的是一个数组，例如长度为8，那计算机可能给你分配的就是一块 <em>32字节</em> 的连续内存，也就是这32字节，不是东一块西一块的，而是紧紧挨在一起、地址从小到大；第三：随机访问的集合，其实这个表述并不准确，因为在C++标准库里的集合是不支持 <strong>随机访问</strong> 的，而数组能随机访问的主要原因就是一个数组里面的每一个元素的地址是连续的，可以通过简单的地址加减就能访问到。（啊？你不知道什么叫做随机访问，不懂就问随机访问是用随机数访问吗？它指的是你可以任意查看或修改位于数组里面任意位置的元素，例如<code>a[9]</code>访问的是数组<code>a</code>的第<code>10</code>个元素。是的，后续我们会看到，有些 <em>数据结构</em> 不支持随机访问）。</li>
+<li>指针是 <strong>变量</strong>，对，不是妖魔鬼怪牛鬼蛇神魑魅魍魉界门纲目科属种的任何一类，它只是一个变量。这个变量的定义是在基本数据类型的保留字后面增加一个<code>*</code>符号，例如<code>int* p</code>定义的是指向<code>int</code>类型变量的指针。那这里就很迷：C++很聪明嘛，还知道 <strong>指向</strong>，如果你是这样认为的，那就是你不聪明了。所谓指针，确实是变量，因此 <strong>它本身是有计算机分配的地址的</strong>，也就是你可以输出 <code>&amp;p</code> 来查看指针 <code>p</code> 的 <strong>自己的</strong> 地址；但变量总得存个值，那这个值是什么呢，在我们学习的时候我们会写这样的句子：<code>int a = 0; int *p = &amp;a;</code> 或者 <code>int a = 0; int *p; p = &amp;a;</code>，而运算符<code>&amp;</code>可以理解为 <strong>取地址</strong>，也就是 <strong>把<code>a</code>变量的地址返回出来</strong>，因此指针变量<code>p</code>的 <strong>值</strong> 是地址，也就是你可以输出 <code>p</code> 来查看 <code>p</code> 的值，也就是 <code>a</code> 的地址。</li>
+<li>动态内存分配：主要使用 <code>new</code> <code>delete</code> 进行内存管理</li>
+<li>数组和指针的关系：一句话，数组名是指向数组起始地址的指针，也就是 <code>*array == &amp;array[0]</code></li>
+</ul>
+</li>
+</ul>
+<p>下面对每一章进行 <strong>比较概括</strong> 的总览。</p>
+<h2 id="程序、编译、内存、基本数据类型"><a href="#程序、编译、内存、基本数据类型" class="headerlink" title="程序、编译、内存、基本数据类型"></a>程序、编译、内存、基本数据类型</h2><h3 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h3><p>使用<code>windows</code>的同学可以尝试打开一个后缀名为<code>exe</code>的文件（怎么打开，强制打开，用记事本）（当然<code>linux</code>发行版、<code>macOS</code>可以查看一下权限中有<code>x</code>的文件），里面是一些人类无法理解（但是顶级人类可以理解）的符号。但是计算机是能看懂的，<code>exe</code>其实是“可执行文件”，你写的C++程序通过 <strong>编译</strong> 最后生成了它。你或许会说：啊？Visual Studio里面在哪找exe啊，我只知道打开sln然后点击运行就能运行我写的代码，这是程序吗？在此不做回答。于是这一门课为了让大家能理解甚至成为计算机，在学编程语言之前，总会让大家先学习二进制的基础知识。是的，所以复习的时候你应该去<strong>熟悉</strong>反码、补码、二进制的运算、进制换算（二进制换十进制，十进制换十六进制等等）。</p>
+<h3 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h3><p>C++是一门 <strong>编译型</strong> 语言，所谓编译你可以理解为有一个叫做 <strong>编译器（VS里面用的是MSVC）</strong> 的东西，将程序员写的C++代码经过词法分析、语法分析、中间代码生成等步骤 <strong>翻译</strong> 成一个便于操作的中间代码，接着再将中间代码转成 <strong>二进制</strong> 代码，也就是计算机能看懂的代码。最后运行时，计算机操作系统经过一系列调度后，将这一段二进制代码加载到内存中运行，可能你的电脑在操作系统的调度下经过一系列的中断、信息传递、线程同步后终于把你的程序跑完了，而人看到的：我点击了运行，它输出了<code>1+1=2</code>。</p>
+<h3 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h3><p>这里我们只需了解什么是内存，什么是地址就行了，至于堆区、栈区在后续学习中会逐渐熟悉。总所周知，是个东西，要存在于计算机中，就必须有“地方”让它存在。我们可以分为两个部分来看：假设你现在开着电脑，你的电脑里面有一个名为cpp的 <strong>文件</strong>，并且你现在正在打开浏览器，浏览这个网站。好，那么请你重启电脑。当你再次打开电脑时，你发现那个名为 cpp 的文件岿然不动地存在于电脑里面，而你刚刚用于冲浪的浏览器已经关闭了。这是因为你的文件存在 <strong>硬盘</strong> 里面，而你 <strong>运行中的</strong> 浏览器存在于 <strong>内存</strong> 中，它们都是 <strong>存储空间</strong>。不论哪一种存储方式，你都可以将其想象成一个 <strong>坐标系</strong>，并且是 <strong>一维</strong> 的。</p>
+<p>那如何 <strong>找到</strong> 或者说 <strong>唯一确定</strong> 一组数据所在的位置呢？前面已经提示了，存储空间其实是可以看作多个一维坐标系的集合，<strong>我们以内存空间为例</strong>。空间对应着坐标，计算机内存的坐标就是所谓的 <strong>地址</strong>（当然，这里还会涉及到物理地址和逻辑地址以及它们的映射关系，但都是后话了，这里我们 <strong>暂时</strong> 把我们看到的地址就当作是数据的实际存放地址）。顺便假设我们的地址就是<code>0x0000</code>到<code>0xFFFF</code>，以十六进制表示（一个十六进制占4位，也就是半个字节，因为要表示16个不同的数，需要4位二进制；因此上面的地址一共是 $4\times 4&#x3D;16$来位，也就是2个字节表示，能表示$2^{16}$不同的地址），例如一个<code>char</code>占1个字节，表示<code>0-255</code>范围大小的数。</p>
+<p>那实际上计算机的地址是什么样的呢？</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token operator">&amp;</span>a<span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> p <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token operator">&amp;</span>p <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token operator">&amp;</span>a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>输出是</p>
+<pre class="line-numbers language-none"><code class="language-none">0000005EBCBFFC90
+0000005EBCBFFC88
+0000005EBCBFFC90<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>可以看见</p>
+<ol>
+<li>地址的分配其实比较任意，如果你在报错时发现地址是类似<code>FFFFFFFF</code>大概率是访问了非法地址、空指针；如果你的报错也是一个随机的地址，可能是数组下标越界（因为访问的是数组规定范围后面的地址）</li>
+<li>一个程序的变量的分配比较连续（并不常常这样），<code>a</code>的地址是<code>0000005EBCBFFC90</code>，指针变量<code>p</code>的地址是<code>0000005EBCBFFC88</code>，相差的是十六进制的8位（…88~…90是8位），也就是32位二进制，4个字节，也就是一个<code>int</code>类型 <strong>或者</strong> 指针类型的大小，是不是十分合理</li>
+<li>指针本身有地址<code>0000005EBCBFFC88</code>，存的是变量的地址<code>0000005EBCBFFC88</code></li>
+</ol>
+<h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><p><a class="link"   target="_blank" rel="noopener" href="https://www.runoob.com/cplusplus/cpp-data-types.html" >看这个<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p><strong>变量初始化</strong>：<br>很多人写代码都不初始化，还好一些比较善意的编译器在编译代码的时候会帮你初始化到一个合理的值。但是如果我们动态分配内存，并访问了其中的地址，其实大概率会访问到一些奇怪的值：<code>-8xxxxx</code>，<code>326xxxx</code>诸如此类。这是因为内存没有被初始化。</p>
+<ul>
+<li>基本数据类型变量初始化：直接用等号（赋值等于号）赋予初值即可</li>
+<li>数组初始化：在 <strong>声明时</strong> 可以用等号赋值的话使用初始化列表<code>&#123;1, 2, 3&#125;</code>之类；也可以后续用 <strong>一重循环</strong> 遍历下标，单独为每个元素赋值</li>
+<li>二重数组初始化：二重循环依次遍历</li>
+</ul>
+</blockquote>
+<h2 id="控制流语句"><a href="#控制流语句" class="headerlink" title="控制流语句"></a>控制流语句</h2><p>从这里往后，大家开始使用大括号了。什么？你说你的<code>if,while</code>都不用大括号？ <strong>如果不用大括号，C++默认是紧接着<code>if,while</code>类似这句话的下一句是包括在语句内部的，其它的不算</strong>。如果不喜欢大括号，这边建议<a class="link"   target="_blank" rel="noopener" href="https://www.python.org/" >指路<i class="fas fa-external-link-alt"></i></a>。</p>
+<p>虽然在C++里面的某些代码格式（format），会要求大括号单独一行，也许你以为通过省略大括号能让你的代码看起来“简短”，让人感觉你用更少的代码写出了更好的程序；在编译器眼中：都一样。</p>
+<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><p>你需要熟练的地方：</p>
+<ul>
+<li><code>if-else if-else</code>的关系中，<code>else</code>表示前面的条件不满足，才会判断<code>else if</code>的内容，不是每一个条件都会判断</li>
+<li><strong>逻辑短路</strong> 的工作原理</li>
+<li>两个变量相等是用<code>==</code>还是<code>=</code></li>
+<li><code>if</code>里到底要填啥（填布尔值），布尔条件到底是啥？为啥我随便填一个数好像也没错？没错，但最好你的表达式返回布尔类型的值。</li>
+<li><code>switch-case</code>的语法以及在<code>case</code>块中加入<code>break</code>的作用，如果不加行不行（当然行啊），但为啥“一般”要加上</li>
+<li><code>switch-case</code>中的<code>default</code>块在何时执行</li>
+</ul>
+<h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><p>你需要熟练的地方：</p>
+<ul>
+<li><code>for</code>语句的语法！！！在<code>for</code>里面有两个分号，其实是三句话，把这三句话对应到<code>while</code>里面分别位于循环的哪些部位，这三句话代表什么含义？能不能添油加醋（当然可以，但是我的评价就像我摘要写的那样）</li>
+<li><code>while</code>语句的语法，<code>while()</code>的<code>()</code>里面到底填啥，填<code>1</code>和填<code>true</code>的区别是什么，作用是什么</li>
+<li><code>do-while</code>语句的语法，这个循环最少执行多少次？并且是否一定会执行？</li>
+<li><code>break, continue</code>的区别是什么？</li>
+</ul>
+<h3 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h3><p><a class="link"   target="_blank" rel="noopener" href="https://www.runoob.com/cplusplus/cpp-variable-scope.html" >参考<i class="fas fa-external-link-alt"></i></a></p>
+<p>一般而言，我们只能在 <strong>函数内部，代码块（一对大括号内）内部，函数的形式参数列表，函数外部</strong> 定义变量</p>
+<ul>
+<li>在函数或一个代码块内部声明的变量，称为<strong>局部变量</strong>。</li>
+<li>在函数参数的定义中声明的变量，称为<strong>形式参数</strong>。</li>
+<li>在所有函数外部声明的变量，称为<strong>全局变量</strong>。</li>
+</ul>
+<p><strong>作用域</strong>是程序的一个区域，变量的作用域可以分为以下几种：</p>
+<ul>
+<li><strong>块作用域：</strong>在代码块内部声明的变量具有块作用域，它们只能在代码块内部访问。块作用域变量在代码块每次被执行时被创建，在代码块执行完后被销毁。</li>
+<li><strong>局部作用域：</strong>在函数内部声明的变量具有局部作用域，它们只能在函数内部访问。局部变量在函数每次被调用时被创建，在函数执行完后被销毁。</li>
+<li><strong>全局作用域：</strong>在所有函数和代码块之外声明的变量具有全局作用域，它们可以被程序中的任何函数访问。全局变量在程序开始时被创建，在程序结束时被销毁。</li>
+<li>类作用域</li>
+</ul>
+<p>作用域可以理解为你 <strong>在哪可以看见这个变量，即可以访问、修改</strong>。对于一个简单的例子：</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">const</span> <span class="token keyword">int</span> times <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> times<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  cout <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>请问最后输出的 <code>a</code> 是多少。【0】，因为在<code>while</code>语句执行完后，内部的<code>a</code>由于是局部变量而被销毁（为什么是局部变量，难道不是在<code>main</code>函数定义的吗？【就近原则】）</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><blockquote>
+<p><strong>为什么会有函数？为什么叫做函数？如何使用函数？</strong></p>
+<p>其实在编码过程，我们经常发现某一段代码（假设有800行）经常会 <strong>重复</strong> 用到，因此需要到处复制粘贴。那我们能不能把这800行 <del>屎山</del> 代码给一个编号，于是叫做 xxx 代码块，也就是 <strong>函数</strong>。函数是代码中 <strong>减少重复代码</strong> 的典型例子之一。那为啥叫做函数呢？对于一段程序，事实上是对数据的一系列操作，最终 <strong>呈现</strong> 出某种效果（可能是算出来一个值，也可能是打印一句话） ，忽略中间部分（或者说把中间部分包裹起来），我只要提供这一段代码 <strong>需要</strong> 的值，并且运行完以后可以 <strong>拿到</strong> 我想要的值，就行了，也就是：<code>f: input -&gt; output</code>，这不就映射嘛！那 <strong>如何使用</strong> 呢？<code>output = f(input)</code>，是不是就和数学上面的表示一模一样了。当然，在某些语言中也称函数为 <em>过程，方法</em></p>
+</blockquote>
+<p>函数分为 <strong>声明</strong> 、 <strong>定义</strong> 、 <strong>调用</strong></p>
+<ul>
+<li><strong>函数声明</strong>会告诉编译器函数名称及如何调用函数。函数的实际主体可以单独定义。一般形式是 <code>return_type function_name( parameter list );</code>。在函数声明中，参数的名称并不重要，只有参数的类型是必需的。</li>
+<li><strong>函数定义</strong>提供了函数的实际主体。<ul>
+<li>返回类型：一个函数可以返回一个值。return_type 是函数返回的值的数据类型。有些函数执行所需的操作而不返回值，在这种情况下，return_type 是关键字 void。</li>
+<li>函数名称：这是函数的实际名称。函数名和参数列表一起构成了函数签名。</li>
+<li>参数：参数就像是占位符。当函数被调用时，您向参数传递一个值，这个值被称为实际参数。参数列表包括函数参数的类型、顺序、数量。参数是可选的，也就是说，函数可能不包含参数。</li>
+<li>函数主体：函数主体包含一组定义函数执行任务的语句。</li>
+</ul>
+</li>
+<li><strong>调用函数</strong>时，传递所需参数，如果函数返回一个值，则可以<strong>存储</strong>返回值。</li>
+</ul>
+<h3 id="道理我都懂，但函数到底是什么"><a href="#道理我都懂，但函数到底是什么" class="headerlink" title="道理我都懂，但函数到底是什么"></a>道理我都懂，但函数到底是什么</h3><p>上一节末尾，我们已经说到 <strong>变量作用域</strong>，其实函数是一个单独的作用域，除了输入输出和全局变量外，一般情况函数的所有部分和外界是分离开的。在使用函数时，一定要牢记 <strong>名字只是符号</strong>。</p>
+<ul>
+<li>形式参数：就是一个形式，一个符号，可能是<code>void f(int a, int b);</code> 你可以这样<strong>调用</strong><code>f(a1, b1)</code>，也可以这样调用<code>f(___, _111)</code>，总之不管怎样， <strong>只要类型能对应</strong>，不论参数是什么名字都无所谓</li>
+<li>实际参数：指的是在 <strong>调用</strong> 时，传入函数的参数， <strong>类型要和函数声明的参数类型一致</strong></li>
+<li>返回值：有人说我在函数返回的是<code>int my_function()&#123;return number;&#125;</code>，也就是<code>number</code>这个变量啊，为什么我在调用的时候 <strong>找不到number</strong>？记住名字只是一个符号，你调用函数后拿到的是 <strong>类型和值</strong>，不是名字，<strong>你需要用你自己定义的变量去接收这个类型和值</strong>，例如<code>int my_number = my_function();</code>就可以通过<code>my_number</code>这个变量访问到函数的返回值；而函数内部的<code>number</code>变量已经随着函数调用的结束而析构。</li>
+</ul>
+<h3 id="奇怪的参数列表和返回值——引用"><a href="#奇怪的参数列表和返回值——引用" class="headerlink" title="奇怪的参数列表和返回值——引用"></a>奇怪的参数列表和返回值——引用</h3><p><img src="/cpp-2023-lecture-notes/2024/01/08/Notes/summary/1704705699573.png" alt="函数调用传值方式"></p>
+<p>你可以写一些简单的程序来测试</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">demo</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span>_p<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token operator">*</span>_p <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token function">demo</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  
+  a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token operator">&amp;</span>a<span class="token punctuation">;</span>
+  <span class="token function">demo</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>程序的输出是</p>
+<pre class="line-numbers language-none"><code class="language-none">10
+10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><p>“自己调用自己”</p>
+<p>理解递归的最好方式是 <strong>画出函数调用图</strong>。例如我们有这样的一个函数：</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">fib</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">||</span> a <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token function">fib</span><span class="token punctuation">(</span>a <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">fib</span><span class="token punctuation">(</span>a <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>如果我们传入参数10，则调用关系如下：</p>
+<p><img src="/cpp-2023-lecture-notes/2024/01/08/Notes/summary/1704706343961.png" alt="递归"></p>
+<p>在书写函数递归的时候要注意 <strong>递归终点</strong>。在递归结束前，最开始的函数是在等待下一层函数的返回值的，而下一层的函数又在等待下下一层的函数的返回值，一直持续到递归终点，可以返回（例如本例是当<code>a==0 || a==1</code>时是递归终点）</p>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>数组很有意思，因为它让我们不用写<code>int a, b, c, d, e, ..., z, a1, b1, ...</code>这么多的数据来定义类型，只要<code>int a[个数]</code>就能定义指定个数的元素。想了一下感觉没啥例子，单独画个内存空间也觉得没意思，于是…</p>
+<p><img src="/cpp-2023-lecture-notes/2024/01/08/Notes/summary/1704707101509.png" alt="一组物品"></p>
+<p>在Minecraft里面，一般而言物品的最大堆叠上限（不加MOD）是64，那其实相当于一个数组，是同类型事物的聚集，有一定的大小。不过与数组不同的是，它每一个元素是 <strong>完全一样的</strong>，但C++里面的数组只要求 <strong>类型一致</strong>。</p>
+<p><img src="/cpp-2023-lecture-notes/2024/01/08/Notes/summary/1704707535749.png" alt="存储形式"></p>
+<p>不论如何，如果你只需要了解什么是数组，你只需要这么多就行了。但是，你还学习了指针。</p>
+<p>但是我们先只讲一下静态数组。所谓静态，其实是指数组的大小在 <strong>编译</strong> 时是确定的（啊？我怎么知道编译时什么是常量），你可以简单理解为 <strong>常量</strong>，例如宏定义的量（<code>#define len 10</code>）、<code>const</code>修饰的 <strong>整型</strong> 变量（<code>const int,const  short, const long, const unsigned, const char, const size_t, const uint...</code>）、字面整型值（<code>1,10,100...</code>），<strong>一旦定义的时候指定数组大小，后续使用都不得更改</strong>。静态数组的定义和初始化：<code>int a[10] = &#123; 0 &#125;;</code>。数组的使用：<code>a[idx]</code>，其中<code>idx</code>是下标值，范围是<code>0 ~ (length - 1)</code>。</p>
+<p>讲这些其实没有意思，但不妨来讨论 <strong>二维数组</strong>、<strong>字符数组</strong></p>
+<ul>
+<li><strong>二维数组</strong>：本质是指针的数组，定义的时候 <strong>最好</strong> 把两个维度大小都指定好，并且初始化时可以使用 <strong>二重循环</strong> 进行初始化</li>
+<li><strong>字符数组</strong>：可以使用头文件 <code>string</code> 中的内置函数进行操作，它的初始化可以直接用字符串进行初始化，！！注意！！我们暂时<strong>不允许使用</strong> <code>string</code> 类型</li>
+</ul>
+<p><strong>关于缺省定义</strong>（灰色中括号内部为代码提示，可以忽略）</p>
+<p><img src="/cpp-2023-lecture-notes/2024/01/08/Notes/summary/1704715511118.png" alt="缺省定义"></p>
+<p><strong>关于字符数组初始化</strong></p>
+<p><img src="/cpp-2023-lecture-notes/2024/01/08/Notes/summary/1704715774813.png" alt="字符数组初始胡"></p>
+<p>你需要掌握：</p>
+<ul>
+<li>数组如何定义，数组如何传给函数，函数如何返回数组</li>
+<li>在函数内修改数组元素的值，函数返回后会不会改变该数组</li>
+<li>编程时要注意检查数组下标是否溢出</li>
+<li>数组初始化</li>
+<li>字符数组初始化记得给<code>&#39;\0&#39;</code>留空间</li>
+</ul>
+<h2 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h2><p>始终记住，指针是一个变量，自己在内存中有一块地址用于存储某些值，而指针能存的值 <strong>只能是</strong> 地址。那有人就问了，<strong>指针能存自己的地址吗</strong>？<a class="link"   target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/593510473" >这个无聊且有趣的问题甚至真有探讨过<i class="fas fa-external-link-alt"></i></a></p>
+<p>在声明指针时，我们常常同时去定义这个指针：</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> val <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token operator">*</span> p_val <span class="token operator">=</span> <span class="token operator">&amp;</span>val<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>在上述代码中，我们定义了一个 **指向<code>int</code>类型的指针变量<code>p_val</code>**，它的 <strong>值</strong> 是 <code>val</code> 的地址。如果看不懂我在说什么，那…一图胜千言吧</p>
+<p><img src="/cpp-2023-lecture-notes/2024/01/08/Notes/summary/1704714262435.png" alt="指针"></p>
+<blockquote>
+<ul>
+<li>对于指针定义，我们可以这样看：把<code>int*</code>看作一个整体，表示我马上要定义一个<code>int</code>型指针，而<code>p_val</code>就是这个指针的名字，又从指针内存的值的类型而言，应该赋值为一个地址<code>&amp;val</code>，其中<code>&amp;</code>用于 <strong>取地址</strong></li>
+<li>对于<strong>指针指向的值</strong>的使用，我们经常会这样用：<code>*p_val = something</code>。于是我们对 <strong>定义</strong> 可以解读为 <code>int</code> 型变量 <code>*p_val</code>，而 <strong>在使用中</strong>，<code>*p_val</code>确实是<code>int</code>型的，其中<code>*</code>用于 <strong>解引用</strong></li>
+</ul>
+</blockquote>
+<p>你需要掌握：</p>
+<ul>
+<li>指针如何初始化，比如<code>NULL</code>或者<code>nullptr</code>，避免指针成为野指针</li>
+<li>指针如何传递给函数，函数如何返回指针</li>
+<li>指针和引用的区别是什么</li>
+<li>引用如何传递给函数，函数如何返回引用</li>
+<li>引用有哪些作用</li>
+<li>指针如何动态分配内存，又如何销毁内存</li>
+</ul>
+<h3 id="动态内存分配"><a href="#动态内存分配" class="headerlink" title="动态内存分配"></a>动态内存分配</h3><p>在C++中，我们使用<code>new</code>保留字来 <strong>分配内存</strong>，一般这样使用：</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token operator">*</span>p1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token operator">*</span>p2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>也就是其返回的是 <strong>指向被分配的内存的地址</strong>，因此要用指针变量来接收这个表达式的返回值。除此之外，内存大小其实由 <strong>数据类型</strong> 和 <strong>数据的个数</strong> 决定，因此在 <code>new</code> 的后面需要告诉你的程序要分配多大的内存。<br>值得注意的是，这个分配过程是 <strong>动态</strong> 的，也就是说在程序运行时，无需保证分配的内存大小是编译时常量，可以 <strong>动态</strong> 指定。</p>
+<p>当然，在这块内存没有利用价值的时候，可以进行 <code>delete</code> 来标记这块内存再也不用了。语法是</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">delete</span> p1<span class="token punctuation">;</span>
+<span class="token keyword">delete</span><span class="token punctuation">[</span><span class="token punctuation">]</span> p2<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p><strong>注意</strong>：很多同学会用这种方式拿到的指针作为数组使用，务必要进行 <strong>初始化</strong>。刚开辟出来的内存毕竟是一块蛮荒之地，需要你带过去文明的火种。</p>
+</blockquote>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p>在这里推荐一个比较适合复习的网站：<a class="link"   target="_blank" rel="noopener" href="https://www.runoob.com/cplusplus/cpp-tutorial.html" >C++教程<i class="fas fa-external-link-alt"></i></a>，里面有很多例子。</p>
+<h3 id="结构体-struct"><a href="#结构体-struct" class="headerlink" title="结构体 struct"></a>结构体 struct</h3><p>类型的集合，自己本身也是类型。</p>
+<blockquote>
+<p><strong>注意</strong>：C++不能直接输出结构体，C++如果要输出结构体必须 <strong>重载</strong> 流运算符（啊？）当然我并没有阻止大家定义一个专门用于结构体输出的函数</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">MyStruct</span><span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> data1<span class="token punctuation">;</span>
+  <span class="token keyword">char</span> data2<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 用于输出结构体的函数</span>
+  <span class="token keyword">void</span> <span class="token function">print_struct</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    cout <span class="token operator">&lt;&lt;</span> data1 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      cout <span class="token operator">&lt;&lt;</span> data2<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    cout <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>调用的时候：<code>MyStruct ms; ms.print_struct();</code>即可。其中运算符<code>.</code>表示的 <strong>访问成员函数</strong>，如果后面跟的是<code>struct</code>内的变量，也表示 <strong>访问成员变量</strong></p>
+</blockquote>
+<h3 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h3><ul>
+<li>如果数组在定义时没有一次性赋值，那么后续想要 <strong>对整个数组</strong> 赋值，需要使用循环，<strong>包括字符数组</strong></li>
+<li>结构体<code>struct</code>类型……最好单个属性赋值（等了解多了以后再进行一次性赋值）</li>
+</ul>
+<h3 id="IO操作"><a href="#IO操作" class="headerlink" title="IO操作"></a>IO操作</h3><p>不会有人还不会输入输出吧…</p>
+<h3 id="随机初始化"><a href="#随机初始化" class="headerlink" title="随机初始化"></a>随机初始化</h3><p>如何使用C++进行随机初始化</p>
+
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="article-nav">
+                        
+                            <div class="article-prev">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/cpp-2023-lecture-notes/2024/01/08/Homework/task11/"
+                                   title="Homework | 第十一次作业解答"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                      <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                            <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Homework | 第十一次作业解答</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="/cpp-2023-lecture-notes/2023/12/06/Homework/task9/"
+                                   title="Homework | 第九次作业解答"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Homework | 第九次作业解答</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E5%86%85%E5%AD%98%E3%80%81%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">程序、编译、内存、基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F"><span class="nav-text">程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%AF%91"><span class="nav-text">编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%AD%98"><span class="nav-text">内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">基本数据类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5"><span class="nav-text">控制流语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5"><span class="nav-text">条件语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="nav-text">循环语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-text">变量的作用域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%93%E7%90%86%E6%88%91%E9%83%BD%E6%87%82%EF%BC%8C%E4%BD%86%E5%87%BD%E6%95%B0%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">道理我都懂，但函数到底是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%87%E6%80%AA%E7%9A%84%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8%E5%92%8C%E8%BF%94%E5%9B%9E%E5%80%BC%E2%80%94%E2%80%94%E5%BC%95%E7%94%A8"><span class="nav-text">奇怪的参数列表和返回值——引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%92%E5%BD%92"><span class="nav-text">递归</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-text">数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-text">指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="nav-text">动态内存分配</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E5%AE%83"><span class="nav-text">其它</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93-struct"><span class="nav-text">结构体 struct</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC"><span class="nav-text">赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IO%E6%93%8D%E4%BD%9C"><span class="nav-text">IO操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-text">随机初始化</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2023</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Andrew-Rey</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E5%86%85%E5%AD%98%E3%80%81%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">程序、编译、内存、基本数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F"><span class="nav-text">程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%AF%91"><span class="nav-text">编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%85%E5%AD%98"><span class="nav-text">内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">基本数据类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5"><span class="nav-text">控制流语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5"><span class="nav-text">条件语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="nav-text">循环语句</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-text">变量的作用域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%81%93%E7%90%86%E6%88%91%E9%83%BD%E6%87%82%EF%BC%8C%E4%BD%86%E5%87%BD%E6%95%B0%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text">道理我都懂，但函数到底是什么</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A5%87%E6%80%AA%E7%9A%84%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8%E5%92%8C%E8%BF%94%E5%9B%9E%E5%80%BC%E2%80%94%E2%80%94%E5%BC%95%E7%94%A8"><span class="nav-text">奇怪的参数列表和返回值——引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%92%E5%BD%92"><span class="nav-text">递归</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-text">数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%87%E9%92%88"><span class="nav-text">指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="nav-text">动态内存分配</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B6%E5%AE%83"><span class="nav-text">其它</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93-struct"><span class="nav-text">结构体 struct</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B5%8B%E5%80%BC"><span class="nav-text">赋值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IO%E6%93%8D%E4%BD%9C"><span class="nav-text">IO操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-text">随机初始化</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/cpp-2023-lecture-notes/js/utils.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/header-shrink.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/back2top.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/dark-light-toggle.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/main.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- code-block -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/cpp-2023-lecture-notes/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/cpp-2023-lecture-notes/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
