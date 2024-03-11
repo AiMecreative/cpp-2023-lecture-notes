@@ -82,7 +82,7 @@
                             <a class=""
                                href="/cpp-2023-lecture-notes/"
                             >
-                                首頁
+                                HOME
                             </a>
                         </li>
                     
@@ -90,7 +90,7 @@
                             <a class=""
                                href="/cpp-2023-lecture-notes/archives"
                             >
-                                歸檔
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -127,12 +127,12 @@
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/cpp-2023-lecture-notes/">首頁</a>
+                       href="/cpp-2023-lecture-notes/">HOME</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/cpp-2023-lecture-notes/archives">歸檔</a>
+                       href="/cpp-2023-lecture-notes/archives">ARCHIVES</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
@@ -204,7 +204,7 @@
 
             <span class="meta-info-item article-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Mon Mar 11 2024 17:21:14 GMT+0800">2024-03-11 17:21:14</span>
+                <span class="pc" data-updated="Mon Mar 11 2024 17:27:36 GMT+0800">2024-03-11 17:27:36</span>
             </span>
         
 
@@ -238,9 +238,10 @@
                 <div class="article-content keep-markdown-body">
                     
 
-                    <span id="more"></span>
+                    <p>春季学期第一周作业答案，反馈已经发送。本次作业需要主要关注类及其构造函数、成员函数的定义和使用，其中第二题的矩形初始化需要注意题意为初始化对角线顶点坐标</p>
+<span id="more"></span>
 
-<h1 id="question-0"><a href="#question-0" class="headerlink" title="question 0"></a>question 0</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;**
+<h1 id="question-0"><a href="#question-0" class="headerlink" title="question 0"></a>question 0</h1><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
  * 题目1：试建立一个类 Student 用于描述学生信息，具体要求如下：
  *         私有数据成员
  *                 int id: 学生学号。  char name[20]。姓名
@@ -255,98 +256,98 @@
  * 主函数可以这样测试定义类
  * int main(void)
  * &#123;
- *      Student stu1(61101, “wang M”,&#39;E&#39;,86),  stu2(61102, “Li M”,&#39;D&#39;,82), stu3;
+ *      Student stu1(61101, “wang M”,'E',86),  stu2(61102, “Li M”,'D',82), stu3;
  *      stu3.set(61103, “zhang M”,‘A’, 90);
  *      stu1.Print();
  *      stu2.Print();
  *      stu3.Print();
  *      return 0;
  * &#125;
- *&#x2F;
+ */</span>
 
-#include &lt;cassert&gt;
-#include &lt;cstring&gt;
-#include &lt;iostream&gt;
-#include &lt;string.h&gt;
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cassert></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstring></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h></span></span>
 
-using namespace std;
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
-&#x2F;&#x2F; 使用全局常量定义名字的长度
-const size_t name_length &#x3D; 20;
+<span class="token comment">// 使用全局常量定义名字的长度</span>
+<span class="token keyword">const</span> size_t name_length <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
 
-&#x2F;&#x2F; 助教编码风格，类名大驼峰命名
-class Student &#123;
-  &#x2F;&#x2F; 定义私有成员变量
-  &#x2F;&#x2F; 助教编码风格是在私有成员前加下划线
-private:
-  int _id;
-  char _name[20];
-  char _chiese; &#x2F;&#x2F; A,B,C,D,E
-  double _math; &#x2F;&#x2F; 0-100
+<span class="token comment">// 助教编码风格，类名大驼峰命名</span>
+<span class="token keyword">class</span> <span class="token class-name">Student</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">// 定义私有成员变量</span>
+  <span class="token comment">// 助教编码风格是在私有成员前加下划线</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+  <span class="token keyword">int</span> _id<span class="token punctuation">;</span>
+  <span class="token keyword">char</span> _name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">char</span> _chiese<span class="token punctuation">;</span> <span class="token comment">// A,B,C,D,E</span>
+  <span class="token keyword">double</span> _math<span class="token punctuation">;</span> <span class="token comment">// 0-100</span>
 
-public:
-  &#x2F;&#x2F; 默认构造（或称为无参构造）
-  &#x2F;&#x2F; 另一种写法是
-  &#x2F;&#x2F; Student() &#x3D; default;
-  Student() &#123;
-    &#x2F;&#x2F; 事实上使用负数初始化更好，可以分辨数据的合理性
-    &#x2F;&#x2F; 例如一名同学的数学成绩是0分，或者学号是0，用负数初始化后可以区分该同学的数据是否已经赋值
-    _id &#x3D; -1;
-    for (unsigned _ &#x3D; 0; _ &lt; name_length; _ +&#x3D; 1) &#123;
-      _name[_] &#x3D; &#39;\0&#39;;
-    &#125;
-    _chiese &#x3D; &#39;\0&#39;;
-    _math &#x3D; -1;
-  &#125;
+<span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token comment">// 默认构造（或称为无参构造）</span>
+  <span class="token comment">// 另一种写法是</span>
+  <span class="token comment">// Student() = default;</span>
+  <span class="token function">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 事实上使用负数初始化更好，可以分辨数据的合理性</span>
+    <span class="token comment">// 例如一名同学的数学成绩是0分，或者学号是0，用负数初始化后可以区分该同学的数据是否已经赋值</span>
+    _id <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">unsigned</span> _ <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> _ <span class="token operator">&lt;</span> name_length<span class="token punctuation">;</span> _ <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      _name<span class="token punctuation">[</span>_<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token char">'\0'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    _chiese <span class="token operator">=</span> <span class="token char">'\0'</span><span class="token punctuation">;</span>
+    _math <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-  Student(int id, const char *name, char chiese, double math) &#123;
-    &#x2F;&#x2F; 由于是数据与学生相关，要在函数体内进行数据合法性验证
-    &#x2F;&#x2F; 使用assert断言
-    assert(id &gt;&#x3D; 0 &amp;&amp; strlen(name) &lt;&#x3D; name_length &amp;&amp; &#39;A&#39; &lt;&#x3D; chiese &amp;&amp;
-           chiese &lt;&#x3D; &#39;E&#39; &amp;&amp; 0 &lt;&#x3D; math &amp;&amp; math &lt;&#x3D; 100);
-    _id &#x3D; id;
-    strcpy_s(_name, name);
-    _chiese &#x3D; chiese;
-    _math &#x3D; math;
-  &#125;
+  <span class="token function">Student</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>name<span class="token punctuation">,</span> <span class="token keyword">char</span> chiese<span class="token punctuation">,</span> <span class="token keyword">double</span> math<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 由于是数据与学生相关，要在函数体内进行数据合法性验证</span>
+    <span class="token comment">// 使用assert断言</span>
+    <span class="token function">assert</span><span class="token punctuation">(</span>id <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token function">strlen</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> name_length <span class="token operator">&amp;&amp;</span> <span class="token char">'A'</span> <span class="token operator">&lt;=</span> chiese <span class="token operator">&amp;&amp;</span>
+           chiese <span class="token operator">&lt;=</span> <span class="token char">'E'</span> <span class="token operator">&amp;&amp;</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> math <span class="token operator">&amp;&amp;</span> math <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+    <span class="token function">strcpy_s</span><span class="token punctuation">(</span>_name<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _chiese <span class="token operator">=</span> chiese<span class="token punctuation">;</span>
+    _math <span class="token operator">=</span> math<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-  void set(int id, const char *name, char chiese, double math) &#123;
-    &#x2F;&#x2F; 注意检查数据的合理性
-    &#x2F;&#x2F; 使用assert断言
-    assert(id &gt;&#x3D; 0 &amp;&amp; strlen(name) &lt;&#x3D; name_length &amp;&amp; &#39;A&#39; &lt;&#x3D; chiese &amp;&amp;
-           chiese &lt;&#x3D; &#39;E&#39; &amp;&amp; 0 &lt;&#x3D; math &amp;&amp; math &lt;&#x3D; 100);
-    _id &#x3D; id;
-    strcpy_s(_name, name);
-    _chiese &#x3D; chiese;
-    _math &#x3D; math;
-  &#125;
+  <span class="token keyword">void</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword">int</span> id<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span> <span class="token operator">*</span>name<span class="token punctuation">,</span> <span class="token keyword">char</span> chiese<span class="token punctuation">,</span> <span class="token keyword">double</span> math<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 注意检查数据的合理性</span>
+    <span class="token comment">// 使用assert断言</span>
+    <span class="token function">assert</span><span class="token punctuation">(</span>id <span class="token operator">>=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token function">strlen</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token operator">&lt;=</span> name_length <span class="token operator">&amp;&amp;</span> <span class="token char">'A'</span> <span class="token operator">&lt;=</span> chiese <span class="token operator">&amp;&amp;</span>
+           chiese <span class="token operator">&lt;=</span> <span class="token char">'E'</span> <span class="token operator">&amp;&amp;</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> math <span class="token operator">&amp;&amp;</span> math <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _id <span class="token operator">=</span> id<span class="token punctuation">;</span>
+    <span class="token function">strcpy_s</span><span class="token punctuation">(</span>_name<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _chiese <span class="token operator">=</span> chiese<span class="token punctuation">;</span>
+    _math <span class="token operator">=</span> math<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-  &#x2F;&#x2F; 助教编码风格，公有成员函数名小驼峰命名
-  void print() &#123;
-    cout &lt;&lt; &quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;Student&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot; &lt;&lt; endl;
-    cout &lt;&lt; &quot;student id: &quot; &lt;&lt; _id &lt;&lt; endl;
-    cout &lt;&lt; &quot;student Chinese score: &quot; &lt;&lt; _chiese &lt;&lt; endl;
-    cout &lt;&lt; &quot;student Math score: &quot; &lt;&lt; _math &lt;&lt; endl;
-    cout &lt;&lt; &quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot; &lt;&lt; endl;
-  &#125;
-&#125;;
+  <span class="token comment">// 助教编码风格，公有成员函数名小驼峰命名</span>
+  <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"========Student========"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"student id: "</span> <span class="token operator">&lt;&lt;</span> _id <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"student Chinese score: "</span> <span class="token operator">&lt;&lt;</span> _chiese <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"student Math score: "</span> <span class="token operator">&lt;&lt;</span> _math <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"======================="</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
 
-int main() &#123;
-  Student stu1(61101, &quot;wang M&quot;, &#39;E&#39;, 86);
-  Student stu2(61102, &quot;Li M&quot;, &#39;D&#39;, 82);
-  Student stu3;
-  stu3.set(61103, &quot;zhang M&quot;, &#39;A&#39;, 90);
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  Student <span class="token function">stu1</span><span class="token punctuation">(</span><span class="token number">61101</span><span class="token punctuation">,</span> <span class="token string">"wang M"</span><span class="token punctuation">,</span> <span class="token char">'E'</span><span class="token punctuation">,</span> <span class="token number">86</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Student <span class="token function">stu2</span><span class="token punctuation">(</span><span class="token number">61102</span><span class="token punctuation">,</span> <span class="token string">"Li M"</span><span class="token punctuation">,</span> <span class="token char">'D'</span><span class="token punctuation">,</span> <span class="token number">82</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Student stu3<span class="token punctuation">;</span>
+  stu3<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token number">61103</span><span class="token punctuation">,</span> <span class="token string">"zhang M"</span><span class="token punctuation">,</span> <span class="token char">'A'</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  stu1.print();
-  stu2.print();
-  stu3.print();
+  stu1<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  stu2<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  stu3<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  return 0;
-&#125;
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-&#x2F;&#x2F; 事实上在实际项目中，学号或者编号之类的存储不用int<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">// 事实上在实际项目中，学号或者编号之类的存储不用int</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="question-1"><a href="#question-1" class="headerlink" title="question 1"></a>question 1</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;**
+<h1 id="question-1"><a href="#question-1" class="headerlink" title="question 1"></a>question 1</h1><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
  * 题目2. 课本 P151  题4.4  建立一个矩形类Rectangle
 参考的主函数测试为：
 包含测试两种构造函数，输出显示成员函数，计算面积和周长的成员函数；
@@ -358,7 +359,7 @@ int main()
         rect.Show();
         Rectangle rect1(0,200,200,0);
         rect1.Show();
-        cout&lt;&lt;&quot;面积&quot;&lt;&lt;rect.Area()&lt;&lt;&#39;\t&#39;&lt;&lt;&quot;周长&quot;&lt;&lt;rect.Perimeter()&lt;&lt;endl;
+        cout&lt;&lt;"面积"&lt;&lt;rect.Area()&lt;&lt;'\t'&lt;&lt;"周长"&lt;&lt;rect.Perimeter()&lt;&lt;endl;
         return 0;
 &#125;
 class Rectangle
@@ -367,103 +368,103 @@ class Rectangle
 public:
         Rectangle(int a,int b,int c,int d)
         &#123;
-                x1 &#x3D; a; y1 &#x3D; b; x2 &#x3D; c; y2 &#x3D; d;
+                x1 = a; y1 = b; x2 = c; y2 = d;
         &#125;
         Rectangle()
         &#123;
-                x1 &#x3D; 0; y1 &#x3D; 0; x2 &#x3D; 0; y2 &#x3D; 0;
+                x1 = 0; y1 = 0; x2 = 0; y2 = 0;
         &#125;
              ……..
 
- *&#x2F;
+ */</span>
 
-#include &lt;cassert&gt;
-#include &lt;cmath&gt;
-#include &lt;corecrt_math.h&gt;
-#include &lt;iostream&gt;
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cassert></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cmath></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;corecrt_math.h></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 
-using namespace std;
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
-&#x2F;&#x2F; 值得注意的是，该矩形是轴平行矩形
-class Rectangle &#123;
+<span class="token comment">// 值得注意的是，该矩形是轴平行矩形</span>
+<span class="token keyword">class</span> <span class="token class-name">Rectangle</span> <span class="token punctuation">&#123;</span>
 
-private:
-  &#x2F;&#x2F; 定义矩形的对角线坐标
-  double _x1;
-  double _y1;
-  double _x2;
-  double _y2;
+<span class="token keyword">private</span><span class="token operator">:</span>
+  <span class="token comment">// 定义矩形的对角线坐标</span>
+  <span class="token keyword">double</span> _x1<span class="token punctuation">;</span>
+  <span class="token keyword">double</span> _y1<span class="token punctuation">;</span>
+  <span class="token keyword">double</span> _x2<span class="token punctuation">;</span>
+  <span class="token keyword">double</span> _y2<span class="token punctuation">;</span>
 
-  double _width;
-  double _height;
+  <span class="token keyword">double</span> _width<span class="token punctuation">;</span>
+  <span class="token keyword">double</span> _height<span class="token punctuation">;</span>
 
-public:
-  &#x2F;&#x2F; 由于都是数据，可以直接用初始化列表
-  Rectangle() : _x1(0.), _y1(0.), _x2(0.), _y2(0.), _width(0.), _height(0.) &#123;&#125;
-  Rectangle(double x1, double y1, double x2, double y2) &#123;
-    &#x2F;&#x2F; 对参数进行检查，可以使用assert，具体用法可以自行查找
-    &#x2F;&#x2F; 翻译就是：断言宽高都大于0，否则抛出异常
-    assert(x1 !&#x3D; x2 &amp;&amp; y1 !&#x3D; y2);
-    _x1 &#x3D; x1;
-    _y1 &#x3D; y1;
-    _x2 &#x3D; x2;
-    _y2 &#x3D; y2;
-    _width &#x3D; fabs(_x1 - _x2);
-    _height &#x3D; fabs(_y1 - _y2);
-  &#125;
+<span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token comment">// 由于都是数据，可以直接用初始化列表</span>
+  <span class="token function">Rectangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">_x1</span><span class="token punctuation">(</span><span class="token number">0.</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_y1</span><span class="token punctuation">(</span><span class="token number">0.</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_x2</span><span class="token punctuation">(</span><span class="token number">0.</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_y2</span><span class="token punctuation">(</span><span class="token number">0.</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_width</span><span class="token punctuation">(</span><span class="token number">0.</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_height</span><span class="token punctuation">(</span><span class="token number">0.</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+  <span class="token function">Rectangle</span><span class="token punctuation">(</span><span class="token keyword">double</span> x1<span class="token punctuation">,</span> <span class="token keyword">double</span> y1<span class="token punctuation">,</span> <span class="token keyword">double</span> x2<span class="token punctuation">,</span> <span class="token keyword">double</span> y2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 对参数进行检查，可以使用assert，具体用法可以自行查找</span>
+    <span class="token comment">// 翻译就是：断言宽高都大于0，否则抛出异常</span>
+    <span class="token function">assert</span><span class="token punctuation">(</span>x1 <span class="token operator">!=</span> x2 <span class="token operator">&amp;&amp;</span> y1 <span class="token operator">!=</span> y2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _x1 <span class="token operator">=</span> x1<span class="token punctuation">;</span>
+    _y1 <span class="token operator">=</span> y1<span class="token punctuation">;</span>
+    _x2 <span class="token operator">=</span> x2<span class="token punctuation">;</span>
+    _y2 <span class="token operator">=</span> y2<span class="token punctuation">;</span>
+    _width <span class="token operator">=</span> <span class="token function">fabs</span><span class="token punctuation">(</span>_x1 <span class="token operator">-</span> _x2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _height <span class="token operator">=</span> <span class="token function">fabs</span><span class="token punctuation">(</span>_y1 <span class="token operator">-</span> _y2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-  &#x2F;&#x2F; 下面函数的const可以省略
-  double perimeter() const &#123; return 2. * (_width + _height); &#125;
-  double area() const &#123; return _width * _height; &#125;
-  void set(double x1, double y1, double x2, double y2) &#123;
-    assert(x1 !&#x3D; x2 &amp;&amp; y1 !&#x3D; y2);
-    _x1 &#x3D; x1;
-    _y1 &#x3D; y1;
-    _x2 &#x3D; x2;
-    _y2 &#x3D; y2;
-    _width &#x3D; fabs(_x1 - _x2);
-    _height &#x3D; fabs(_y1 - _y2);
-  &#125;
-  void show() &#123;
-    cout &lt;&lt; &quot;rectangle corners: &quot;;
-    cout &lt;&lt; &quot;Point(&quot; &lt;&lt; _x1 &lt;&lt; &quot;, &quot; &lt;&lt; _y1 &lt;&lt; &quot;), &quot;;
-    cout &lt;&lt; &quot;Point(&quot; &lt;&lt; _x2 &lt;&lt; &quot;, &quot; &lt;&lt; _y2 &lt;&lt; &quot;)&quot; &lt;&lt; endl;
-  &#125;
-&#125;;
+  <span class="token comment">// 下面函数的const可以省略</span>
+  <span class="token keyword">double</span> <span class="token function">perimeter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> <span class="token keyword">return</span> <span class="token number">2.</span> <span class="token operator">*</span> <span class="token punctuation">(</span>_width <span class="token operator">+</span> _height<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+  <span class="token keyword">double</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> <span class="token keyword">return</span> _width <span class="token operator">*</span> _height<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+  <span class="token keyword">void</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token keyword">double</span> x1<span class="token punctuation">,</span> <span class="token keyword">double</span> y1<span class="token punctuation">,</span> <span class="token keyword">double</span> x2<span class="token punctuation">,</span> <span class="token keyword">double</span> y2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">assert</span><span class="token punctuation">(</span>x1 <span class="token operator">!=</span> x2 <span class="token operator">&amp;&amp;</span> y1 <span class="token operator">!=</span> y2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _x1 <span class="token operator">=</span> x1<span class="token punctuation">;</span>
+    _y1 <span class="token operator">=</span> y1<span class="token punctuation">;</span>
+    _x2 <span class="token operator">=</span> x2<span class="token punctuation">;</span>
+    _y2 <span class="token operator">=</span> y2<span class="token punctuation">;</span>
+    _width <span class="token operator">=</span> <span class="token function">fabs</span><span class="token punctuation">(</span>_x1 <span class="token operator">-</span> _x2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _height <span class="token operator">=</span> <span class="token function">fabs</span><span class="token punctuation">(</span>_y1 <span class="token operator">-</span> _y2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"rectangle corners: "</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Point("</span> <span class="token operator">&lt;&lt;</span> _x1 <span class="token operator">&lt;&lt;</span> <span class="token string">", "</span> <span class="token operator">&lt;&lt;</span> _y1 <span class="token operator">&lt;&lt;</span> <span class="token string">"), "</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Point("</span> <span class="token operator">&lt;&lt;</span> _x2 <span class="token operator">&lt;&lt;</span> <span class="token string">", "</span> <span class="token operator">&lt;&lt;</span> _y2 <span class="token operator">&lt;&lt;</span> <span class="token string">")"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
 
-int main() &#123;
-  Rectangle rect1;
-  rect1.show();
-  rect1.set(100, 400, 300, 200);
-  rect1.show();
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  Rectangle rect1<span class="token punctuation">;</span>
+  rect1<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  rect1<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  rect1<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  Rectangle rect2(0, 200, 200, 0);
-  rect2.show();
-  cout &lt;&lt; &quot;area of rect2: &quot; &lt;&lt; rect2.area() &lt;&lt; endl;
-  cout &lt;&lt; &quot;perimeter of rect2: &quot; &lt;&lt; rect2.perimeter() &lt;&lt; endl;
+  Rectangle <span class="token function">rect2</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  rect2<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"area of rect2: "</span> <span class="token operator">&lt;&lt;</span> rect2<span class="token punctuation">.</span><span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"perimeter of rect2: "</span> <span class="token operator">&lt;&lt;</span> rect2<span class="token punctuation">.</span><span class="token function">perimeter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
 
-  return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h1 id="question-2"><a href="#question-2" class="headerlink" title="question 2"></a>question 2</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">
-&#x2F;**
+<h1 id="question-2"><a href="#question-2" class="headerlink" title="question 2"></a>question 2</h1><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">
+<span class="token comment">/**
  * 题目3  补充完整建立一个分数类。
 (1)增加复制构造函数，完成对象的复制，并在主程序中测试;
 (2) 实现加法add功能，减法subtract 功能，并测试；
 (3) 增加判断和另外一个分数是否相等 IsEqual的功能，并测试；
 class fraction
-&#123;	int above;  &#x2F;&#x2F;分子
-        int below;  &#x2F;&#x2F;分母
-        void reduction();  &#x2F;&#x2F;约分
-               fraction makecommond(fraction b);  &#x2F;&#x2F;通分
+&#123;	int above;  //分子
+        int below;  //分母
+        void reduction();  //约分
+               fraction makecommond(fraction b);  //通分
 public:
-        fraction(int &#x3D;0,int &#x3D;1);    &#x2F;&#x2F;构造函数
-        &#x2F;&#x2F;加法
-               &#x2F;&#x2F; 减法
-        void display();&#x2F;&#x2F;显示
-        void input();&#x2F;&#x2F;输入
+        fraction(int =0,int =1);    //构造函数
+        //加法
+               // 减法
+        void display();//显示
+        void input();//输入
 
-   &#x2F;&#x2F; 按照要求添加函数
+   // 按照要求添加函数
 &#125;;
 int main()
 &#123;
@@ -471,10 +472,10 @@ int main()
      a.display();
      b.display();
 
-     c&#x3D;a.add(b);
+     c=a.add(b);
      c.display();
 
-     c&#x3D;b.substract(a);
+     c=b.substract(a);
      c.display();
 
      if(a.IsEqual(b))
@@ -483,131 +484,131 @@ int main()
              cout&lt;&lt;“不等”;
      return 0;
 &#125;
- *&#x2F;
+ */</span>
 
-#include &lt;algorithm&gt;
-#include &lt;iostream&gt;
-using namespace std;
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;algorithm></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 
-class Fraction &#123;
-private:
-  int _above;
-  int _below;
+<span class="token keyword">class</span> <span class="token class-name">Fraction</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+  <span class="token keyword">int</span> _above<span class="token punctuation">;</span>
+  <span class="token keyword">int</span> _below<span class="token punctuation">;</span>
 
-  &#x2F;&#x2F; 最大公约数
-  int _gcd(int a, int b) &#123;
-    for (int g &#x3D; min(a, b); g &gt; 0; g -&#x3D; 1) &#123;
-      if (a % g &#x3D;&#x3D; 0 &amp;&amp; b % g &#x3D;&#x3D; 0) &#123;
-        return g;
-      &#125;
-    &#125;
-    return -1;
-  &#125;
+  <span class="token comment">// 最大公约数</span>
+  <span class="token keyword">int</span> <span class="token function">_gcd</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> g <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> g <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span> g <span class="token operator">-=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">%</span> g <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> b <span class="token operator">%</span> g <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> g<span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-  &#x2F;&#x2F; 最小公倍数
-  int _lcm(int a, int b) &#123;
-    for (int l &#x3D; max(a, b); l &lt;&#x3D; a * b; l +&#x3D; 1) &#123;
-      if (l % a &#x3D;&#x3D; 0 &amp;&amp; l % b &#x3D;&#x3D; 0) &#123;
-        return l;
-      &#125;
-    &#125;
-    return -1;
-  &#125;
+  <span class="token comment">// 最小公倍数</span>
+  <span class="token keyword">int</span> <span class="token function">_lcm</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> l <span class="token operator">&lt;=</span> a <span class="token operator">*</span> b<span class="token punctuation">;</span> l <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>l <span class="token operator">%</span> a <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> l <span class="token operator">%</span> b <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> l<span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
 
-public:
-  &#x2F;&#x2F; 默认构造
-  Fraction() : _above(0), _below(0) &#123;&#125;
-  &#x2F;&#x2F; 有参构造
-  Fraction(int above, int below) : _above(above), _below(below) &#123;&#125;
-  &#x2F;&#x2F; 拷贝构造
-  Fraction(Fraction &amp;other) : _above(other._above), _below(other._below) &#123;&#125;
+<span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token comment">// 默认构造</span>
+  <span class="token function">Fraction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">_above</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_below</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+  <span class="token comment">// 有参构造</span>
+  <span class="token function">Fraction</span><span class="token punctuation">(</span><span class="token keyword">int</span> above<span class="token punctuation">,</span> <span class="token keyword">int</span> below<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">_above</span><span class="token punctuation">(</span>above<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_below</span><span class="token punctuation">(</span>below<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+  <span class="token comment">// 拷贝构造</span>
+  <span class="token function">Fraction</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">_above</span><span class="token punctuation">(</span>other<span class="token punctuation">.</span>_above<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_below</span><span class="token punctuation">(</span>other<span class="token punctuation">.</span>_below<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
 
-  &#x2F;&#x2F; !注意这里把约分和通分作为公有函数接口，更加合理
+  <span class="token comment">// !注意这里把约分和通分作为公有函数接口，更加合理</span>
 
-  &#x2F;&#x2F; 约分
-  void reduction();
+  <span class="token comment">// 约分</span>
+  <span class="token keyword">void</span> <span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  &#x2F;&#x2F; 通分
-  &#x2F;&#x2F; !注意这里与题目要求不一致但更加合理
-  &#x2F;&#x2F; !通分是本对象与另一个分数通分，但不改变另一个分数的分子分母，只改变自身，因此也没有必要有返回值
-  void common(const Fraction &amp;other);
+  <span class="token comment">// 通分</span>
+  <span class="token comment">// !注意这里与题目要求不一致但更加合理</span>
+  <span class="token comment">// !通分是本对象与另一个分数通分，但不改变另一个分数的分子分母，只改变自身，因此也没有必要有返回值</span>
+  <span class="token keyword">void</span> <span class="token function">common</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  Fraction add(Fraction &amp;other);
-  Fraction minus(Fraction &amp;other);
+  Fraction <span class="token function">add</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Fraction <span class="token function">minus</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  bool isEqual(Fraction &amp;other);
+  <span class="token keyword">bool</span> <span class="token function">isEqual</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  void input();
-  void display();
-&#125;;
+  <span class="token keyword">void</span> <span class="token function">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">void</span> <span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
 
-void Fraction::reduction() &#123;
-  int gcd &#x3D; this-&gt;_gcd(_above, _below);
-  _above &#x2F;&#x3D; gcd;
-  _below &#x2F;&#x3D; gcd;
-&#125;
+<span class="token keyword">void</span> <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> gcd <span class="token operator">=</span> <span class="token keyword">this</span><span class="token operator">-></span><span class="token function">_gcd</span><span class="token punctuation">(</span>_above<span class="token punctuation">,</span> _below<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  _above <span class="token operator">/=</span> gcd<span class="token punctuation">;</span>
+  _below <span class="token operator">/=</span> gcd<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-void Fraction::common(const Fraction &amp;other) &#123;
-  int lcm &#x3D; this-&gt;_lcm(_below, other._below);
-  int factor &#x3D; lcm &#x2F; _below;
-  _below *&#x3D; factor;
-  _above *&#x3D; factor;
-&#125;
+<span class="token keyword">void</span> <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">common</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> lcm <span class="token operator">=</span> <span class="token keyword">this</span><span class="token operator">-></span><span class="token function">_lcm</span><span class="token punctuation">(</span>_below<span class="token punctuation">,</span> other<span class="token punctuation">.</span>_below<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> factor <span class="token operator">=</span> lcm <span class="token operator">/</span> _below<span class="token punctuation">;</span>
+  _below <span class="token operator">*=</span> factor<span class="token punctuation">;</span>
+  _above <span class="token operator">*=</span> factor<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-Fraction Fraction::add(Fraction &amp;other) &#123;
-  this-&gt;common(other);
-  other.common(*this);
+Fraction <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">add</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token operator">-></span><span class="token function">common</span><span class="token punctuation">(</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  other<span class="token punctuation">.</span><span class="token function">common</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  Fraction add_result(this-&gt;_above + other._above, this-&gt;_below);
-  add_result.reduction();
-  return add_result;
-&#125;
+  Fraction <span class="token function">add_result</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-></span>_above <span class="token operator">+</span> other<span class="token punctuation">.</span>_above<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token operator">-></span>_below<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  add_result<span class="token punctuation">.</span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> add_result<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-Fraction Fraction::minus(Fraction &amp;other) &#123;
-  this-&gt;common(other);
-  other.common(*this);
+Fraction <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">minus</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token operator">-></span><span class="token function">common</span><span class="token punctuation">(</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  other<span class="token punctuation">.</span><span class="token function">common</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  Fraction minus_result(this-&gt;_above - other._above, this-&gt;_below);
-  minus_result.reduction();
-  return minus_result;
-&#125;
+  Fraction <span class="token function">minus_result</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-></span>_above <span class="token operator">-</span> other<span class="token punctuation">.</span>_above<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token operator">-></span>_below<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  minus_result<span class="token punctuation">.</span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> minus_result<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-bool Fraction::isEqual(Fraction &amp;other) &#123;
-  this-&gt;reduction();
-  other.reduction();
-  return this-&gt;_above &#x3D;&#x3D; other._above &amp;&amp; this-&gt;_below &#x3D;&#x3D; other._below;
-&#125;
+<span class="token keyword">bool</span> <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">isEqual</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token operator">-></span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  other<span class="token punctuation">.</span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token operator">-></span>_above <span class="token operator">==</span> other<span class="token punctuation">.</span>_above <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token operator">-></span>_below <span class="token operator">==</span> other<span class="token punctuation">.</span>_below<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-void Fraction::input() &#123;
-  cout &lt;&lt; &quot;input fraction in order(above, below):&quot;;
-  cin &gt;&gt; _above;
-  cout &lt;&lt; &quot; &#x2F; &quot;;
-  cin &gt;&gt; _below;
-  reduction();
-&#125;
+<span class="token keyword">void</span> <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"input fraction in order(above, below):"</span><span class="token punctuation">;</span>
+  cin <span class="token operator">>></span> _above<span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">" / "</span><span class="token punctuation">;</span>
+  cin <span class="token operator">>></span> _below<span class="token punctuation">;</span>
+  <span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-&#x2F;&#x2F; 这里没有对输出进行格式化，会出现符号问题
-void Fraction::display() &#123;
-  reduction();
-  cout &lt;&lt; &quot;fraction: &quot; &lt;&lt; _above &lt;&lt; &quot; &#x2F; &quot; &lt;&lt; _below &lt;&lt; endl;
-&#125;
+<span class="token comment">// 这里没有对输出进行格式化，会出现符号问题</span>
+<span class="token keyword">void</span> <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"fraction: "</span> <span class="token operator">&lt;&lt;</span> _above <span class="token operator">&lt;&lt;</span> <span class="token string">" / "</span> <span class="token operator">&lt;&lt;</span> _below <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-int main() &#123;
-  Fraction a(1, 2);
-  Fraction b(5, 15);
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  Fraction <span class="token function">a</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Fraction <span class="token function">b</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  a.display();
-  b.display();
+  a<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  b<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  Fraction c;
-  c &#x3D; a.add(b);
-  c.display();
+  Fraction c<span class="token punctuation">;</span>
+  c <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  c<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  if (a.isEqual(b)) cout &lt;&lt; &quot;fraction &#96;a&#96; equals to &#96;b&#96;&quot; &lt;&lt; endl;
-  else cout &lt;&lt; &quot;fraction &#96;a&#96; not equals &#96;b&#96;&quot; &lt;&lt; endl;
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">isEqual</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> <span class="token string">"fraction `a` equals to `b`"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  <span class="token keyword">else</span> cout <span class="token operator">&lt;&lt;</span> <span class="token string">"fraction `a` not equals `b`"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
 
-  return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 </div>
 
                 
@@ -635,7 +636,7 @@ int main() &#123;
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">Homework | 第十三次作业解答</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                             <span class="right arrow-icon flex-center">
                                       <i class="fas fa-chevron-right"></i>
@@ -690,7 +691,7 @@ int main() &#123;
             </div>
 
             <div class="theme-info info-item default">
-                <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;框架&nbsp;&&nbsp;主題&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
