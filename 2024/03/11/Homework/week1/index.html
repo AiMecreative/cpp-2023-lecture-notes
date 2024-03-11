@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Andrew-Rey">
+    
+    <title>
+        
+            Homework | 第一次作业解答 |
+        
+        算法与程序设计 2023
+    </title>
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/cpp-2023-lecture-notes/images/seu-round.png">
+    
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"andrew-rey.github.io","root":"/cpp-2023-lecture-notes/","language":"zh"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"style":{"primary_color":"#0066cc","logo":"/images/seu-round.png","favicon":"/images/seu-round.png","avatar":"/images/seu-round.png","first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"SEU吴健雄学院 算法与程序设计 2023","hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false}},"post":{"author_label":{"enable":false,"auto":false,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"version":"3.8.3"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/cpp-2023-lecture-notes/images/seu-round.png">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               算法与程序设计 2023
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/"
+                            >
+                                首頁
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/archives"
+                            >
+                                歸檔
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/category/homework"
+                            >
+                                HOMEWORK
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/category/notes"
+                            >
+                                NOTES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/">首頁</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/archives">歸檔</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/category/homework">HOMEWORK</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/category/notes">NOTES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        Homework | 第一次作业解答
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/cpp-2023-lecture-notes/images/seu-round.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">Andrew-Rey</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2024-03-11 17:19:45</span>
+                <span class="mobile">2024-03-11 17:19</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Mon Mar 11 2024 17:21:14 GMT+0800">2024-03-11 17:21:14</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="article-category-ul">
+                    
+                            <li class="category-item"><a href="/cpp-2023-lecture-notes/category/Homework/">Homework</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <span id="more"></span>
+
+<h1 id="question-0"><a href="#question-0" class="headerlink" title="question 0"></a>question 0</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;**
+ * 题目1：试建立一个类 Student 用于描述学生信息，具体要求如下：
+ *         私有数据成员
+ *                 int id: 学生学号。  char name[20]。姓名
+ *                 char yuwen: 语文成绩（五级分制：A、B、C、D和E，其它无效）。
+ *                 double shuxue: 数学成绩（百分制）。
+ *         公有成员函数
+ * 1)	缺省构造函数（无参数的构造函数）：初始化数据成员为0或空值。
+ * 2)	带参构造函数：用参数初始化数据成员。
+ * 3)	void Print( ): 输出本对象的学号、语文成绩和数学成绩。
+ * 4)	修改函数void set(int ID, char nm[], char score, int ma
+ * )：从键盘输入新的学号、语文成绩和数学成绩，修改相应数据成员的值。
+ * 主函数可以这样测试定义类
+ * int main(void)
+ * &#123;
+ *      Student stu1(61101, “wang M”,&#39;E&#39;,86),  stu2(61102, “Li M”,&#39;D&#39;,82), stu3;
+ *      stu3.set(61103, “zhang M”,‘A’, 90);
+ *      stu1.Print();
+ *      stu2.Print();
+ *      stu3.Print();
+ *      return 0;
+ * &#125;
+ *&#x2F;
+
+#include &lt;cassert&gt;
+#include &lt;cstring&gt;
+#include &lt;iostream&gt;
+#include &lt;string.h&gt;
+
+using namespace std;
+
+&#x2F;&#x2F; 使用全局常量定义名字的长度
+const size_t name_length &#x3D; 20;
+
+&#x2F;&#x2F; 助教编码风格，类名大驼峰命名
+class Student &#123;
+  &#x2F;&#x2F; 定义私有成员变量
+  &#x2F;&#x2F; 助教编码风格是在私有成员前加下划线
+private:
+  int _id;
+  char _name[20];
+  char _chiese; &#x2F;&#x2F; A,B,C,D,E
+  double _math; &#x2F;&#x2F; 0-100
+
+public:
+  &#x2F;&#x2F; 默认构造（或称为无参构造）
+  &#x2F;&#x2F; 另一种写法是
+  &#x2F;&#x2F; Student() &#x3D; default;
+  Student() &#123;
+    &#x2F;&#x2F; 事实上使用负数初始化更好，可以分辨数据的合理性
+    &#x2F;&#x2F; 例如一名同学的数学成绩是0分，或者学号是0，用负数初始化后可以区分该同学的数据是否已经赋值
+    _id &#x3D; -1;
+    for (unsigned _ &#x3D; 0; _ &lt; name_length; _ +&#x3D; 1) &#123;
+      _name[_] &#x3D; &#39;\0&#39;;
+    &#125;
+    _chiese &#x3D; &#39;\0&#39;;
+    _math &#x3D; -1;
+  &#125;
+
+  Student(int id, const char *name, char chiese, double math) &#123;
+    &#x2F;&#x2F; 由于是数据与学生相关，要在函数体内进行数据合法性验证
+    &#x2F;&#x2F; 使用assert断言
+    assert(id &gt;&#x3D; 0 &amp;&amp; strlen(name) &lt;&#x3D; name_length &amp;&amp; &#39;A&#39; &lt;&#x3D; chiese &amp;&amp;
+           chiese &lt;&#x3D; &#39;E&#39; &amp;&amp; 0 &lt;&#x3D; math &amp;&amp; math &lt;&#x3D; 100);
+    _id &#x3D; id;
+    strcpy_s(_name, name);
+    _chiese &#x3D; chiese;
+    _math &#x3D; math;
+  &#125;
+
+  void set(int id, const char *name, char chiese, double math) &#123;
+    &#x2F;&#x2F; 注意检查数据的合理性
+    &#x2F;&#x2F; 使用assert断言
+    assert(id &gt;&#x3D; 0 &amp;&amp; strlen(name) &lt;&#x3D; name_length &amp;&amp; &#39;A&#39; &lt;&#x3D; chiese &amp;&amp;
+           chiese &lt;&#x3D; &#39;E&#39; &amp;&amp; 0 &lt;&#x3D; math &amp;&amp; math &lt;&#x3D; 100);
+    _id &#x3D; id;
+    strcpy_s(_name, name);
+    _chiese &#x3D; chiese;
+    _math &#x3D; math;
+  &#125;
+
+  &#x2F;&#x2F; 助教编码风格，公有成员函数名小驼峰命名
+  void print() &#123;
+    cout &lt;&lt; &quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;Student&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot; &lt;&lt; endl;
+    cout &lt;&lt; &quot;student id: &quot; &lt;&lt; _id &lt;&lt; endl;
+    cout &lt;&lt; &quot;student Chinese score: &quot; &lt;&lt; _chiese &lt;&lt; endl;
+    cout &lt;&lt; &quot;student Math score: &quot; &lt;&lt; _math &lt;&lt; endl;
+    cout &lt;&lt; &quot;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&quot; &lt;&lt; endl;
+  &#125;
+&#125;;
+
+int main() &#123;
+  Student stu1(61101, &quot;wang M&quot;, &#39;E&#39;, 86);
+  Student stu2(61102, &quot;Li M&quot;, &#39;D&#39;, 82);
+  Student stu3;
+  stu3.set(61103, &quot;zhang M&quot;, &#39;A&#39;, 90);
+
+  stu1.print();
+  stu2.print();
+  stu3.print();
+
+  return 0;
+&#125;
+
+&#x2F;&#x2F; 事实上在实际项目中，学号或者编号之类的存储不用int<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="question-1"><a href="#question-1" class="headerlink" title="question 1"></a>question 1</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;**
+ * 题目2. 课本 P151  题4.4  建立一个矩形类Rectangle
+参考的主函数测试为：
+包含测试两种构造函数，输出显示成员函数，计算面积和周长的成员函数；
+int main()
+&#123;
+        Rectangle rect;
+        rect.Show();
+        rect.set(100,400,300,200);
+        rect.Show();
+        Rectangle rect1(0,200,200,0);
+        rect1.Show();
+        cout&lt;&lt;&quot;面积&quot;&lt;&lt;rect.Area()&lt;&lt;&#39;\t&#39;&lt;&lt;&quot;周长&quot;&lt;&lt;rect.Perimeter()&lt;&lt;endl;
+        return 0;
+&#125;
+class Rectangle
+&#123;
+        int x1,y1,x2,y2;
+public:
+        Rectangle(int a,int b,int c,int d)
+        &#123;
+                x1 &#x3D; a; y1 &#x3D; b; x2 &#x3D; c; y2 &#x3D; d;
+        &#125;
+        Rectangle()
+        &#123;
+                x1 &#x3D; 0; y1 &#x3D; 0; x2 &#x3D; 0; y2 &#x3D; 0;
+        &#125;
+             ……..
+
+ *&#x2F;
+
+#include &lt;cassert&gt;
+#include &lt;cmath&gt;
+#include &lt;corecrt_math.h&gt;
+#include &lt;iostream&gt;
+
+using namespace std;
+
+&#x2F;&#x2F; 值得注意的是，该矩形是轴平行矩形
+class Rectangle &#123;
+
+private:
+  &#x2F;&#x2F; 定义矩形的对角线坐标
+  double _x1;
+  double _y1;
+  double _x2;
+  double _y2;
+
+  double _width;
+  double _height;
+
+public:
+  &#x2F;&#x2F; 由于都是数据，可以直接用初始化列表
+  Rectangle() : _x1(0.), _y1(0.), _x2(0.), _y2(0.), _width(0.), _height(0.) &#123;&#125;
+  Rectangle(double x1, double y1, double x2, double y2) &#123;
+    &#x2F;&#x2F; 对参数进行检查，可以使用assert，具体用法可以自行查找
+    &#x2F;&#x2F; 翻译就是：断言宽高都大于0，否则抛出异常
+    assert(x1 !&#x3D; x2 &amp;&amp; y1 !&#x3D; y2);
+    _x1 &#x3D; x1;
+    _y1 &#x3D; y1;
+    _x2 &#x3D; x2;
+    _y2 &#x3D; y2;
+    _width &#x3D; fabs(_x1 - _x2);
+    _height &#x3D; fabs(_y1 - _y2);
+  &#125;
+
+  &#x2F;&#x2F; 下面函数的const可以省略
+  double perimeter() const &#123; return 2. * (_width + _height); &#125;
+  double area() const &#123; return _width * _height; &#125;
+  void set(double x1, double y1, double x2, double y2) &#123;
+    assert(x1 !&#x3D; x2 &amp;&amp; y1 !&#x3D; y2);
+    _x1 &#x3D; x1;
+    _y1 &#x3D; y1;
+    _x2 &#x3D; x2;
+    _y2 &#x3D; y2;
+    _width &#x3D; fabs(_x1 - _x2);
+    _height &#x3D; fabs(_y1 - _y2);
+  &#125;
+  void show() &#123;
+    cout &lt;&lt; &quot;rectangle corners: &quot;;
+    cout &lt;&lt; &quot;Point(&quot; &lt;&lt; _x1 &lt;&lt; &quot;, &quot; &lt;&lt; _y1 &lt;&lt; &quot;), &quot;;
+    cout &lt;&lt; &quot;Point(&quot; &lt;&lt; _x2 &lt;&lt; &quot;, &quot; &lt;&lt; _y2 &lt;&lt; &quot;)&quot; &lt;&lt; endl;
+  &#125;
+&#125;;
+
+int main() &#123;
+  Rectangle rect1;
+  rect1.show();
+  rect1.set(100, 400, 300, 200);
+  rect1.show();
+
+  Rectangle rect2(0, 200, 200, 0);
+  rect2.show();
+  cout &lt;&lt; &quot;area of rect2: &quot; &lt;&lt; rect2.area() &lt;&lt; endl;
+  cout &lt;&lt; &quot;perimeter of rect2: &quot; &lt;&lt; rect2.perimeter() &lt;&lt; endl;
+
+  return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="question-2"><a href="#question-2" class="headerlink" title="question 2"></a>question 2</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">
+&#x2F;**
+ * 题目3  补充完整建立一个分数类。
+(1)增加复制构造函数，完成对象的复制，并在主程序中测试;
+(2) 实现加法add功能，减法subtract 功能，并测试；
+(3) 增加判断和另外一个分数是否相等 IsEqual的功能，并测试；
+class fraction
+&#123;	int above;  &#x2F;&#x2F;分子
+        int below;  &#x2F;&#x2F;分母
+        void reduction();  &#x2F;&#x2F;约分
+               fraction makecommond(fraction b);  &#x2F;&#x2F;通分
+public:
+        fraction(int &#x3D;0,int &#x3D;1);    &#x2F;&#x2F;构造函数
+        &#x2F;&#x2F;加法
+               &#x2F;&#x2F; 减法
+        void display();&#x2F;&#x2F;显示
+        void input();&#x2F;&#x2F;输入
+
+   &#x2F;&#x2F; 按照要求添加函数
+&#125;;
+int main()
+&#123;
+     fraction a(1,2), b(5,15), c;
+     a.display();
+     b.display();
+
+     c&#x3D;a.add(b);
+     c.display();
+
+     c&#x3D;b.substract(a);
+     c.display();
+
+     if(a.IsEqual(b))
+             cout&lt;&lt;“相等”;
+      else
+             cout&lt;&lt;“不等”;
+     return 0;
+&#125;
+ *&#x2F;
+
+#include &lt;algorithm&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+class Fraction &#123;
+private:
+  int _above;
+  int _below;
+
+  &#x2F;&#x2F; 最大公约数
+  int _gcd(int a, int b) &#123;
+    for (int g &#x3D; min(a, b); g &gt; 0; g -&#x3D; 1) &#123;
+      if (a % g &#x3D;&#x3D; 0 &amp;&amp; b % g &#x3D;&#x3D; 0) &#123;
+        return g;
+      &#125;
+    &#125;
+    return -1;
+  &#125;
+
+  &#x2F;&#x2F; 最小公倍数
+  int _lcm(int a, int b) &#123;
+    for (int l &#x3D; max(a, b); l &lt;&#x3D; a * b; l +&#x3D; 1) &#123;
+      if (l % a &#x3D;&#x3D; 0 &amp;&amp; l % b &#x3D;&#x3D; 0) &#123;
+        return l;
+      &#125;
+    &#125;
+    return -1;
+  &#125;
+
+public:
+  &#x2F;&#x2F; 默认构造
+  Fraction() : _above(0), _below(0) &#123;&#125;
+  &#x2F;&#x2F; 有参构造
+  Fraction(int above, int below) : _above(above), _below(below) &#123;&#125;
+  &#x2F;&#x2F; 拷贝构造
+  Fraction(Fraction &amp;other) : _above(other._above), _below(other._below) &#123;&#125;
+
+  &#x2F;&#x2F; !注意这里把约分和通分作为公有函数接口，更加合理
+
+  &#x2F;&#x2F; 约分
+  void reduction();
+
+  &#x2F;&#x2F; 通分
+  &#x2F;&#x2F; !注意这里与题目要求不一致但更加合理
+  &#x2F;&#x2F; !通分是本对象与另一个分数通分，但不改变另一个分数的分子分母，只改变自身，因此也没有必要有返回值
+  void common(const Fraction &amp;other);
+
+  Fraction add(Fraction &amp;other);
+  Fraction minus(Fraction &amp;other);
+
+  bool isEqual(Fraction &amp;other);
+
+  void input();
+  void display();
+&#125;;
+
+void Fraction::reduction() &#123;
+  int gcd &#x3D; this-&gt;_gcd(_above, _below);
+  _above &#x2F;&#x3D; gcd;
+  _below &#x2F;&#x3D; gcd;
+&#125;
+
+void Fraction::common(const Fraction &amp;other) &#123;
+  int lcm &#x3D; this-&gt;_lcm(_below, other._below);
+  int factor &#x3D; lcm &#x2F; _below;
+  _below *&#x3D; factor;
+  _above *&#x3D; factor;
+&#125;
+
+Fraction Fraction::add(Fraction &amp;other) &#123;
+  this-&gt;common(other);
+  other.common(*this);
+
+  Fraction add_result(this-&gt;_above + other._above, this-&gt;_below);
+  add_result.reduction();
+  return add_result;
+&#125;
+
+Fraction Fraction::minus(Fraction &amp;other) &#123;
+  this-&gt;common(other);
+  other.common(*this);
+
+  Fraction minus_result(this-&gt;_above - other._above, this-&gt;_below);
+  minus_result.reduction();
+  return minus_result;
+&#125;
+
+bool Fraction::isEqual(Fraction &amp;other) &#123;
+  this-&gt;reduction();
+  other.reduction();
+  return this-&gt;_above &#x3D;&#x3D; other._above &amp;&amp; this-&gt;_below &#x3D;&#x3D; other._below;
+&#125;
+
+void Fraction::input() &#123;
+  cout &lt;&lt; &quot;input fraction in order(above, below):&quot;;
+  cin &gt;&gt; _above;
+  cout &lt;&lt; &quot; &#x2F; &quot;;
+  cin &gt;&gt; _below;
+  reduction();
+&#125;
+
+&#x2F;&#x2F; 这里没有对输出进行格式化，会出现符号问题
+void Fraction::display() &#123;
+  reduction();
+  cout &lt;&lt; &quot;fraction: &quot; &lt;&lt; _above &lt;&lt; &quot; &#x2F; &quot; &lt;&lt; _below &lt;&lt; endl;
+&#125;
+
+int main() &#123;
+  Fraction a(1, 2);
+  Fraction b(5, 15);
+
+  a.display();
+  b.display();
+
+  Fraction c;
+  c &#x3D; a.add(b);
+  c.display();
+
+  if (a.isEqual(b)) cout &lt;&lt; &quot;fraction &#96;a&#96; equals to &#96;b&#96;&quot; &lt;&lt; endl;
+  else cout &lt;&lt; &quot;fraction &#96;a&#96; not equals &#96;b&#96;&quot; &lt;&lt; endl;
+
+  return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="article-nav">
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="/cpp-2023-lecture-notes/2024/01/08/Homework/task13/"
+                                   title="Homework | 第十三次作业解答"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Homework | 第十三次作业解答</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#question-0"><span class="nav-text">question 0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#question-1"><span class="nav-text">question 1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#question-2"><span class="nav-text">question 2</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2023</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Andrew-Rey</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;框架&nbsp;&&nbsp;主題&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#question-0"><span class="nav-text">question 0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#question-1"><span class="nav-text">question 1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#question-2"><span class="nav-text">question 2</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/cpp-2023-lecture-notes/js/utils.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/header-shrink.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/back2top.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/dark-light-toggle.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/main.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- code-block -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/cpp-2023-lecture-notes/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/cpp-2023-lecture-notes/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
