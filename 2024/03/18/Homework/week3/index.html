@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Andrew-Rey">
+    
+    <title>
+        
+            Homework | 第三次作业解答 |
+        
+        算法与程序设计 2023
+    </title>
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/cpp-2023-lecture-notes/images/seu-round.png">
+    
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/cpp-2023-lecture-notes/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"andrew-rey.github.io","root":"/cpp-2023-lecture-notes/","language":"zh"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"style":{"primary_color":"#0066cc","logo":"/images/seu-round.png","favicon":"/images/seu-round.png","avatar":"/images/seu-round.png","first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"SEU吴健雄学院 算法与程序设计 2023","hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.21"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false}},"post":{"author_label":{"enable":false,"auto":false,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null}},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"version":"3.8.3"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original article title","author":"Original article author","link":"Original article link"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/cpp-2023-lecture-notes/images/seu-round.png">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               算法与程序设计 2023
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/"
+                            >
+                                首頁
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/archives"
+                            >
+                                歸檔
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/category/homework"
+                            >
+                                HOMEWORK
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/cpp-2023-lecture-notes/category/notes"
+                            >
+                                NOTES
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/">首頁</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/archives">歸檔</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/category/homework">HOMEWORK</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/cpp-2023-lecture-notes/category/notes">NOTES</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        Homework | 第三次作业解答
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/cpp-2023-lecture-notes/images/seu-round.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">Andrew-Rey</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2024-03-18 16:36:09</span>
+                <span class="mobile">2024-03-18 16:36</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Mon Mar 18 2024 16:44:02 GMT+0800">2024-03-18 16:44:02</span>
+            </span>
+        
+
+        
+            <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="article-category-ul">
+                    
+                            <li class="category-item"><a href="/cpp-2023-lecture-notes/category/Homework/">Homework</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <p>春季学期第二次作业解答</p>
+<span id="more"></span>
+
+<h1 id="question-0"><a href="#question-0" class="headerlink" title="question 0"></a>question 0</h1><p><img src="/cpp-2023-lecture-notes/2024/03/18/Homework/week3/t0.png" alt="question0"></p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cmath></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;corecrt_math.h></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Point</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+  <span class="token keyword">int</span> _x<span class="token punctuation">;</span>
+  <span class="token keyword">int</span> _y<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token function">Point</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">_x</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_y</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+  <span class="token function">Point</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">_x</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_y</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+
+  <span class="token keyword">void</span> <span class="token function">setXy</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    _x <span class="token operator">=</span> x<span class="token punctuation">;</span>
+    _y <span class="token operator">=</span> y<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token keyword">int</span> <span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> <span class="token keyword">return</span> _x<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+  <span class="token keyword">int</span> <span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">&#123;</span> <span class="token keyword">return</span> _y<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Rectangle</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+  Point _point1<span class="token punctuation">;</span> <span class="token comment">// 左上</span>
+  Point _point2<span class="token punctuation">;</span> <span class="token comment">// 左下</span>
+  Point _point3<span class="token punctuation">;</span> <span class="token comment">// 右下</span>
+  Point _point4<span class="token punctuation">;</span> <span class="token comment">// 右上</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token function">Rectangle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+  <span class="token comment">// 注意题目中说“对象之间可以赋值”，但在规范的编程中需要重载等号</span>
+  <span class="token comment">// 因此这里使用`setXy(int, int)`</span>
+  <span class="token function">Rectangle</span><span class="token punctuation">(</span>Point point1<span class="token punctuation">,</span> Point point3<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    _point1<span class="token punctuation">.</span><span class="token function">setXy</span><span class="token punctuation">(</span>point1<span class="token punctuation">.</span><span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> point1<span class="token punctuation">.</span><span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _point2<span class="token punctuation">.</span><span class="token function">setXy</span><span class="token punctuation">(</span>point1<span class="token punctuation">.</span><span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> point3<span class="token punctuation">.</span><span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _point3<span class="token punctuation">.</span><span class="token function">setXy</span><span class="token punctuation">(</span>point3<span class="token punctuation">.</span><span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> point3<span class="token punctuation">.</span><span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _point4<span class="token punctuation">.</span><span class="token function">setXy</span><span class="token punctuation">(</span>point3<span class="token punctuation">.</span><span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> point1<span class="token punctuation">.</span><span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token function">Rectangle</span><span class="token punctuation">(</span><span class="token keyword">int</span> x1<span class="token punctuation">,</span> <span class="token keyword">int</span> y1<span class="token punctuation">,</span> <span class="token keyword">int</span> x3<span class="token punctuation">,</span> <span class="token keyword">int</span> y3<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    _point1<span class="token punctuation">.</span><span class="token function">setXy</span><span class="token punctuation">(</span>x1<span class="token punctuation">,</span> y1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _point2<span class="token punctuation">.</span><span class="token function">setXy</span><span class="token punctuation">(</span>x1<span class="token punctuation">,</span> y3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _point3<span class="token punctuation">.</span><span class="token function">setXy</span><span class="token punctuation">(</span>x3<span class="token punctuation">,</span> y3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _point4<span class="token punctuation">.</span><span class="token function">setXy</span><span class="token punctuation">(</span>x3<span class="token punctuation">,</span> y1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token keyword">int</span> <span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> h <span class="token operator">=</span> <span class="token function">abs</span><span class="token punctuation">(</span>_point1<span class="token punctuation">.</span><span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> _point2<span class="token punctuation">.</span><span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> w <span class="token operator">=</span> <span class="token function">abs</span><span class="token punctuation">(</span>_point2<span class="token punctuation">.</span><span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> _point3<span class="token punctuation">.</span><span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> h <span class="token operator">*</span> w<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token keyword">void</span> <span class="token function">printPoints</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"( "</span> <span class="token operator">&lt;&lt;</span> _point1<span class="token punctuation">.</span><span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">", "</span> <span class="token operator">&lt;&lt;</span> _point1<span class="token punctuation">.</span><span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"), "</span>
+         <span class="token operator">&lt;&lt;</span> <span class="token string">"( "</span> <span class="token operator">&lt;&lt;</span> _point4<span class="token punctuation">.</span><span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">", "</span> <span class="token operator">&lt;&lt;</span> _point4<span class="token punctuation">.</span><span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">")\n"</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"( "</span> <span class="token operator">&lt;&lt;</span> _point2<span class="token punctuation">.</span><span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">", "</span> <span class="token operator">&lt;&lt;</span> _point2<span class="token punctuation">.</span><span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"), "</span>
+         <span class="token operator">&lt;&lt;</span> <span class="token string">"( "</span> <span class="token operator">&lt;&lt;</span> _point3<span class="token punctuation">.</span><span class="token function">getX</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">", "</span> <span class="token operator">&lt;&lt;</span> _point3<span class="token punctuation">.</span><span class="token function">getY</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">")\n"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  Point <span class="token function">p1</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">56</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Point <span class="token function">p2</span><span class="token punctuation">(</span><span class="token number">89</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  Rectangle <span class="token function">rec1</span><span class="token punctuation">(</span>p1<span class="token punctuation">,</span> p2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Rectangle <span class="token function">rec2</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"矩形1的四个顶点坐标："</span><span class="token punctuation">;</span>
+  rec1<span class="token punctuation">.</span><span class="token function">printPoints</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"矩形1的面积："</span> <span class="token operator">&lt;&lt;</span> rec1<span class="token punctuation">.</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"矩形2的四个顶点坐标："</span><span class="token punctuation">;</span>
+  rec2<span class="token punctuation">.</span><span class="token function">printPoints</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"矩形2的面积："</span> <span class="token operator">&lt;&lt;</span> rec2<span class="token punctuation">.</span><span class="token function">getArea</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="question-1"><a href="#question-1" class="headerlink" title="question 1"></a>question 1</h1><p><img src="/cpp-2023-lecture-notes/2024/03/18/Homework/week3/t1.png" alt="question1"></p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Fraction</span> <span class="token punctuation">&#123;</span>
+<span class="token keyword">private</span><span class="token operator">:</span>
+  <span class="token keyword">int</span> _above<span class="token punctuation">;</span>
+  <span class="token keyword">int</span> _below<span class="token punctuation">;</span>
+
+  <span class="token comment">// 最大公约数</span>
+  <span class="token keyword">int</span> <span class="token function">_gcd</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> g <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> g <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span> g <span class="token operator">-=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">%</span> g <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> b <span class="token operator">%</span> g <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> g<span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token comment">// 最小公倍数</span>
+  <span class="token keyword">int</span> <span class="token function">_lcm</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> l <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> l <span class="token operator">&lt;=</span> a <span class="token operator">*</span> b<span class="token punctuation">;</span> l <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>l <span class="token operator">%</span> a <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> l <span class="token operator">%</span> b <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> l<span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+<span class="token keyword">public</span><span class="token operator">:</span>
+  <span class="token comment">// 默认构造</span>
+  <span class="token function">Fraction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">_above</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_below</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+  <span class="token comment">// 有参构造</span>
+  <span class="token function">Fraction</span><span class="token punctuation">(</span><span class="token keyword">int</span> above<span class="token punctuation">,</span> <span class="token keyword">int</span> below<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">_above</span><span class="token punctuation">(</span>above<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_below</span><span class="token punctuation">(</span>below<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+
+  <span class="token comment">//---------------week3 question1 added---------------//</span>
+  <span class="token comment">// 拷贝构造</span>
+  <span class="token function">Fraction</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token function">_above</span><span class="token punctuation">(</span>other<span class="token punctuation">.</span>_above<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">_below</span><span class="token punctuation">(</span>other<span class="token punctuation">.</span>_below<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+  <span class="token comment">// 析构函数</span>
+  <span class="token operator">~</span><span class="token function">Fraction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+  Fraction <span class="token keyword">operator</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Fraction <span class="token keyword">operator</span><span class="token operator">-</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Fraction <span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">bool</span> <span class="token keyword">operator</span><span class="token operator">==</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//---------------------------------------------------//</span>
+  <span class="token comment">// !注意这里把约分和通分作为公有函数接口，更加合理</span>
+
+  <span class="token comment">// 约分</span>
+  <span class="token keyword">void</span> <span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 通分</span>
+  <span class="token comment">// !注意这里与题目要求不一致但更加合理</span>
+  <span class="token comment">// !通分是本对象与另一个分数通分，但不改变另一个分数的分子分母</span>
+  <span class="token comment">// !只改变自身，因此也没有必要有返回值</span>
+  <span class="token keyword">void</span> <span class="token function">common</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  Fraction <span class="token function">add</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Fraction <span class="token function">minus</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">bool</span> <span class="token function">isEqual</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">void</span> <span class="token function">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">void</span> <span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">//---------------week3 question1 added---------------//</span>
+  <span class="token keyword">friend</span> Fraction <span class="token keyword">operator</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>current<span class="token punctuation">,</span> <span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">friend</span> Fraction <span class="token keyword">operator</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>current<span class="token punctuation">,</span> <span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//---------------------------------------------------//</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span>
+
+<span class="token comment">//---------------week3 question1 added---------------//</span>
+Fraction Fraction<span class="token double-colon punctuation">::</span><span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  _above <span class="token operator">=</span> other<span class="token punctuation">.</span>_above<span class="token punctuation">;</span>
+  _below <span class="token operator">=</span> other<span class="token punctuation">.</span>_below<span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+Fraction Fraction<span class="token double-colon punctuation">::</span><span class="token keyword">operator</span><span class="token operator">+</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  Fraction <span class="token function">res</span><span class="token punctuation">(</span>_above <span class="token operator">+</span> other<span class="token punctuation">.</span>_above<span class="token punctuation">,</span> _below <span class="token operator">+</span> other<span class="token punctuation">.</span>_below<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  res<span class="token punctuation">.</span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+Fraction Fraction<span class="token double-colon punctuation">::</span><span class="token keyword">operator</span><span class="token operator">-</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  Fraction <span class="token function">res</span><span class="token punctuation">(</span>_above <span class="token operator">-</span> other<span class="token punctuation">.</span>_above<span class="token punctuation">,</span> _below <span class="token operator">-</span> other<span class="token punctuation">.</span>_below<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  res<span class="token punctuation">.</span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">bool</span> Fraction<span class="token double-colon punctuation">::</span><span class="token keyword">operator</span><span class="token operator">==</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token operator">-></span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  other<span class="token punctuation">.</span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> _above <span class="token operator">==</span> other<span class="token punctuation">.</span>_above <span class="token operator">&amp;&amp;</span> _below <span class="token operator">==</span> other<span class="token punctuation">.</span>_below<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+Fraction <span class="token keyword">operator</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>current<span class="token punctuation">,</span> <span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  Fraction <span class="token function">res</span><span class="token punctuation">(</span>current<span class="token punctuation">.</span>_above <span class="token operator">*</span> other<span class="token punctuation">.</span>_above<span class="token punctuation">,</span> current<span class="token punctuation">.</span>_below <span class="token operator">*</span> other<span class="token punctuation">.</span>_below<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  res<span class="token punctuation">.</span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+Fraction <span class="token keyword">operator</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>current<span class="token punctuation">,</span> <span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  Fraction <span class="token function">res</span><span class="token punctuation">(</span>current<span class="token punctuation">.</span>_above <span class="token operator">*</span> other<span class="token punctuation">.</span>_below<span class="token punctuation">,</span> current<span class="token punctuation">.</span>_below <span class="token operator">*</span> other<span class="token punctuation">.</span>_above<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  res<span class="token punctuation">.</span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">//---------------------------------------------------//</span>
+
+<span class="token keyword">void</span> <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> gcd <span class="token operator">=</span> <span class="token keyword">this</span><span class="token operator">-></span><span class="token function">_gcd</span><span class="token punctuation">(</span>_above<span class="token punctuation">,</span> _below<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  _above <span class="token operator">/=</span> gcd<span class="token punctuation">;</span>
+  _below <span class="token operator">/=</span> gcd<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">void</span> <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">common</span><span class="token punctuation">(</span><span class="token keyword">const</span> Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">int</span> lcm <span class="token operator">=</span> <span class="token keyword">this</span><span class="token operator">-></span><span class="token function">_lcm</span><span class="token punctuation">(</span>_below<span class="token punctuation">,</span> other<span class="token punctuation">.</span>_below<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> factor <span class="token operator">=</span> lcm <span class="token operator">/</span> _below<span class="token punctuation">;</span>
+  _below <span class="token operator">*=</span> factor<span class="token punctuation">;</span>
+  _above <span class="token operator">*=</span> factor<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+Fraction <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">add</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token operator">-></span><span class="token function">common</span><span class="token punctuation">(</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  other<span class="token punctuation">.</span><span class="token function">common</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  Fraction <span class="token function">add_result</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-></span>_above <span class="token operator">+</span> other<span class="token punctuation">.</span>_above<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token operator">-></span>_below<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  add_result<span class="token punctuation">.</span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> add_result<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+Fraction <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">minus</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token operator">-></span><span class="token function">common</span><span class="token punctuation">(</span>other<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  other<span class="token punctuation">.</span><span class="token function">common</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  Fraction <span class="token function">minus_result</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token operator">-></span>_above <span class="token operator">-</span> other<span class="token punctuation">.</span>_above<span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token operator">-></span>_below<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  minus_result<span class="token punctuation">.</span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> minus_result<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">bool</span> <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">isEqual</span><span class="token punctuation">(</span>Fraction <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">this</span><span class="token operator">-></span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  other<span class="token punctuation">.</span><span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token operator">-></span>_above <span class="token operator">==</span> other<span class="token punctuation">.</span>_above <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token operator">-></span>_below <span class="token operator">==</span> other<span class="token punctuation">.</span>_below<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">void</span> <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"input fraction in order(above, below):"</span><span class="token punctuation">;</span>
+  cin <span class="token operator">>></span> _above<span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">" / "</span><span class="token punctuation">;</span>
+  cin <span class="token operator">>></span> _below<span class="token punctuation">;</span>
+  <span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// 这里没有对输出进行格式化，会出现正负的符号问题</span>
+<span class="token keyword">void</span> <span class="token class-name">Fraction</span><span class="token double-colon punctuation">::</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  cout <span class="token operator">&lt;&lt;</span> <span class="token string">"fraction: "</span> <span class="token operator">&lt;&lt;</span> _above <span class="token operator">&lt;&lt;</span> <span class="token string">" / "</span> <span class="token operator">&lt;&lt;</span> _below <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  Fraction <span class="token function">a</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Fraction <span class="token function">b</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Fraction c <span class="token operator">=</span> a<span class="token punctuation">;</span>
+
+  a<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  b<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  c<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  c <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+  c<span class="token punctuation">.</span><span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  Fraction <span class="token function">f</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>f <span class="token operator">==</span> b<span class="token punctuation">)</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"fraction `f` equals to `b`"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+  <span class="token keyword">else</span>
+    cout <span class="token operator">&lt;&lt;</span> <span class="token string">"fraction `f` not equals `b`"</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="article-nav">
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="/cpp-2023-lecture-notes/2024/03/18/Homework/week2/"
+                                   title="Homework | 第二次作业解答"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Homework | 第二次作业解答</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#question-0"><span class="nav-text">question 0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#question-1"><span class="nav-text">question 1</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;<span>2023</span>&nbsp;-&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Andrew-Rey</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;框架&nbsp;&&nbsp;主題&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#question-0"><span class="nav-text">question 0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#question-1"><span class="nav-text">question 1</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/cpp-2023-lecture-notes/js/utils.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/header-shrink.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/back2top.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/dark-light-toggle.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/main.js"></script>
+
+<script src="/cpp-2023-lecture-notes/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+
+<!-- code-block -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    
+        <!-- post-helper -->
+        
+<script src="/cpp-2023-lecture-notes/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/cpp-2023-lecture-notes/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
