@@ -9,7 +9,7 @@
     
     <title>
         
-            关于这门课 |
+            Notes | 等号重载、模板 |
         
         算法与程序设计 2023
     </title>
@@ -171,7 +171,7 @@
             <div class="article-content-bottom border-box">
                 
                     <div class="article-title">
-                        关于这门课
+                        Notes | 等号重载、模板
                     </div>
                 
 
@@ -198,13 +198,13 @@
         
             <span class="meta-info-item article-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-10-09 14:32:22</span>
-                <span class="mobile">2023-10-09 14:32</span>
+                <span class="pc">2024-04-02 00:16:57</span>
+                <span class="mobile">2024-04-02 00:16</span>
             </span>
 
             <span class="meta-info-item article-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Mon Oct 30 2023 12:38:34 GMT+0800">2023-10-30 12:38:34</span>
+                <span class="pc" data-updated="Tue Apr 02 2024 01:06:53 GMT+0800">2024-04-02 01:06:53</span>
             </span>
         
 
@@ -212,7 +212,7 @@
             <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="article-category-ul">
                     
-                            <li class="category-item"><a href="/cpp-2023-lecture-notes/category/notes/">notes</a></li>
+                            <li class="category-item"><a href="/cpp-2023-lecture-notes/category/Notes/">Notes</a></li>
                         
                     
                 </ul>
@@ -238,72 +238,91 @@
                 <div class="article-content keep-markdown-body">
                     
 
-                    <h4 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Hello World!"</span> <span class="token operator">&lt;&lt;</span> std<span class="token double-colon punctuation">::</span>endl<span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                    <p>总结了一些关于提问较多的，关于运算符重载的问题</p>
 <span id="more"></span>
 
-<h4 id="课程介绍"><a href="#课程介绍" class="headerlink" title="课程介绍"></a>课程介绍</h4><p><strong>课程基本情况：</strong> 本课程是由 <strong>东南大学吴健雄学院</strong> 在2023学年开设的一门公共基础课，主要讲解C++基本语法知识，目的是培养同学们的程序设计思维和逻辑能力。同时，该课程也为其它编程语言的学习（例如Python，Java）打下了基础。</p>
+<h1 id="等号重载问题"><a href="#等号重载问题" class="headerlink" title="等号重载问题"></a>等号重载问题</h1><p>问题描述：按照语法规定，完成了等号重载，在逻辑上没有任何问题，但最后使用等号赋值时出现错误</p>
+<p>常见错误：没有与“&#x3D;”相匹配的操作数或运算符</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; 实例代码
+MyClass MyClass::operator&#x3D;(MyClass&amp; other) &#123;
+    &#x2F;&#x2F; codes
+&#125;
+
+&#x2F;&#x2F; 实例使用
+
+MyClass a();
+&#x2F;&#x2F; 调用等号重载
+MyClass b &#x3D; a;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可能原因：</p>
+<ol>
+<li>没有写拷贝构造（复制构造）函数：</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; 复制构造函数
+class MyClass &#123;
+  public:
+    MyClass(const MyClass &amp; other) &#123;
+        &#x2F;&#x2F; codes
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>注意</strong>：复制构造函数和带参构造不一样！！目前很多同学将其搞混</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; 带参构造函数
+class MyClass &#123;
+    int _p1;
+    int _p2;
+  public:
+    MyClass(int p1, int p2) &#123;
+        &#x2F;&#x2F; codes
+    &#125;
+&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li>将“临时对象”（右值）赋值给对象：</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">MyClass a(), b();
+&#x2F;&#x2F; 调用等号重载，报错
+MyClass c &#x3D; a + b;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>这是因为<code>a+b</code>的值是右值，即一个“临时对象”，不能被写入，应该为<code>const</code></p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">MyClass MyClass::operator&#x3D;(const MyClass&amp; other) &#123;
+    &#x2F;&#x2F; codes
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>类外定义成员函数没有声明类空间，即缺少<code>MyClass::</code>：注意在类外定义成员函数时，除了构造函数和析构函数没有返回值以外，其它函数都有返回值，格式为：<code>&lt;模板&gt; 返回值 类名::成员函数(形参列表)&#123;函数实现&#125;</code></li>
+</ol>
+<h1 id="模板问题"><a href="#模板问题" class="headerlink" title="模板问题"></a>模板问题</h1><blockquote>
+<p>在使用VS编写代码时，编辑器不会给出错误提示，这需要我们仔细写代码。</p>
 <ul>
-<li>任课老师：<a class="link"   target="_blank" rel="noopener" href="https://me.seu.edu.cn/xy/list.htm" >幸研<i class="fas fa-external-link-alt"></i></a></li>
-<li>助教：<a class="link"   target="_blank" rel="noopener" href="https://github.com/Andrew-Rey" >许睿<i class="fas fa-external-link-alt"></i></a></li>
+<li>关于为啥不会给错误提示：因为模板比较特殊，它们在使用时才会被 <strong>编译</strong> ，因此在写代码的时候你的IDE会忽略对它的检查</li>
 </ul>
-<p>课程计划分两学期完成（计算思维与程序实践I&#x2F;计算思维与程序实践II），每学期2.5 学分&#x2F; 32学时（课堂教学）+ 32学时（实践）</p>
-<ul>
-<li>计算思维与程序实践I：包含C++基本入门知识和控制结构程序设计、函数、指针与数组等内容</li>
-<li>计算思维与程序实践II：包含类与对象、数组与指针、模板与数据结构、动态内存分配与数据结构、继承和多态以及IO库</li>
-</ul>
-<h4 id="使用指北"><a href="#使用指北" class="headerlink" title="使用指北"></a>使用指北</h4><p><strong>一般而言</strong>，该网站会发布与课程相关的笔记（notes页面）和作业解答（homework页面），在归档（archive）页面可以查看发布过的所有内容，但如果在学习中有什么困难，还是欢迎找我们的助教大大！！！</p>
-<blockquote>
-<p><strong>说明</strong>：可能 <del>（大概率）</del> 该网站的信息同步会延迟，因为助教其实有很多自己的事情，所以有疑问时可以直接通过某些当代人通信的方式联系他，这样会快捷很多</p>
 </blockquote>
-<blockquote>
-<p><del>你也想学怎么搭建这个网站？</del></p>
-</blockquote>
-<h4 id="或许你能用到"><a href="#或许你能用到" class="headerlink" title="或许你能用到"></a>或许你能用到</h4><blockquote>
-<p><strong>能解决你95%问题的：</strong></p>
-</blockquote>
-<ul>
-<li>c++语法参考（英文）：<a class="link"   target="_blank" rel="noopener" href="https://en.cppreference.com/w/" >cppreference<i class="fas fa-external-link-alt"></i></a></li>
-<li>c++语法参考（中文）<a class="link"   target="_blank" rel="noopener" href="https://zh.cppreference.com/w/" >cppreference-zh<i class="fas fa-external-link-alt"></i></a></li>
-<li>来自Microsoft的C++文档：<a class="link"   target="_blank" rel="noopener" href="https://learn.microsoft.com/zh-cn/cpp/cpp/?view=msvc-170" >Microsoft-cpp<i class="fas fa-external-link-alt"></i></a></li>
-<li>来自前任助教的好意：<a class="link"   target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1gk4y1r7UH" >C++QuickStart<i class="fas fa-external-link-alt"></i></a></li>
-<li>bing搜索引擎：<a class="link"   target="_blank" rel="noopener" href="https://www.bing.com/" >bing<i class="fas fa-external-link-alt"></i></a></li>
-<li>google搜索引擎：<a class="link"   target="_blank" rel="noopener" href="https://www.google.com/" >google<i class="fas fa-external-link-alt"></i></a></li>
-<li>非常👍的技术论坛：<a class="link"   target="_blank" rel="noopener" href="https://stackoverflow.com/" >stack overflow<i class="fas fa-external-link-alt"></i></a>(<em>Stack Overflow is a question-and-answer website for programmers</em>)</li>
-<li>全球最大的同性交友网站：<a class="link"   target="_blank" rel="noopener" href="https://github.com/" >github<i class="fas fa-external-link-alt"></i></a></li>
-<li>或许我把它放这里不是坏事：<a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/?utm_source=LCUS&utm_medium=ip_redirect&utm_campaign=transfer2china" >leetcode<i class="fas fa-external-link-alt"></i></a></li>
-<li>提问的智慧1.0：<a class="link"   target="_blank" rel="noopener" href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md" >智慧<i class="fas fa-external-link-alt"></i></a></li>
-<li>提问的智慧2.0：<a class="link"   target="_blank" rel="noopener" href="https://github.com/tangx/Stop-Ask-Questions-The-Stupid-Ways/blob/master/README.md" >更加智慧<i class="fas fa-external-link-alt"></i></a></li>
-</ul>
-<blockquote>
-<p><strong>快速入门并且能解决你60%问题的：</strong></p>
-</blockquote>
-<ul>
-<li>技术（？）论坛：<a class="link"   target="_blank" rel="noopener" href="https://www.csdn.net/" >CSDN<i class="fas fa-external-link-alt"></i></a></li>
-<li>B站大学（你是来搜课程的！）：<a class="link"   target="_blank" rel="noopener" href="https://bilibili.com/" >bilibili<i class="fas fa-external-link-alt"></i></a></li>
-<li>某乎的某些回答：<a class="link"   target="_blank" rel="noopener" href="https://zhihu.com/" >zhihu<i class="fas fa-external-link-alt"></i></a></li>
-<li>别人写的一些技术博客✅</li>
-</ul>
-<blockquote>
-<p><strong>快速入土并且能把你解决的：</strong></p>
-</blockquote>
-<ul>
-<li>专门搜索广告的：<a class="link"   target="_blank" rel="noopener" href="https://www.baidu.com/" >baidu<i class="fas fa-external-link-alt"></i></a></li>
-<li>从某些地方乱抄的技术（？）论坛回答：<a class="link"   target="_blank" rel="noopener" href="https://www.csdn.net/" >CSDN<i class="fas fa-external-link-alt"></i></a></li>
-<li>直接复制粘贴别人的作业和代码 <del>（C-V大法好！）</del></li>
-</ul>
-<h4 id="C-没意思？"><a href="#C-没意思？" class="headerlink" title="C++没意思？"></a>C++没意思？</h4><ul>
-<li>人生苦短，我用<a class="link"   target="_blank" rel="noopener" href="https://www.python.org/" >Python<i class="fas fa-external-link-alt"></i></a></li>
-<li>趁还没制裁，偷学<a class="link"   target="_blank" rel="noopener" href="https://nic.seu.edu.cn/fwzn/rjzbh/matlabzbh.htm" >Matlab<i class="fas fa-external-link-alt"></i></a></li>
-<li>喜欢玩《我的世界》？自己写<a class="link"   target="_blank" rel="noopener" href="https://www.java.com/zh-CN/" >MOD<i class="fas fa-external-link-alt"></i></a></li>
-<li>原来你也…<a class="link"   target="_blank" rel="noopener" href="https://unity.com/cn" >忘了<i class="fas fa-external-link-alt"></i></a></li>
-</ul>
-<blockquote>
-<p><strong>总之，you can code, you can have the world. ——<a class="link"   target="_blank" rel="noopener" href="https://space.bilibili.com/202224425?spm_id_from=333.337.search-card.all.click" >jyy<i class="fas fa-external-link-alt"></i></a></strong></p>
-</blockquote>
+<p>常见错误：编译器报错ERROR1001等在生成解决方案时出现的错误；链接错误，找不到模板定义等</p>
+<p>解决方式：</p>
+<ol>
+<li>逐行检查语法错误：例如漏了分号，成员变量是否存在等低级语法错误</li>
+<li>将模板的声明和实现放在同一个文件（处理链接等问题）</li>
+</ol>
+<h1 id="其它调试技巧"><a href="#其它调试技巧" class="headerlink" title="其它调试技巧"></a>其它调试技巧</h1><ol>
+<li>用好断点：发现大家在调试带有循环的语句时，单步调试进入循环后疯狂单步调试，以便快速结束该循环，但其实只要在循环语句的后面再打一个断点，点击继续，即可跳转到循环后：</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">
+--&gt; 第一个断点 一些代码...
+&#x2F;&#x2F; 另一些代码
+for (...) &#123;
+    for (...) &#123;
+        &#x2F;&#x2F; 很多循环，但没有错误
+        &#x2F;&#x2F; 很多同学不会跳过，这时候只需要添加第二个断点即可
+    &#125;
+&#125;
+
+--&gt; 第二个断点 程序运行到第一个断点后，如果想直接运行完中间部分，直到第二个断点处，只需要在程序运行到第一个断点时按下“继续”即可一次性运行到下一个断点处<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li>在报错框中双击报错的那一行提示，可以跳转到报错位置</li>
+<li>观察地址：如果地址的样子特别规律，例如<code>0000000</code>, <code>FFFFFFF</code>, <code>dddddd</code>之类，要么是没有初始化，要么是new以后没有赋值；而如果地址是存在的，但仍然报错“访问冲突”之类的，大概率是访问越界（下标超出范围）</li>
+</ol>
 
                 </div>
 
@@ -323,22 +342,22 @@
                 
                     <div class="article-nav">
                         
-                            <div class="article-prev">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/cpp-2023-lecture-notes/2023/10/09/Homework/task1/"
-                                   title="Homework | 第一次作业解答"
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="/cpp-2023-lecture-notes/2024/03/18/Homework/week3/"
+                                   title="Homework | 第三次作业解答"
                                 >
-                                    <span class="left arrow-icon flex-center">
-                                      <i class="fas fa-chevron-left"></i>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Homework | 第三次作业解答</span>
+                                        <span class="post-nav-item">下一篇</span>
                                     </span>
-                                            <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Homework | 第一次作业解答</span>
-                                        <span class="post-nav-item">上一篇</span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
                                     </span>
                                 </a>
                             </div>
-                        
                         
                     </div>
                 
@@ -359,7 +378,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hello-World"><span class="nav-text">Hello World</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D"><span class="nav-text">课程介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97"><span class="nav-text">使用指北</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%96%E8%AE%B8%E4%BD%A0%E8%83%BD%E7%94%A8%E5%88%B0"><span class="nav-text">或许你能用到</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-%E6%B2%A1%E6%84%8F%E6%80%9D%EF%BC%9F"><span class="nav-text">C++没意思？</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%89%E5%8F%B7%E9%87%8D%E8%BD%BD%E9%97%AE%E9%A2%98"><span class="nav-text">等号重载问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E9%97%AE%E9%A2%98"><span class="nav-text">模板问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E5%AE%83%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7"><span class="nav-text">其它调试技巧</span></a></li></ol>
     </div>
 </div>
 
@@ -489,7 +508,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hello-World"><span class="nav-text">Hello World</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D"><span class="nav-text">课程介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8C%97"><span class="nav-text">使用指北</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%88%96%E8%AE%B8%E4%BD%A0%E8%83%BD%E7%94%A8%E5%88%B0"><span class="nav-text">或许你能用到</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C-%E6%B2%A1%E6%84%8F%E6%80%9D%EF%BC%9F"><span class="nav-text">C++没意思？</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%89%E5%8F%B7%E9%87%8D%E8%BD%BD%E9%97%AE%E9%A2%98"><span class="nav-text">等号重载问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E9%97%AE%E9%A2%98"><span class="nav-text">模板问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E5%AE%83%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7"><span class="nav-text">其它调试技巧</span></a></li></ol>
     </div>
 </div>
 
