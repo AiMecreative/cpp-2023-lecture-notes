@@ -14,7 +14,7 @@ category: Notes
 
 常见错误：没有与“=”相匹配的操作数或运算符
 
-```c++
+```cpp
 // 实例代码
 MyClass MyClass::operator=(MyClass& other) {
     // codes
@@ -31,7 +31,7 @@ MyClass b = a;
 
 1. 没有写拷贝构造（复制构造）函数：
 
-```c++
+```cpp
 // 复制构造函数
 class MyClass {
   public:
@@ -43,7 +43,7 @@ class MyClass {
 
 **注意**：复制构造函数和带参构造不一样！！目前很多同学将其搞混
 
-```c++
+```cpp
 // 带参构造函数
 class MyClass {
     int _p1;
@@ -57,7 +57,7 @@ class MyClass {
 
 2. 将“临时对象”（右值）赋值给对象：
 
-```c++
+```cpp
 MyClass a(), b();
 // 调用等号重载，报错
 MyClass c = a + b;
@@ -65,7 +65,7 @@ MyClass c = a + b;
 
 这是因为`a+b`的值是右值，即一个“临时对象”，不能被写入，应该为`const`
 
-```c++
+```cpp
 MyClass MyClass::operator=(const MyClass& other) {
     // codes
 }
@@ -89,7 +89,7 @@ MyClass MyClass::operator=(const MyClass& other) {
 
 1. 用好断点：发现大家在调试带有循环的语句时，单步调试进入循环后疯狂单步调试，以便快速结束该循环，但其实只要在循环语句的后面再打一个断点，点击继续，即可跳转到循环后：
 
-```c++
+```cpp
 
 --> 第一个断点 一些代码...
 // 另一些代码
