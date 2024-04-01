@@ -82,7 +82,7 @@
                             <a class=""
                                href="/cpp-2023-lecture-notes/"
                             >
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -90,7 +90,7 @@
                             <a class=""
                                href="/cpp-2023-lecture-notes/archives"
                             >
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -127,12 +127,12 @@
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/cpp-2023-lecture-notes/">首页</a>
+                       href="/cpp-2023-lecture-notes/">HOME</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/cpp-2023-lecture-notes/archives">归档</a>
+                       href="/cpp-2023-lecture-notes/archives">ARCHIVES</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
@@ -204,7 +204,7 @@
 
             <span class="meta-info-item article-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Tue Apr 02 2024 01:06:53 GMT+0800">2024-04-02 01:06:53</span>
+                <span class="pc" data-updated="Tue Apr 02 2024 01:08:49 GMT+0800">2024-04-02 01:08:49</span>
             </span>
         
 
@@ -243,51 +243,51 @@
 
 <h1 id="等号重载问题"><a href="#等号重载问题" class="headerlink" title="等号重载问题"></a>等号重载问题</h1><p>问题描述：按照语法规定，完成了等号重载，在逻辑上没有任何问题，但最后使用等号赋值时出现错误</p>
 <p>常见错误：没有与“&#x3D;”相匹配的操作数或运算符</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; 实例代码
-MyClass MyClass::operator&#x3D;(MyClass&amp; other) &#123;
-    &#x2F;&#x2F; codes
-&#125;
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 实例代码</span>
+MyClass MyClass<span class="token double-colon punctuation">::</span><span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span>MyClass<span class="token operator">&amp;</span> other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// codes</span>
+<span class="token punctuation">&#125;</span>
 
-&#x2F;&#x2F; 实例使用
+<span class="token comment">// 实例使用</span>
 
-MyClass a();
-&#x2F;&#x2F; 调用等号重载
-MyClass b &#x3D; a;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+MyClass <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 调用等号重载</span>
+MyClass b <span class="token operator">=</span> a<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>可能原因：</p>
 <ol>
 <li>没有写拷贝构造（复制构造）函数：</li>
 </ol>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; 复制构造函数
-class MyClass &#123;
-  public:
-    MyClass(const MyClass &amp; other) &#123;
-        &#x2F;&#x2F; codes
-    &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 复制构造函数</span>
+<span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">MyClass</span><span class="token punctuation">(</span><span class="token keyword">const</span> MyClass <span class="token operator">&amp;</span> other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// codes</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>注意</strong>：复制构造函数和带参构造不一样！！目前很多同学将其搞混</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; 带参构造函数
-class MyClass &#123;
-    int _p1;
-    int _p2;
-  public:
-    MyClass(int p1, int p2) &#123;
-        &#x2F;&#x2F; codes
-    &#125;
-&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 带参构造函数</span>
+<span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">int</span> _p1<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> _p2<span class="token punctuation">;</span>
+  <span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token function">MyClass</span><span class="token punctuation">(</span><span class="token keyword">int</span> p1<span class="token punctuation">,</span> <span class="token keyword">int</span> p2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// codes</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ol start="2">
 <li>将“临时对象”（右值）赋值给对象：</li>
 </ol>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">MyClass a(), b();
-&#x2F;&#x2F; 调用等号重载，报错
-MyClass c &#x3D; a + b;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">MyClass <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 调用等号重载，报错</span>
+MyClass c <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>这是因为<code>a+b</code>的值是右值，即一个“临时对象”，不能被写入，应该为<code>const</code></p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">MyClass MyClass::operator&#x3D;(const MyClass&amp; other) &#123;
-    &#x2F;&#x2F; codes
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">MyClass MyClass<span class="token double-colon punctuation">::</span><span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">const</span> MyClass<span class="token operator">&amp;</span> other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// codes</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ol start="3">
 <li>类外定义成员函数没有声明类空间，即缺少<code>MyClass::</code>：注意在类外定义成员函数时，除了构造函数和析构函数没有返回值以外，其它函数都有返回值，格式为：<code>&lt;模板&gt; 返回值 类名::成员函数(形参列表)&#123;函数实现&#125;</code></li>
@@ -307,17 +307,17 @@ MyClass c &#x3D; a + b;<span aria-hidden="true" class="line-numbers-rows"><span>
 <h1 id="其它调试技巧"><a href="#其它调试技巧" class="headerlink" title="其它调试技巧"></a>其它调试技巧</h1><ol>
 <li>用好断点：发现大家在调试带有循环的语句时，单步调试进入循环后疯狂单步调试，以便快速结束该循环，但其实只要在循环语句的后面再打一个断点，点击继续，即可跳转到循环后：</li>
 </ol>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">
---&gt; 第一个断点 一些代码...
-&#x2F;&#x2F; 另一些代码
-for (...) &#123;
-    for (...) &#123;
-        &#x2F;&#x2F; 很多循环，但没有错误
-        &#x2F;&#x2F; 很多同学不会跳过，这时候只需要添加第二个断点即可
-    &#125;
-&#125;
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">
+<span class="token operator">--</span><span class="token operator">></span> 第一个断点 一些代码<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token comment">// 另一些代码</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">// 很多循环，但没有错误</span>
+        <span class="token comment">// 很多同学不会跳过，这时候只需要添加第二个断点即可</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
 
---&gt; 第二个断点 程序运行到第一个断点后，如果想直接运行完中间部分，直到第二个断点处，只需要在程序运行到第一个断点时按下“继续”即可一次性运行到下一个断点处<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token operator">--</span><span class="token operator">></span> 第二个断点 程序运行到第一个断点后，如果想直接运行完中间部分，直到第二个断点处，只需要在程序运行到第一个断点时按下“继续”即可一次性运行到下一个断点处<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ol start="2">
 <li>在报错框中双击报错的那一行提示，可以跳转到报错位置</li>
@@ -351,7 +351,7 @@ for (...) &#123;
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">Homework | 第三次作业解答</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                             <span class="right arrow-icon flex-center">
                                       <i class="fas fa-chevron-right"></i>
@@ -406,7 +406,7 @@ for (...) &#123;
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
