@@ -9,7 +9,7 @@
     
     <title>
         
-            Notes | 等号重载、模板 |
+            Homework | 第七次作业解答 |
         
         算法与程序设计 2023
     </title>
@@ -171,7 +171,7 @@
             <div class="article-content-bottom border-box">
                 
                     <div class="article-title">
-                        Notes | 等号重载、模板
+                        Homework | 第七次作业解答
                     </div>
                 
 
@@ -198,13 +198,13 @@
         
             <span class="meta-info-item article-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2024-04-02 00:16:57</span>
-                <span class="mobile">2024-04-02 00:16</span>
+                <span class="pc">2024-04-08 13:21:36</span>
+                <span class="mobile">2024-04-08 13:21</span>
             </span>
 
             <span class="meta-info-item article-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Tue Apr 02 2024 01:08:49 GMT+0800">2024-04-02 01:08:49</span>
+                <span class="pc" data-updated="Mon Apr 08 2024 13:28:05 GMT+0800">2024-04-08 13:28:05</span>
             </span>
         
 
@@ -212,7 +212,7 @@
             <span class="meta-info-item article-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
                 <ul class="article-category-ul">
                     
-                            <li class="category-item"><a href="/cpp-2023-lecture-notes/category/Notes/">Notes</a></li>
+                            <li class="category-item"><a href="/cpp-2023-lecture-notes/category/Homework/">Homework</a></li>
                         
                     
                 </ul>
@@ -238,92 +238,312 @@
                 <div class="article-content keep-markdown-body">
                     
 
-                    <p>总结了一些关于提问较多的，关于运算符重载的问题</p>
-<span id="more"></span>
+                    <span id="more"></span>
 
-<h1 id="等号重载问题"><a href="#等号重载问题" class="headerlink" title="等号重载问题"></a>等号重载问题</h1><p>问题描述：按照语法规定，完成了等号重载，在逻辑上没有任何问题，但最后使用等号赋值时出现错误</p>
-<p>常见错误：没有与“&#x3D;”相匹配的操作数或运算符</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 实例代码</span>
-MyClass MyClass<span class="token double-colon punctuation">::</span><span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span>MyClass<span class="token operator">&amp;</span> other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// codes</span>
-<span class="token punctuation">&#125;</span>
+<h1 id="question-0"><a href="#question-0" class="headerlink" title="question 0"></a>question 0</h1><p>使用模板实现矩阵类。需要重载常见的赋值运算符和乘法运算符，存储方式采用二维指针。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;cassert&gt;
+#include &lt;iostream&gt;
+#include &lt;random&gt;
+#include &lt;type_traits&gt;
 
-<span class="token comment">// 实例使用</span>
+using namespace std;
 
-MyClass <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// 调用等号重载</span>
-MyClass b <span class="token operator">=</span> a<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+template &lt;typename Ty&gt; class CMatrix &#123;
+private:
+  Ty **_value_ptr;
+  int _row;
+  int _col;
 
-<p>可能原因：</p>
-<ol>
-<li>没有写拷贝构造（复制构造）函数：</li>
-</ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 复制构造函数</span>
-<span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">&#123;</span>
-  <span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token function">MyClass</span><span class="token punctuation">(</span><span class="token keyword">const</span> MyClass <span class="token operator">&amp;</span> other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token comment">// codes</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+public:
+  CMatrix&lt;Ty&gt;() &#123;
+    _value_ptr &#x3D; nullptr;
+    _row &#x3D; 0;
+    _col &#x3D; 0;
+  &#125;
 
-<p><strong>注意</strong>：复制构造函数和带参构造不一样！！目前很多同学将其搞混</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 带参构造函数</span>
-<span class="token keyword">class</span> <span class="token class-name">MyClass</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">int</span> _p1<span class="token punctuation">;</span>
-    <span class="token keyword">int</span> _p2<span class="token punctuation">;</span>
-  <span class="token keyword">public</span><span class="token operator">:</span>
-    <span class="token function">MyClass</span><span class="token punctuation">(</span><span class="token keyword">int</span> p1<span class="token punctuation">,</span> <span class="token keyword">int</span> p2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token comment">// codes</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  CMatrix&lt;Ty&gt;(int row, int col) : _row(row), _col(col) &#123;
+    _value_ptr &#x3D; new Ty *[row];
+    for (int r &#x3D; 0; r &lt; row; r +&#x3D; 1) &#123;
+      _value_ptr[r] &#x3D; new Ty[col];
+    &#125;
+  &#125;
 
-<ol start="2">
-<li>将“临时对象”（右值）赋值给对象：</li>
-</ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">MyClass <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// 调用等号重载，报错</span>
-MyClass c <span class="token operator">=</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+  CMatrix&lt;Ty&gt;(const CMatrix&lt;Ty&gt; &amp;other) : _row(other._row), _col(other._col) &#123;
+    _value_ptr &#x3D; new Ty *[_row];
+    for (int r &#x3D; 0; r &lt; _row; r +&#x3D; 1) &#123;
+      _value_ptr[r] &#x3D; new Ty[_col];
+      for (int c &#x3D; 0; c &lt; _col; c +&#x3D; 1) &#123;
+        _value_ptr[r][c] &#x3D; other._value_ptr[r][c];
+      &#125;
+    &#125;
+  &#125;
 
-<p>这是因为<code>a+b</code>的值是右值，即一个“临时对象”，不能被写入，应该为<code>const</code></p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">MyClass MyClass<span class="token double-colon punctuation">::</span><span class="token keyword">operator</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">const</span> MyClass<span class="token operator">&amp;</span> other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token comment">// codes</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+  ~CMatrix&lt;Ty&gt;() &#123;
+    if (_value_ptr &#x3D;&#x3D; nullptr) &#123;
+      return;
+    &#125;
+    for (int r &#x3D; 0; r &lt; _row; r +&#x3D; 1) &#123;
+      delete[] _value_ptr[r];
+    &#125;
+    delete[] _value_ptr;
+  &#125;
 
-<ol start="3">
-<li>类外定义成员函数没有声明类空间，即缺少<code>MyClass::</code>：注意在类外定义成员函数时，除了构造函数和析构函数没有返回值以外，其它函数都有返回值，格式为：<code>&lt;模板&gt; 返回值 类名::成员函数(形参列表)&#123;函数实现&#125;</code></li>
-</ol>
-<h1 id="模板问题"><a href="#模板问题" class="headerlink" title="模板问题"></a>模板问题</h1><blockquote>
-<p>在使用VS编写代码时，编辑器不会给出错误提示，这需要我们仔细写代码。</p>
-<ul>
-<li>关于为啥不会给错误提示：因为模板比较特殊，它们在使用时才会被 <strong>编译</strong> ，因此在写代码的时候你的IDE会忽略对它的检查</li>
-</ul>
-</blockquote>
-<p>常见错误：编译器报错ERROR1001等在生成解决方案时出现的错误；链接错误，找不到模板定义等</p>
-<p>解决方式：</p>
-<ol>
-<li>逐行检查语法错误：例如漏了分号，成员变量是否存在等低级语法错误</li>
-<li>将模板的声明和实现放在同一个文件（处理链接等问题）</li>
-</ol>
-<h1 id="其它调试技巧"><a href="#其它调试技巧" class="headerlink" title="其它调试技巧"></a>其它调试技巧</h1><ol>
-<li>用好断点：发现大家在调试带有循环的语句时，单步调试进入循环后疯狂单步调试，以便快速结束该循环，但其实只要在循环语句的后面再打一个断点，点击继续，即可跳转到循环后：</li>
-</ol>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">
-<span class="token operator">--</span><span class="token operator">></span> 第一个断点 一些代码<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token comment">// 另一些代码</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token comment">// 很多循环，但没有错误</span>
-        <span class="token comment">// 很多同学不会跳过，这时候只需要添加第二个断点即可</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
+  Ty *operator[](int index) &#123;
+    assert(index &lt; _row);
+    assert(_value_ptr !&#x3D; nullptr);
+    return _value_ptr[index];
+  &#125;
 
-<span class="token operator">--</span><span class="token operator">></span> 第二个断点 程序运行到第一个断点后，如果想直接运行完中间部分，直到第二个断点处，只需要在程序运行到第一个断点时按下“继续”即可一次性运行到下一个断点处<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  CMatrix&lt;Ty&gt; operator*(CMatrix&lt;Ty&gt; &amp;other) &#123;
+    assert(_col &#x3D;&#x3D; other._row);
+    CMatrix&lt;Ty&gt; res(_row, other._col);
+    for (int i &#x3D; 0; i &lt; res._row; i +&#x3D; 1) &#123;
+      for (int j &#x3D; 0; j &lt; res._col; j +&#x3D; 1) &#123;
+        Ty t &#x3D; Ty();
+        for (int n &#x3D; 0; n &lt; _col; n +&#x3D; 1) &#123;
+          t &#x3D; t + _value_ptr[i][n] * other._value_ptr[n][j];
+        &#125;
+        res[i][j] &#x3D; t;
+      &#125;
+    &#125;
+    return res;
+  &#125;
 
-<ol start="2">
-<li>在报错框中双击报错的那一行提示，可以跳转到报错位置</li>
-<li>观察地址：如果地址的样子特别规律，例如<code>0000000</code>, <code>FFFFFFF</code>, <code>dddddd</code>之类，要么是没有初始化，要么是new以后没有赋值；而如果地址是存在的，但仍然报错“访问冲突”之类的，大概率是访问越界（下标超出范围）</li>
-</ol>
+  CMatrix&lt;Ty&gt; &amp;operator&#x3D;(const CMatrix&lt;Ty&gt; &amp;other) &#123;
+    if (_value_ptr !&#x3D; nullptr) &#123;
+      for (int r &#x3D; 0; r &lt; _row; r +&#x3D; 1) &#123;
+        delete[] _value_ptr[r];
+      &#125;
+      delete[] _value_ptr;
+    &#125;
 
+    _row &#x3D; other._row;
+    _col &#x3D; other._col;
+
+    _value_ptr &#x3D; new Ty *[_row];
+    for (int r &#x3D; 0; r &lt; _row; r +&#x3D; 1) &#123;
+      _value_ptr[r] &#x3D; new Ty[_col];
+      for (int c &#x3D; 0; c &lt; _col; c +&#x3D; 1) &#123;
+        _value_ptr[r][c] &#x3D; other._value_ptr[r][c];
+      &#125;
+    &#125;
+
+    return *this;
+  &#125;
+
+  &#x2F;&#x2F; 矩阵转置
+  CMatrix&lt;Ty&gt; T() &#123;
+    CMatrix&lt;Ty&gt; t(_col, _row);
+    for (int r &#x3D; 0; r &lt; t._row; r +&#x3D; 1) &#123;
+      for (int c &#x3D; 0; c &lt; t._col; c +&#x3D; 1) &#123;
+        t._value_ptr[r][c] &#x3D; _value_ptr[c][r];
+      &#125;
+    &#125;
+    return t;
+  &#125;
+
+  &#x2F;&#x2F; 随机初始化，设计到 type_traits ，可以忽略
+  void rand_init(Ty lower, Ty upper, int seed &#x3D; 0) &#123;
+    default_random_engine e;
+    e.seed(seed);
+    if constexpr (is_floating_point_v&lt;Ty&gt;) &#123;
+      uniform_real_distribution&lt;Ty&gt; u(lower, upper);
+      for (int r &#x3D; 0; r &lt; _row; r +&#x3D; 1) &#123;
+        for (int c &#x3D; 0; c &lt; _col; c +&#x3D; 1) &#123;
+          _value_ptr[r][c] &#x3D; u(e);
+        &#125;
+      &#125;
+      return;
+    &#125;
+    if constexpr (is_integral_v&lt;Ty&gt;) &#123;
+      uniform_int_distribution&lt;Ty&gt; u(lower, upper);
+      for (int r &#x3D; 0; r &lt; _row; r +&#x3D; 1) &#123;
+        for (int c &#x3D; 0; c &lt; _col; c +&#x3D; 1) &#123;
+          _value_ptr[r][c] &#x3D; u(e);
+        &#125;
+      &#125;
+    &#125;
+  &#125;
+
+  void print() &#123;
+    assert(_value_ptr !&#x3D; nullptr);
+    for (int c &#x3D; 0; c &lt; _col; c +&#x3D; 1) &#123;
+      for (int r &#x3D; 0; r &lt; _row; r +&#x3D; 1) &#123;
+        cout &lt;&lt; _value_ptr[r][c] &lt;&lt; &quot; &quot;;
+      &#125;
+      cout &lt;&lt; endl;
+    &#125;
+  &#125;
+&#125;;
+
+using dtype &#x3D; double;
+
+int main() &#123;
+  CMatrix&lt;dtype&gt; m1;
+  CMatrix&lt;dtype&gt; m2(3, 3);
+  m2.rand_init(2, 8);
+  cout &lt;&lt; &quot;m2:\n&quot;;
+  m2.print();
+
+  m1 &#x3D; m2.T();
+  cout &lt;&lt; &quot;m1:\n&quot;;
+  m1.print();
+
+  CMatrix&lt;dtype&gt; m3(m1);
+  cout &lt;&lt; &quot;m3:\n&quot;;
+  m3.print();
+
+  m3.rand_init(0, 10);
+  cout &lt;&lt; &quot;m3:\n&quot;;
+  m3.print();
+
+  CMatrix&lt;dtype&gt; m4;
+  m4 &#x3D; m2;
+  cout &lt;&lt; &quot;m4:\n&quot;;
+  m4.print();
+
+  &#x2F;&#x2F; 希望大家在自己写的代码中测试一下这两句
+  m4 &#x3D; m3 * m2 * m1;
+  m4 &#x3D; m3 * (m2 * m1);
+  cout &lt;&lt; &quot;m4:\n&quot;;
+  m4.print();
+
+  return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h1 id="question-1"><a href="#question-1" class="headerlink" title="question 1"></a>question 1</h1><p>实现链表，数据域使用复数。</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+#include &lt;sstream&gt;
+#include &lt;string&gt;
+
+using namespace std;
+
+class Complex &#123;
+private:
+  int _re;
+  int _im;
+
+public:
+  Complex() : _re(0), _im(0) &#123;&#125;
+  Complex(int re, int im) : _re(re), _im(im) &#123;&#125;
+  Complex(const Complex &amp;other) : _re(other._re), _im(other._im) &#123;&#125;
+
+  Complex operator&#x3D;(const Complex &amp;other) &#123;
+    _re &#x3D; other._re;
+    _im &#x3D; other._im;
+    return *this;
+  &#125;
+
+  void print(bool require_endl &#x3D; false) &#123;
+    string sign &#x3D; _im &lt;&#x3D; 0 ? &quot;&quot; : &quot;+&quot;;
+    if (_re !&#x3D; 0) &#123;
+      cout &lt;&lt; _re;
+    &#125;
+    cout &lt;&lt; sign;
+    if (_im !&#x3D; 0) &#123;
+      cout &lt;&lt; _im &lt;&lt; &quot;i&quot;;
+    &#125;
+    if (_re &#x3D;&#x3D; 0 &amp;&amp; _im &#x3D;&#x3D; 0) &#123;
+      cout &lt;&lt; 0;
+    &#125;
+    if (require_endl) &#123;
+      cout &lt;&lt; endl;
+    &#125;
+  &#125;
+&#125;;
+
+struct Node &#123;
+  Complex value;
+  Node *ptr;
+
+  Node() : value(Complex()), ptr(nullptr) &#123;&#125;
+&#125;;
+
+class List &#123;
+private:
+  Node *_head;
+
+public:
+  &#x2F;&#x2F; 初始化哨兵结点（什么是哨兵结点？）
+  &#x2F;&#x2F; 可以将前后插入结点的操作统一起来
+  List() : _head(nullptr) &#123;
+    _head &#x3D; new Node;
+    _head-&gt;value &#x3D; Complex();
+    _head-&gt;ptr &#x3D; nullptr;
+  &#125;
+
+  void clear() &#123;
+    if (_head-&gt;ptr &#x3D;&#x3D; nullptr) &#123;
+      return;
+    &#125;
+    Node *p &#x3D; _head-&gt;ptr;
+    while (p !&#x3D; nullptr) &#123;
+      Node *q &#x3D; p-&gt;ptr;
+      delete[] p;
+      p &#x3D; q;
+    &#125;
+  &#125;
+
+  &#x2F;&#x2F; 在前插入结点实现链表
+  void forward(const string &amp;fp) &#123;
+    ifstream file_in&#123;fp&#125;;
+    while (!file_in.eof()) &#123;
+      int re &#x3D; 0;
+      int im &#x3D; 0;
+      file_in &gt;&gt; re &gt;&gt; im;
+
+      Complex complex(re, im);
+      Node *node &#x3D; new Node;
+      node-&gt;value &#x3D; complex;
+      node-&gt;ptr &#x3D; _head-&gt;ptr;
+      _head-&gt;ptr &#x3D; node;
+    &#125;
+  &#125;
+
+  &#x2F;&#x2F; 在后插入结点实现链表
+  void reverse(const string &amp;fp) &#123;
+    ifstream file_in&#123;fp&#125;;
+    Node *p &#x3D; _head;
+    while (!file_in.eof()) &#123;
+      int re &#x3D; 0;
+      int im &#x3D; 0;
+      file_in &gt;&gt; re &gt;&gt; im;
+
+      Complex complex(re, im);
+      Node *node &#x3D; new Node;
+      node-&gt;value &#x3D; complex;
+      p-&gt;ptr &#x3D; node;
+      p &#x3D; node;
+    &#125;
+  &#125;
+
+  void print() &#123;
+    Node *p &#x3D; _head-&gt;ptr;
+    cout &lt;&lt; &quot;HEAD -&gt; &quot;;
+    while (p !&#x3D; nullptr) &#123;
+      cout &lt;&lt; &quot;[&quot;;
+      p-&gt;value.print();
+      cout &lt;&lt; &quot;] -&gt; &quot;;
+      p &#x3D; p-&gt;ptr;
+    &#125;
+    cout &lt;&lt; &quot;END&quot; &lt;&lt; endl;
+  &#125;
+  &#x2F;&#x2F; List operator+()
+&#125;;
+
+const string fp &#x3D;&quot;path&#x2F;to&#x2F;data&quot;;
+
+int main() &#123;
+  List li;
+  li.forward(fp);
+  li.print();
+  li.clear();
+  li.reverse(fp);
+  li.print();
+  return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 </div>
 
                 
@@ -342,31 +562,15 @@ MyClass c <span class="token operator">=</span> a <span class="token operator">+
                 
                     <div class="article-nav">
                         
-                            <div class="article-prev">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/cpp-2023-lecture-notes/2024/04/08/Homework/week7/"
-                                   title="Homework | 第七次作业解答"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                      <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                            <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Homework | 第七次作业解答</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="article-next">
                                 <a class="next"
                                    rel="next"
-                                   href="/cpp-2023-lecture-notes/2024/03/18/Homework/week3/"
-                                   title="Homework | 第三次作业解答"
+                                   href="/cpp-2023-lecture-notes/2024/04/02/Notes/attn-1/"
+                                   title="Notes | 等号重载、模板"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Homework | 第三次作业解答</span>
+                                        <span class="post-nav-title-item text-ellipsis">Notes | 等号重载、模板</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                             <span class="right arrow-icon flex-center">
@@ -394,7 +598,7 @@ MyClass c <span class="token operator">=</span> a <span class="token operator">+
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%89%E5%8F%B7%E9%87%8D%E8%BD%BD%E9%97%AE%E9%A2%98"><span class="nav-text">等号重载问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E9%97%AE%E9%A2%98"><span class="nav-text">模板问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E5%AE%83%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7"><span class="nav-text">其它调试技巧</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#question-0"><span class="nav-text">question 0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#question-1"><span class="nav-text">question 1</span></a></li></ol>
     </div>
 </div>
 
@@ -524,7 +728,7 @@ MyClass c <span class="token operator">=</span> a <span class="token operator">+
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AD%89%E5%8F%B7%E9%87%8D%E8%BD%BD%E9%97%AE%E9%A2%98"><span class="nav-text">等号重载问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E6%9D%BF%E9%97%AE%E9%A2%98"><span class="nav-text">模板问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B6%E5%AE%83%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7"><span class="nav-text">其它调试技巧</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#question-0"><span class="nav-text">question 0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#question-1"><span class="nav-text">question 1</span></a></li></ol>
     </div>
 </div>
 
