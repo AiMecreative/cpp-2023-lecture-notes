@@ -64,7 +64,7 @@ public:
     return _value_ptr[index];
   }
 
-  CMatrix<Ty> operator*(CMatrix<Ty> &other) {
+  CMatrix<Ty> operator*(const CMatrix<Ty> &other) {
     assert(_col == other._row);
     CMatrix<Ty> res(_row, other._col);
     for (int i = 0; i < res._row; i += 1) {
