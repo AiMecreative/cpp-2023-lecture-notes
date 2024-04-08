@@ -204,7 +204,7 @@
 
             <span class="meta-info-item article-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Mon Apr 08 2024 14:13:31 GMT+0800">2024-04-08 14:13:31</span>
+                <span class="pc" data-updated="Mon Apr 08 2024 17:39:06 GMT+0800">2024-04-08 17:39:06</span>
             </span>
         
 
@@ -294,7 +294,7 @@
     <span class="token keyword">return</span> _value_ptr<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>
   <span class="token punctuation">&#125;</span>
 
-  CMatrix<span class="token operator">&lt;</span>Ty<span class="token operator">></span> <span class="token keyword">operator</span><span class="token operator">*</span><span class="token punctuation">(</span>CMatrix<span class="token operator">&lt;</span>Ty<span class="token operator">></span> <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  CMatrix<span class="token operator">&lt;</span>Ty<span class="token operator">></span> <span class="token keyword">operator</span><span class="token operator">*</span><span class="token punctuation">(</span><span class="token keyword">const</span> CMatrix<span class="token operator">&lt;</span>Ty<span class="token operator">></span> <span class="token operator">&amp;</span>other<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     <span class="token function">assert</span><span class="token punctuation">(</span>_col <span class="token operator">==</span> other<span class="token punctuation">.</span>_row<span class="token punctuation">)</span><span class="token punctuation">;</span>
     CMatrix<span class="token operator">&lt;</span>Ty<span class="token operator">></span> <span class="token function">res</span><span class="token punctuation">(</span>_row<span class="token punctuation">,</span> other<span class="token punctuation">.</span>_col<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> res<span class="token punctuation">.</span>_row<span class="token punctuation">;</span> i <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
@@ -576,6 +576,22 @@ HEAD -> [1+2i] -> [3+4i] -> [5+6i] -> [0] -> [-1+3i] -> [9-5i] -> [-1-1i] -> END
 
                 
                     <div class="article-nav">
+                        
+                            <div class="article-prev">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/cpp-2023-lecture-notes/2024/04/08/Notes/talks-2/"
+                                   title="Notes | 杂谈 II"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                      <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                            <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Notes | 杂谈 II</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
                         
                         
                             <div class="article-next">
