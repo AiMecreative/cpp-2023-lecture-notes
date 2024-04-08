@@ -204,7 +204,7 @@
 
             <span class="meta-info-item article-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Mon Apr 08 2024 13:49:35 GMT+0800">2024-04-08 13:49:35</span>
+                <span class="pc" data-updated="Mon Apr 08 2024 14:13:31 GMT+0800">2024-04-08 14:13:31</span>
             </span>
         
 
@@ -413,6 +413,21 @@
 
 
 <h1 id="question-1"><a href="#question-1" class="headerlink" title="question 1"></a>question 1</h1><p>实现链表，数据域使用复数。</p>
+<p>参考解答中使用了文件读入数据的方式，示例数据文件如下所示：</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">1 2
+3 4
+5 6
+0 0
+-1 3
+9 -5
+-1 -1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>其中一行分别代表复数的实部和虚部。</p>
+<p>除此之外，参考解答在输出的时候进行了可视化，例如，由上述数据文件构造的链表如下所示：</p>
+<pre class="line-numbers language-text" data-language="text"><code class="language-text">HEAD -> [-1-1i] -> [9-5i] -> [-1+3i] -> [0] -> [5+6i] -> [3+4i] -> [1+2i] -> END
+HEAD -> [1+2i] -> [3+4i] -> [5+6i] -> [0] -> [-1+3i] -> [9-5i] -> [-1-1i] -> END<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>后续为参考解答。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;fstream></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;sstream></span></span>

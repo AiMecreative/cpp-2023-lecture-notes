@@ -1,0 +1,5 @@
+@font-face {
+  font-style: normal;
+  font-family: "LXGWBright";
+  src: local("LXGWBright"), url("../lxgw/LXGWBright-Regular.ttf") format("truetype");
+}
