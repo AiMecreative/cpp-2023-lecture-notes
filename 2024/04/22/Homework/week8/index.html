@@ -204,7 +204,7 @@
 
             <span class="meta-info-item article-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Mon Apr 22 2024 15:04:54 GMT+0800">2024-04-22 15:04:54</span>
+                <span class="pc" data-updated="Mon Apr 22 2024 15:10:37 GMT+0800">2024-04-22 15:10:37</span>
             </span>
         
 
@@ -311,10 +311,10 @@
     <span class="token function">strcpy_s</span><span class="token punctuation">(</span>description<span class="token punctuation">,</span> des_size<span class="token punctuation">,</span> _description<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">&#125;</span>
 
-  <span class="token comment">// 閲嶈浇int鐨勫己鍒惰浆鎹?锛屾柟渚緽ook鍒癷nt鐨勮浆鎹?锛岀敤浜庢瘮杈冨ぇ灏?</span>
+  <span class="token comment">// 重载了int的强制转换，方便后续用于比较大小</span>
   <span class="token keyword">operator</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token keyword">return</span> _lending_times<span class="token punctuation">;</span> <span class="token punctuation">&#125;</span>
 
-  <span class="token comment">// 杩欓噷閲嶈浇杈撳嚭娴佽繍绠椾唬鏇垮師棰樼洰涓?鐨刾rint鍑芥暟锛屼緵澶у?跺?︿範鍙傝€?</span>
+  <span class="token comment">// 重载了流运算符，方便后续直接使用cout进行输出，代替了原题目中的print函数</span>
   <span class="token keyword">friend</span> ostream <span class="token operator">&amp;</span><span class="token keyword">operator</span><span class="token operator">&lt;&lt;</span><span class="token punctuation">(</span>ostream <span class="token operator">&amp;</span>out<span class="token punctuation">,</span> <span class="token keyword">const</span> Book <span class="token operator">&amp;</span>book<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
     out <span class="token operator">&lt;&lt;</span> <span class="token string">"|--------------- Book ---------------|\n"</span><span class="token punctuation">;</span>
     out <span class="token operator">&lt;&lt;</span> <span class="token string">"| book name: "</span> <span class="token operator">&lt;&lt;</span> book<span class="token punctuation">.</span>_bookname <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
