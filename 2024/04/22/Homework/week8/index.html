@@ -82,7 +82,7 @@
                             <a class=""
                                href="/cpp-2023-lecture-notes/"
                             >
-                                首页
+                                HOME
                             </a>
                         </li>
                     
@@ -90,7 +90,7 @@
                             <a class=""
                                href="/cpp-2023-lecture-notes/archives"
                             >
-                                归档
+                                ARCHIVES
                             </a>
                         </li>
                     
@@ -127,12 +127,12 @@
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/cpp-2023-lecture-notes/">首页</a>
+                       href="/cpp-2023-lecture-notes/">HOME</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/cpp-2023-lecture-notes/archives">归档</a>
+                       href="/cpp-2023-lecture-notes/archives">ARCHIVES</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
@@ -204,7 +204,7 @@
 
             <span class="meta-info-item article-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Mon Apr 22 2024 15:10:37 GMT+0800">2024-04-22 15:10:37</span>
+                <span class="pc" data-updated="Mon Apr 22 2024 16:08:33 GMT+0800">2024-04-22 16:08:33</span>
             </span>
         
 
@@ -367,6 +367,57 @@
   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<p>输出结果为</p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">|--------------- Book ---------------|
+| book name: 一句顶一万句
+| author name: 刘震云
+| description: 底层百姓人物的故事
+| lending times: 200
+|-----------------------------------|
+
+|--------------- Book ---------------|
+| book name: 蛙
+| author name: 莫言
+| description: 乡村女医生的人生经历
+| lending times: 180
+|-----------------------------------|
+
+|--------------- Book ---------------|
+| book name: 推拿
+| author name: 毕飞宇
+| description: 推拿中盲人的情感、尊严和梦想
+| lending times: 170
+|-----------------------------------|
+
+|--------------- Book ---------------|
+| book name: 你在高原
+| author name: 张炜
+| description: 地址队员的故事
+| lending times: 160
+|-----------------------------------|
+
+|--------------- Book ---------------|
+| book name: 天行者
+| author name: 刘醒龙
+| description: 乡村民办教师的故事
+| lending times: 150
+|-----------------------------------|
+
+sorted!
+|--------------- Book ---------------|
+| book name: 人世间
+| author name: 梁晓声
+| description: 中国社会的巨大变迁和百姓生活
+| lending times: 150
+|-----------------------------------|
+
+|--------------- Book ---------------|
+| book name: 人世间
+| author name: 梁晓声
+| description: 中国社会的巨大变迁和百姓生活
+| lending times: 150
+|-----------------------------------|<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h1 id="question-1"><a href="#question-1" class="headerlink" title="question 1"></a>question 1</h1><p>链表的操作规整成为函数完成。</p>
 <p>包括：</p>
 <ul>
@@ -503,6 +554,26 @@ Node <span class="token operator">*</span><span class="token function">find</spa
   <span class="token function">printList</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>输出结果为</p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">insert node [1] in the front:
+[HEAD] -> [1] -> [TAIL]
+insert node [7] in the front:
+[HEAD] -> [7] -> [1] -> [TAIL]
+insert node [4] in the front:
+[HEAD] -> [4] -> [7] -> [1] -> [TAIL]
+insert node [0] in the tail:
+[HEAD] -> [4] -> [7] -> [1] -> [0] -> [TAIL]
+insert node [9] in the tail:
+[HEAD] -> [4] -> [7] -> [1] -> [0] -> [9] -> [TAIL]
+insert node [4] in the tail:
+[HEAD] -> [4] -> [7] -> [1] -> [0] -> [9] -> [4] -> [TAIL]
+wish to find [8] in the list: fail!
+wish to delete [8] in the list, deleted result:
+no node should be deleted
+[HEAD] -> [4] -> [7] -> [1] -> [0] -> [9] -> [4] -> [TAIL]
+make empty:
+[HEAD] -> [TAIL]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 </div>
 
                 
@@ -521,6 +592,22 @@ Node <span class="token operator">*</span><span class="token function">find</spa
                 
                     <div class="article-nav">
                         
+                            <div class="article-prev">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/cpp-2023-lecture-notes/2024/04/22/Homework/week6/"
+                                   title="Homework | 第六次作业解答"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                      <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                            <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Homework | 第六次作业解答</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
                         
                             <div class="article-next">
                                 <a class="next"
@@ -530,7 +617,7 @@ Node <span class="token operator">*</span><span class="token function">find</spa
                                 >
                                     <span class="title flex-center">
                                         <span class="post-nav-title-item text-ellipsis">Notes | 杂谈 II</span>
-                                        <span class="post-nav-item">下一篇</span>
+                                        <span class="post-nav-item">Next posts</span>
                                     </span>
                                             <span class="right arrow-icon flex-center">
                                       <i class="fas fa-chevron-right"></i>
@@ -585,7 +672,7 @@ Node <span class="token operator">*</span><span class="token function">find</spa
             </div>
 
             <div class="theme-info info-item default">
-                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+                Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
             </div>
 
             
