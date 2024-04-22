@@ -143,6 +143,60 @@ int main() {
 }
 ```
 
+输出结果为
+
+```txt
+|--------------- Book ---------------|
+| book name: 一句顶一万句
+| author name: 刘震云
+| description: 底层百姓人物的故事
+| lending times: 200
+|-----------------------------------|
+
+|--------------- Book ---------------|
+| book name: 蛙
+| author name: 莫言
+| description: 乡村女医生的人生经历
+| lending times: 180
+|-----------------------------------|
+
+|--------------- Book ---------------|
+| book name: 推拿
+| author name: 毕飞宇
+| description: 推拿中盲人的情感、尊严和梦想
+| lending times: 170
+|-----------------------------------|
+
+|--------------- Book ---------------|
+| book name: 你在高原
+| author name: 张炜
+| description: 地址队员的故事
+| lending times: 160
+|-----------------------------------|
+
+|--------------- Book ---------------|
+| book name: 天行者
+| author name: 刘醒龙
+| description: 乡村民办教师的故事
+| lending times: 150
+|-----------------------------------|
+
+sorted!
+|--------------- Book ---------------|
+| book name: 人世间
+| author name: 梁晓声
+| description: 中国社会的巨大变迁和百姓生活
+| lending times: 150
+|-----------------------------------|
+
+|--------------- Book ---------------|
+| book name: 人世间
+| author name: 梁晓声
+| description: 中国社会的巨大变迁和百姓生活
+| lending times: 150
+|-----------------------------------|
+```
+
 # question 1
 
 链表的操作规整成为函数完成。
@@ -283,4 +337,27 @@ int main() {
   printList(head);
   return 0;
 }
+```
+
+输出结果为
+
+```txt
+insert node [1] in the front:
+[HEAD] -> [1] -> [TAIL]
+insert node [7] in the front:
+[HEAD] -> [7] -> [1] -> [TAIL]
+insert node [4] in the front:
+[HEAD] -> [4] -> [7] -> [1] -> [TAIL]
+insert node [0] in the tail:
+[HEAD] -> [4] -> [7] -> [1] -> [0] -> [TAIL]
+insert node [9] in the tail:
+[HEAD] -> [4] -> [7] -> [1] -> [0] -> [9] -> [TAIL]
+insert node [4] in the tail:
+[HEAD] -> [4] -> [7] -> [1] -> [0] -> [9] -> [4] -> [TAIL]
+wish to find [8] in the list: fail!
+wish to delete [8] in the list, deleted result:
+no node should be deleted
+[HEAD] -> [4] -> [7] -> [1] -> [0] -> [9] -> [4] -> [TAIL]
+make empty:
+[HEAD] -> [TAIL]
 ```
