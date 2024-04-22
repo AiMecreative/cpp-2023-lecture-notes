@@ -86,10 +86,10 @@ public:
     strcpy_s(description, des_size, _description);
   }
 
-  // 閲嶈浇int鐨勫己鍒惰浆鎹?锛屾柟渚緽ook鍒癷nt鐨勮浆鎹?锛岀敤浜庢瘮杈冨ぇ灏?
+  // 重载了int的强制转换，方便后续用于比较大小
   operator int() { return _lending_times; }
 
-  // 杩欓噷閲嶈浇杈撳嚭娴佽繍绠椾唬鏇垮師棰樼洰涓?鐨刾rint鍑芥暟锛屼緵澶у?跺?︿範鍙傝€?
+  // 重载了流运算符，方便后续直接使用cout进行输出，代替了原题目中的print函数
   friend ostream &operator<<(ostream &out, const Book &book) {
     out << "|--------------- Book ---------------|\n";
     out << "| book name: " << book._bookname << endl;
